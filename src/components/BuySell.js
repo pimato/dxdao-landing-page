@@ -8,6 +8,7 @@ import EnablePending from './common/EnablePending';
 import SellForm from './Sell/SellForm';
 import SellDisconnected from './Sell/SellDisconnected';
 import { useStores } from '../contexts/storesContext';
+import { DatState } from '../stores/datStore';
 import BalanceInfo from './BalanceInfo';
 
 const BuySellWrapper = styled.div`
@@ -57,7 +58,7 @@ const ContentWrapper = styled.div`
 
 const BuySell = observer(() => {
     const {
-        root: { tradingStore, providerStore },
+        root: { configStore, datStore, tradingStore, providerStore },
     } = useStores();
 
     const { account } = providerStore.getActiveWeb3React();
@@ -66,6 +67,11 @@ const BuySell = observer(() => {
 
     const incrementTKN = tradingStore.enableTKNState;
     const incrementDXD = tradingStore.enableDXDState;
+
+    console.log("state: " + datStore.getState(configStore.activeDatAddress));
+    console.log("enum: " + DatState.STATE_INIT);
+    console.log("test: " + datStore.getState(configStore.activeDatAddress) === DatState.STATE_INIT);
+    const SellText = datStore.getState(configStore.activeDatAddress) === DatState.STATE_INIT ? "Withdraw" : "Sell";
 
     const TabButton = ({ currentTab, tabType, left, children }) => {
         if (currentTab === tabType) {
@@ -150,7 +156,7 @@ const BuySell = observer(() => {
                     Buy
                 </TabButton>
                 <TabButton currentTab={currentTab} tabType={1} left={true}>
-                    Sell
+                    {SellText}
                 </TabButton>
             </TabWrapper>
             <ContentWrapper>
