@@ -59,7 +59,7 @@ const Description = styled.div`
     letter-spacing: 0.03em;
     color: var(--light-body-text);
     margin-top: 24px;
-    max-width: 614px;
+    max-width: 655px;
 `;
 
 const ButtonRow = styled.div`
@@ -318,8 +318,6 @@ const LandingPage = () => {
                     The dxDAO is a decentralized organization initialized in May
                     of 2019 and has over 400 unique stakeholder addresses. It
                     develops, governs, and grows DeFi protocols and products.
-                    Owned and operated by the community, the Dxdao has the
-                    potential to significantly scale its membership.
                 </Description>
                 <ButtonRow>
                     <BlueButton route="/exchange">Invest</BlueButton>
@@ -340,12 +338,9 @@ const LandingPage = () => {
                 <DXDLogo src="DXD.svg" />
                 <Message>DXD powers the Decentralised Ecosystem</Message>
                 <Description margin="12px">
-                    The DXD token is DXdao´s native token. DXD token holders
-                    have an economic claim to the DXdao´s revenue. It also
-                    grants its owners future access to a suite of services and
-                    premium features in decentralised applications, such as
-                    glasless transactions, feeless anonymizing of assets,
-                    reduced trading fees on DEX protocols and more.
+                    The DXD token is DXdao´s native token. DXD token holders have an economic claim to the DXdao´s revenue and 
+                    future privilege to access a suite of services and premium features in decentralised applications, 
+                    such as gasless transactions, feeless anonymizing of assets, reduced trading fees on DEX protocols and more.
                 </Description>
             </DXDSection>
             <ProductSection>
