@@ -7,6 +7,7 @@ import LandingPageHeader from './components/LandingPage/Header';
 
 import FAQPage from 'components/FAQPage';
 import BrandAssetsPage from 'components/BrandAssetsPage';
+import CodebasePage from 'components/CodebasePage';
 
 const App = () => {
     return (
@@ -37,6 +38,15 @@ const App = () => {
                         <div className="app-shell">
                             <LandingPageHeader />
                             <BrandAssetsPage />
+                            <LandingPageFooter />
+                        </div>
+                    </div>
+                </Route>
+                <Route exact path="/codebase">
+                    <div className="landing-body-container">
+                        <div className="app-shell">
+                            <LandingPageHeader />
+                            <CodebasePage />
                             <LandingPageFooter />
                         </div>
                     </div>
