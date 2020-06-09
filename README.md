@@ -4,7 +4,7 @@ This is the **Landing page** of the [DXdao](dxdao.eth.link).
 
 ## Technical Description
 
-The Landing-Page is written in javascript and typescrypt, it uses ReactJS and Webapack.
+The Landing-Page is written in javascript and typescrypt, it uses ReactJS and Webpack.
 
 ## Install
 Install dependencies with the following command:
@@ -35,7 +35,13 @@ To make the build of the dapp use the command `yarn run build`. It will create p
 
 ### IPFS
 
-Follow the installation instructions here https://docs-beta.ipfs.io/how-to/command-line-quick-start/#install-ipfs.
+The fastest way to deploy the landingpage on ipfs is using Pinata. Make sure you added your Pinata `IPFS_DEPLOY_PINATA__API_KEY` and `IPFS_DEPLOY_PINATA__SECRET_API_KEY` in the .env file and run the following command:
+
+```
+yarn ipfs-deploy
+```
+
+Alternativly you can follow the installation instructions here https://docs-beta.ipfs.io/how-to/command-line-quick-start/#install-ipfs.
 
 Executables for ipfs-update can be downloaded from https://dist.ipfs.io/#ipfs-update.
 

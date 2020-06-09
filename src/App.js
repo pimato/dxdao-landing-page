@@ -42,6 +42,7 @@ const App = () => {
                         </div>
                     </div>
                 </Route>
+
                 <Route exact path="/codebase">
                     <div className="landing-body-container">
                         <div className="app-shell">

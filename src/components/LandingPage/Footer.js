@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
 

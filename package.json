@@ -1,11 +1,12 @@
 {
-    "name": "BC-DAPP",
+    "name": "dxdao-landing-page",
     "version": "0.2.0",
-    "description": "Decentralized app for fundraising in DXdao.",
+    "description": "DXdao landingpage dxdao.eth.link",
     "scripts": {
         "start": "./scripts/start.sh",
         "dev": "./scripts/dev.sh",
-        "build": "node scripts/build.js"
+        "build": "node scripts/build.js",
+        "ipfs-deploy": "ipfs-deploy build --pinner pinata --no-open --no-clipboard"
     },
     "repository": {
         "type": "git",
@@ -126,12 +127,13 @@
         "case-sensitive-paths-webpack-plugin": "2.2.0",
         "copy-to-clipboard": "^3.3.1",
         "css-loader": "2.1.1",
-        "dotenv": "^8.1.0",
+        "dotenv": "^8.2.0",
         "dotenv-expand": "5.1.0",
         "file-loader": "3.0.1",
         "hdkey": "^1.1.1",
         "html-webpack-plugin": "4.0.0-beta.5",
         "identity-obj-proxy": "3.0.0",
+        "ipfs-deploy": "^7.14.0",
         "is-wsl": "^1.1.0",
         "isomorphic-fetch": "^2.2.1",
         "jazzicon": "^1.5.0",

@@ -166,12 +166,12 @@ const ProductPanelWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     margin: 36px 0 0 0;
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
         margin-top: 0;
         &:nth-of-type(odd) {
-            margin-top: 32px
+            margin-top: 32px;
         }
     }
 `;
@@ -341,10 +341,6 @@ const JoinAction = styled.a`
     &:hover {
         color: #1690cc;
     }
-`;
-
-const ReadAction = styled(JoinAction)`
-    margin: 0;
 `;
 
 const JoinActionText = styled.div``;
