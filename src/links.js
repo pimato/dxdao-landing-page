@@ -6,6 +6,10 @@ landing_invest : "/exchange",
 
 landing_faq : "/faq",
 
+landing_codebase : "/codebase",
+
+landing_brand : "/brand-assets",
+
 landing_whitepaper : 'https://github.com/gnosis/dx-daostack/blob/master/dxdao_whitepaper_v1.pdf',
 
 landing_mixeth : "https://daotalk.org/t/mix-eth-seeking-feedback-on-proposal/1183",
