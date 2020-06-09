@@ -6,7 +6,7 @@
         "start": "./scripts/start.sh",
         "dev": "./scripts/dev.sh",
         "build": "node scripts/build.js",
-        "ipfs-deploy": "ipfs-deploy build --pinner pinata --no-open --no-clipboard"
+        "ipfs-deploy": "node scripts/build.js && ipfs-deploy build --pinner pinata --no-open --no-clipboard"
     },
     "repository": {
         "type": "git",
