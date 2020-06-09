@@ -165,7 +165,7 @@ const ProductPanelWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 36px 0 0 0;
+    margin: 20px 0 0 0;
     @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
