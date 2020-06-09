@@ -68,14 +68,6 @@ const Footer = () => {
                         Git Hash
                     </a>
                 </FooterItem>
-                <FooterDivider></FooterDivider>
-                <FooterItem>
-                    <Link to="/brand-assets">Brand Assets</Link>
-                </FooterItem>
-                <FooterDivider></FooterDivider>
-                <FooterItem>
-                    <Link to="/codebase">Codebase</Link>
-                </FooterItem>
             </LeftFooter>
             <RighFooter>
                 <LogoWrapper>

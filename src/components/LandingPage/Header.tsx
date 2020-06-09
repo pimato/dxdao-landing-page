@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links'
 
@@ -49,7 +49,7 @@ const LogoContainer = styled.div`
     cursor: pointer;
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled(Link)`
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
@@ -90,8 +90,8 @@ const MobileNav = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 180px;
     border-bottom: 1px solid var(--footer-divider);
+    padding-bottom: 12px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
     ${props => {
         if(props.active) {
@@ -103,7 +103,7 @@ const MobileNav = styled.div`
     z-index: 1;
 `;
 
-const MobileMenuItem = styled.a`
+const MobileMenuItem = styled(Link)`
     color: var(--dark-text);
     font-size: 16px;
     font-weight: 600;
@@ -141,36 +141,36 @@ const NavBar = ({}) => {
         }
     }
 
+    const handleLogoClicked = (): void => {
+        if(active === true){
+            setActive(false);
+        }
+    }
+
     return (
         <NavWrapper>
             <LeftNav>
                 <NavItem route="/">
-                    <DXdaoLogo src="Dxdao_Landing.svg"/>
+                    <DXdaoLogo src="Dxdao_Landing.svg" onClick={handleLogoClicked}/>
                 </NavItem>
             </LeftNav>
             <RightNav>
-                <MenuItem href={links.header_governance} target="_blank">
-                    Governance
+                <MenuItem to={links.landing_codebase} >
+                    Codebase
                 </MenuItem>
-                <MenuItem href={links.header_chat} target="_blank">
-                    Chat
-                </MenuItem>
-                <MenuItem href={links.header_forum} target="_blank">
-                    Forum
+                <MenuItem to={links.landing_brand}>
+                    Brand Assets
                 </MenuItem>
                 <MobileMenu onClick={toggleMenu}>
                     <img src="menu-burger.svg" alt="Menu" />
                 </MobileMenu>
             </RightNav>
             <MobileNav active={active}>
-                <MobileMenuItem href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">
-                    Governance
+                <MobileMenuItem to={links.landing_codebase} onClick={toggleMenu}>
+                    Codebase
                 </MobileMenuItem>
-                <MobileMenuItem href="https://keybase.io/team/dx_dao" target="_blank">
-                    Chat
-                </MobileMenuItem>
-                <MobileMenuItem href="https://daotalk.org/c/daos/dx-dao/15" target="_blank">
-                    Forum
+                <MobileMenuItem to={links.landing_brand} onClick={toggleMenu}>
+                    Brand Assets
                 </MobileMenuItem>
             </MobileNav>
         </NavWrapper>

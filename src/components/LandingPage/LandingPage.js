@@ -322,7 +322,7 @@ const JoinActionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 24px;
 `;
 
 const JoinAction = styled.a`
@@ -393,6 +393,50 @@ const LandingPage = () => {
                     Owned and operated by the community, the DXdao has the
                     potential to significantly scale its membership.
                 </Description>
+                <JoinActionWrapper>
+                    <JoinAction
+                        href={links.landing_create_proposal}
+                        target="_blank"
+                    >
+                        <JoinActionText>Create a proposal</JoinActionText>
+                        <JoinActionArrow src="RightArrow.svg" />
+                    </JoinAction>
+                    <JoinAction
+                        href={links.landing_start_forum_discussion}
+                        target="_blank"
+                    >
+                        <JoinActionText>
+                            Start a forum discussion
+                        </JoinActionText>
+                        <JoinActionArrow src="RightArrow.svg" />
+                    </JoinAction>
+                    <JoinAction
+                        href={links.landing_community_chat}
+                        target="_blank"
+                    >
+                        <JoinActionText>Community chat</JoinActionText>
+                        <JoinActionArrow src="RightArrow.svg" />
+                    </JoinAction>
+                    <JoinAction
+                        href={links.landing_developer_chat}
+                        target="_blank"
+                    >
+                        <JoinActionText>Developer chat</JoinActionText>
+                        <JoinActionArrow src="RightArrow.svg" />
+                    </JoinAction>
+                </JoinActionWrapper>
+            </BannerSection>
+            <DXDSection>
+                <DXDLogo src="DXD.svg" />
+                <Message>DXD powers the Decentralised Ecosystem</Message>
+                <Description margin="12px">
+                    The DXD token is DXdao´s native token. DXD token holders
+                    have an economic claim to the DXdao´s revenue. It also
+                    grants its owners future access to a suite of services and
+                    premium features in decentralised applications, such as
+                    glasless transactions, feeless anonymizing of assets,
+                    reduced trading fees on DEX protocols and more.
+                </Description>
                 <ButtonRow>
                     <BlueButton route="/exchange">Invest</BlueButton>
                     <NormalButton route="/faq">FAQ</NormalButton>
@@ -407,18 +451,6 @@ const LandingPage = () => {
                         Whitepaper
                     </Button>
                 </ButtonRow>
-            </BannerSection>
-            <DXDSection>
-                <DXDLogo src="DXD.svg" />
-                <Message>DXD powers the Decentralised Ecosystem</Message>
-                <Description margin="12px">
-                    The DXD token is DXdao´s native token. DXD token holders
-                    have an economic claim to the DXdao´s revenue. It also
-                    grants its owners future access to a suite of services and
-                    premium features in decentralised applications, such as
-                    glasless transactions, feeless anonymizing of assets,
-                    reduced trading fees on DEX protocols and more.
-                </Description>
             </DXDSection>
             <ProductSection>
                 <TagLine>Our collectively owned products</TagLine>
@@ -528,41 +560,6 @@ const LandingPage = () => {
                     </AboutPanel>
                 </AboutPanelWrapper>
             </AboutUsSection>
-            <JoinSection>
-                <Message>Join now</Message>
-                <JoinActionWrapper>
-                    <JoinAction
-                        href={links.landing_create_proposal}
-                        target="_blank"
-                    >
-                        <JoinActionText>Create a proposal</JoinActionText>
-                        <JoinActionArrow src="RightArrow.svg" />
-                    </JoinAction>
-                    <JoinAction
-                        href={links.landing_start_forum_discussion}
-                        target="_blank"
-                    >
-                        <JoinActionText>
-                            Start a forum discussion
-                        </JoinActionText>
-                        <JoinActionArrow src="RightArrow.svg" />
-                    </JoinAction>
-                    <JoinAction
-                        href={links.landing_community_chat}
-                        target="_blank"
-                    >
-                        <JoinActionText>Community chat</JoinActionText>
-                        <JoinActionArrow src="RightArrow.svg" />
-                    </JoinAction>
-                    <JoinAction
-                        href={links.landing_developer_chat}
-                        target="_blank"
-                    >
-                        <JoinActionText>Developer chat</JoinActionText>
-                        <JoinActionArrow src="RightArrow.svg" />
-                    </JoinAction>
-                </JoinActionWrapper>
-            </JoinSection>
         </LandingPageWrapper>
     );
 };
