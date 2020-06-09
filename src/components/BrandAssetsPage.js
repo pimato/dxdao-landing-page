@@ -53,21 +53,6 @@ const Description = styled.div`
     }
 `;
 
-const TagLine = styled.div`
-    font-family: Source Sans Pro;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--light-header-text);
-
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: pre;
-`;
-
 ///////
 
 const MediaSection = styled.div`

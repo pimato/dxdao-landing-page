@@ -35,7 +35,7 @@ To make the build of the dapp use the command `yarn run build`. It will create p
 
 ### IPFS
 
-The fastest way to deploy the landingpage on ipfs is through Pinata. Make sure you added your Pinata API KEY and SECRET API KEY in the .env file and run the following command:
+The fastest way to deploy the landingpage on ipfs is using Pinata. Make sure you added your Pinata `IPFS_DEPLOY_PINATA__API_KEY` and `IPFS_DEPLOY_PINATA__SECRET_API_KEY` in the .env file and run the following command:
 
 ```
 yarn ipfs-deploy
