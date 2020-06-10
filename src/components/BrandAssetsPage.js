@@ -228,6 +228,10 @@ const BrandAssetsPage = () => {
                     content="Official DXdao and product logos: Omen Mix Dxswap Mesa"
                 />
                 <meta id="og-title" property="og:title" content="DXdao Brand" />
+                <meta
+                    name="keywords"
+                    content="DXdao, BrandAssets, Omen, Mix, Dxswap, Mesa"
+                />
             </MetaTags>
             <Headline>DXdao Brand</Headline>
             <Description>

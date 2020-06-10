@@ -48,6 +48,7 @@ const FAQPage = () => {
                     content="DXdao Frequently Asked Questions"
                 />
                 <meta id="og-title" property="og:title" content="DXdao FAQ" />
+                <meta name="keywords" content="DXdao, FAQ" />
             </MetaTags>
             <main className="Container">
                 <BannerMessage>Frequently Asked Questions</BannerMessage>

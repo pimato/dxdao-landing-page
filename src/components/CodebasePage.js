@@ -246,6 +246,7 @@ const CodebasePage = () => {
                     property="og:title"
                     content="DXdao Codebase"
                 />
+                <meta name="keywords" content="DXdao, Codebase" />
             </MetaTags>
             <Headline>DXdao Codebase</Headline>
             <Subheadline>DXdao Official Projects</Subheadline>

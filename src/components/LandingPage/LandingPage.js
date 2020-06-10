@@ -386,6 +386,10 @@ const LandingPage = () => {
                             property="og:image"
                             content="DXD.svg"
                         />
+                        <meta
+                            name="keywords"
+                            content="DXdao, LandingPage, Omen, Mix, Dxswap, Mesa"
+                        />
                     </MetaTags>
                     <HeavyMessage>DXdao </HeavyMessage>is a{' '}
                     <HeavyMessage>sovereign collective</HeavyMessage>
