@@ -163,52 +163,52 @@ const ProductDescription = styled.div`
 const assets = {
     dxdao: {
         blue: {
-            svg: '/brand/dxdao-blue.svg',
-            png: '/brand/dxdao-blue.png',
-            jpg: '/brand/dxdao-blue.jpg',
+            svg: './brand/dxdao-blue.svg',
+            png: './brand/dxdao-blue.png',
+            jpg: './brand/dxdao-blue.jpg',
         },
         black: {
-            svg: '/brand/dxdao-black.svg',
-            png: '/brand/dxdao-black.png',
-            jpg: '/brand/dxdao-black.jpg',
+            svg: './brand/dxdao-black.svg',
+            png: './brand/dxdao-black.png',
+            jpg: './brand/dxdao-black.jpg',
         },
     },
     omen: {
         blue: {
-            svg: '/brand/omen-blue.svg',
-            png: '/brand/omen-blue.png',
-            jpg: '/brand/omen-blue.jpg',
+            svg: './brand/omen-blue.svg',
+            png: './brand/omen-blue.png',
+            jpg: './brand/omen-blue.jpg',
         },
         black: {
-            svg: '/brand/omen-black.svg',
-            png: '/brand/omen-black.png',
-            jpg: '/brand/omen-black.jpg',
+            svg: './brand/omen-black.svg',
+            png: './brand/omen-black.png',
+            jpg: './brand/omen-black.jpg',
         },
     },
     mix: {
         black: {
-            svg: '/brand/mix-black.svg',
-            png: '/brand/mix-black.png',
-            jpg: '/brand/mix-black.jpg',
+            svg: './brand/mix-black.svg',
+            png: './brand/mix-black.png',
+            jpg: './brand/mix-black.jpg',
         },
     },
     dxswap: {
         purple: {
-            svg: '/brand/dxswap-purple.svg',
-            png: '/brand/dxswap-purple.png',
-            jpg: '/brand/dxswap-purple.jpg',
+            svg: './brand/dxswap-purple.svg',
+            png: './brand/dxswap-purple.png',
+            jpg: './brand/dxswap-purple.jpg',
         },
         black: {
-            svg: '/brand/dxswap-black.svg',
-            png: '/brand/dxswap-black.png',
-            jpg: '/brand/dxswap-black.jpg',
+            svg: './brand/dxswap-black.svg',
+            png: './brand/dxswap-black.png',
+            jpg: './brand/dxswap-black.jpg',
         },
     },
     mesa: {
         black: {
-            svg: '/brand/mesa-black.svg',
-            png: '/brand/mesa-black.png',
-            jpg: '/brand/mesa-black.jpg',
+            svg: './brand/mesa-black.svg',
+            png: './brand/mesa-black.png',
+            jpg: './brand/mesa-black.jpg',
         },
     },
 };
