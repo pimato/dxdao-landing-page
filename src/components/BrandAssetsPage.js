@@ -164,26 +164,26 @@ const ProductDescription = styled.div`
 const assets = {
     dxdao: {
         blue: {
-            svg: '/brand/dxdao-blue.svg',
-            png: '/brand/dxdao-blue.png',
-            jpg: '/brand/dxdao-blue.jpg',
+            svg: './brand/dxdao-blue.svg',
+            png: './brand/dxdao-blue.png',
+            jpg: './brand/dxdao-blue.jpg',
         },
         black: {
-            svg: '/brand/dxdao-black.svg',
-            png: '/brand/dxdao-black.png',
-            jpg: '/brand/dxdao-black.jpg',
+            svg: './brand/dxdao-black.svg',
+            png: './brand/dxdao-black.png',
+            jpg: './brand/dxdao-black.jpg',
         },
     },
     omen: {
         blue: {
-            svg: '/brand/omen-blue.svg',
-            png: '/brand/omen-blue.png',
-            jpg: '/brand/omen-blue.jpg',
+            svg: './brand/omen-blue.svg',
+            png: './brand/omen-blue.png',
+            jpg: './brand/omen-blue.jpg',
         },
         black: {
-            svg: '/brand/omen-black.svg',
-            png: '/brand/omen-black.png',
-            jpg: '/brand/omen-black.jpg',
+            svg: './brand/omen-black.svg',
+            png: './brand/omen-black.png',
+            jpg: './brand/omen-black.jpg',
         },
     },
     mix: {

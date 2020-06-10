@@ -371,8 +371,6 @@ const LandingPage = () => {
                 <TagLine>We decentralize DeFi</TagLine>
                 <BannerMessage>
                     <MetaTags>
-                        <HeavyMessage>DXdao </HeavyMessage>is a{' '}
-                        <HeavyMessage>sovereign collective</HeavyMessage>
                         <meta
                             id="meta-description"
                             name="dxdao.eth"
@@ -389,6 +387,8 @@ const LandingPage = () => {
                             content="DXD.svg"
                         />
                     </MetaTags>
+                    <HeavyMessage>DXdao </HeavyMessage>is a{' '}
+                    <HeavyMessage>sovereign collective</HeavyMessage>
                 </BannerMessage>
                 <Description>
                     The DXdao is a decentralized organization initialized in May
