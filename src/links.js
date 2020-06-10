@@ -19,7 +19,7 @@ const links = {
 
     landing_mesaeth: 'https://mesa.eth.link',
 
-    landing_dxswapeth: 'https://trade.dxdao.eth.link',
+    landing_dxswapeth: 'https://dxswap.eth.link/',
 
     landing_create_proposal:
         'https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a',
