@@ -145,7 +145,7 @@ const projects = {
     official: [
         {
             name: 'BC-DAPP',
-            github: 'github.com/levelkdev/BC-DAPP/v0.2.0',
+            github: 'https://github.com/levelkdev/BC-DAPP/tree/v0.2.0',
             ipfs:
                 'https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/BC-DAPP-0.2.0',
             version: 'Stable v0.2.0',

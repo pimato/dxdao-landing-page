@@ -165,7 +165,7 @@ const ProductPanelWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 36px 0 0 0;
+    margin: 20px 0 0 0;
     @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
@@ -350,20 +350,6 @@ const JoinActionArrow = styled.img`
 `;
 
 const LandingPage = () => {
-    const BlueButton = withRouter(
-        ({ option, route, history, location, children }) => {
-            return (
-                <DarkButton
-                    onClick={() => {
-                        history.push(route);
-                    }}
-                >
-                    {children}
-                </DarkButton>
-            );
-        }
-    );
-
     const NormalButton = withRouter(
         ({ option, route, history, location, children }) => {
             return (
@@ -438,7 +424,16 @@ const LandingPage = () => {
                     reduced trading fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
-                    <BlueButton route="/exchange">Invest</BlueButton>
+                    <DarkButton
+                        onClick={() => {
+                            window.open(
+                                'https://dxdao.eth.link/#/exchange',
+                                '_blank'
+                            );
+                        }}
+                    >
+                        Invest
+                    </DarkButton>
                     <NormalButton route="/faq">FAQ</NormalButton>
                     <Button
                         onClick={() => {

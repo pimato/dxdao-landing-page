@@ -59,7 +59,7 @@ const Footer = () => {
             <LeftFooter>
                 <FooterItem>
                     <a href={links.footer_version} target="#">
-                        Version: {process.env.REACT_APP_VERSION}
+                        Version {process.env.REACT_APP_VERSION}
                     </a>
                 </FooterItem>
                 <FooterDivider></FooterDivider>
