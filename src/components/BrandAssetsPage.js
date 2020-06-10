@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MetaTags from 'react-meta-tags';
 
 const Headline = styled.div`
     font-family: Raleway;
@@ -220,6 +221,14 @@ const BrandAssetsPage = () => {
 
     return (
         <section className="Brand Assets">
+            <MetaTags>
+                <meta
+                    id="meta-description"
+                    name="dxdao.eth"
+                    content="Official DXdao and product logos: Omen Mix Dxswap Mesa"
+                />
+                <meta id="og-title" property="og:title" content="DXdao Brand" />
+            </MetaTags>
             <Headline>DXdao Brand</Headline>
             <Description>
                 <pre>Official DXdao and product logos</pre>
