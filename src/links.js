@@ -1,3 +1,5 @@
+import { version } from '../package.json';
+
 const links = {
     // Landing Page
 
@@ -46,9 +48,7 @@ const links = {
 
     // Footer
 
-    footer_version: `https://github.com/fMercury/dxdao-landing-page/tree/v${process.env.REACT_APP_VERSION}`,
-
-    footer_git_hash: `https://github.com/fMercury/dxdao-landing-page/tree/${process.env.REACT_APP_GIT_SHA}`,
+    footer_version: `https://github.com/fMercury/dxdao-landing-page/tree/v${version}`,
 
     footer_twitter: 'https://twitter.com/dxdao_',
 
