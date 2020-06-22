@@ -146,6 +146,8 @@ const projects = {
         {
             name: 'openraise-dapp',
             github: 'https://github.com/levelkdev/openraise-dapp',
+            ipfs:
+                'https://gateway.ipfs.io/ipfs/QmUJKG2kjQYrsGmkyCR2NVcoif8nXRa8uCARoZWuoZuNxV',
             version: '0.2.3',
             links:
                 '<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xc10a5bbf78e0013dae5d62b4b6dbb174be8cfc6c3e7c3a48869565349162a276" target="_blank" rel="noopener noreferrer">Proposal #1</a>, <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xf3ace9e04caccd90316c344ba3bd32408498f1851a3db08bfbcf7b88181d6c47" target="_blank" rel="noopener noreferrer">Proposal #2</a>',
