@@ -46,7 +46,7 @@ const links = {
 
     // Footer
 
-    footer_version: 'https://github.com/fMercury/dxdao-landing-page',
+    footer_version: `https://github.com/fMercury/dxdao-landing-page/tree/v${process.env.REACT_APP_VERSION}`,
 
     footer_git_hash: `https://github.com/fMercury/dxdao-landing-page/tree/${process.env.REACT_APP_GIT_SHA}`,
 
