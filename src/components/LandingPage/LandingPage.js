@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
+import MetaTags from 'react-meta-tags';
 
 //////
 const LandingPageWrapper = styled.div``;
@@ -369,6 +370,27 @@ const LandingPage = () => {
             <BannerSection>
                 <TagLine>We decentralize DeFi</TagLine>
                 <BannerMessage>
+                    <MetaTags>
+                        <meta
+                            id="meta-description"
+                            name="dxdao.eth"
+                            content="The DXdao is a decentralized organization. It develops, governs, and grows DeFi protocols and products. Owned and operated by the community, the DXdao has the potential to significantly scale its membership."
+                        />
+                        <meta
+                            id="og-title"
+                            property="og:title"
+                            content="DXdao LandingPage"
+                        />
+                        <meta
+                            id="og-image"
+                            property="og:image"
+                            content="DXD.svg"
+                        />
+                        <meta
+                            name="keywords"
+                            content="DXdao, LandingPage, Omen, Mix, Dxswap, Mesa"
+                        />
+                    </MetaTags>
                     <HeavyMessage>DXdao </HeavyMessage>is a{' '}
                     <HeavyMessage>sovereign collective</HeavyMessage>
                 </BannerMessage>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MetaTags from 'react-meta-tags';
 
 const Headline = styled.div`
     font-family: Raleway;
@@ -237,6 +238,19 @@ const CodebasePage = () => {
 
     return (
         <section className="Codebase">
+            <MetaTags>
+                <meta
+                    id="meta-description"
+                    name="dxdao.eth"
+                    content="DXdao Official Projects"
+                />
+                <meta
+                    id="og-title"
+                    property="og:title"
+                    content="DXdao Codebase"
+                />
+                <meta name="keywords" content="DXdao, Codebase" />
+            </MetaTags>
             <Headline>DXdao Codebase</Headline>
             <Subheadline>DXdao Official Projects</Subheadline>
             <CodebaseSection>
