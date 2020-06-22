@@ -423,7 +423,7 @@ const LandingPage = () => {
                     DXD is the DXdao native ERC20 token, DXD token holders have
                     an economic claim to the DXdao´s revenue and it also grants
                     its owners future access to a suite of services and premium
-                    features in decentralised applications, such as glasless
+                    features in decentralised applications, such as gasless
                     transactions, feeless anonymizing of assets, reduced trading
                     fees on DEX protocols and more.
                 </Description>
