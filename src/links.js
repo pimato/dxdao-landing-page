@@ -32,6 +32,9 @@ const links = {
 
     landing_newsletter: 'https://t.me/dxDAO',
 
+    landing_guidebook:
+        'https://docs.google.com/document/d/1odc_6wVYpzF9SBp09Eeltje27mKPhGIMi4NwAPdyDNk',
+
     // Header
 
     header_governance:

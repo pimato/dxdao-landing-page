@@ -432,26 +432,27 @@ const LandingPage = () => {
                         <JoinActionText>Developer chat</JoinActionText>
                         <JoinActionArrow src="RightArrow.svg" />
                     </JoinAction>
+                    <JoinAction href={links.landing_guidebook} target="_blank">
+                        <JoinActionText>Governance Guidebook</JoinActionText>
+                        <JoinActionArrow src="RightArrow.svg" />
+                    </JoinAction>
                 </JoinActionWrapper>
             </BannerSection>
             <DXDSection>
                 <DXDLogo src="DXD.svg" />
-                <Message>DXD powers the Decentralised Ecosystem</Message>
+                <Message>DXD powers the Decentralized Ecosystem</Message>
                 <Description margin="12px">
-                    The DXD token is DXdao´s native token. DXD token holders
-                    have an economic claim to the DXdao´s revenue. It also
-                    grants its owners future access to a suite of services and
-                    premium features in decentralised applications, such as
-                    glasless transactions, feeless anonymizing of assets,
-                    reduced trading fees on DEX protocols and more.
+                    DXD is the DXdao native ERC20 token, DXD token holders have
+                    an economic claim to the DXdao´s revenue and it also grants
+                    its owners future access to a suite of services and premium
+                    features in decentralised applications, such as gasless
+                    transactions, feeless anonymizing of assets, reduced trading
+                    fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
                     <DarkButton
                         onClick={() => {
-                            window.open(
-                                'https://dxdao.eth.link/#/exchange',
-                                '_blank'
-                            );
+                            window.open('https://dxtrust.eth.link/', '_blank');
                         }}
                     >
                         Invest
@@ -490,7 +491,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://daotalk.org/t/omen-mvp-overview/1229"
+                        href="https://omen.eth.link"
                         target="_blank"
                     >
                         <ProductPanel>
@@ -524,7 +525,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://trade.dxdao.eth.link"
+                        href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317"
                         target="_blank"
                     >
                         <ProductPanel>
