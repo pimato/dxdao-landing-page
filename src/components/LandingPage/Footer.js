@@ -62,12 +62,6 @@ const Footer = () => {
                         Version {process.env.REACT_APP_VERSION}
                     </a>
                 </FooterItem>
-                <FooterDivider></FooterDivider>
-                <FooterItem>
-                    <a href={links.footer_git_hash} target="#">
-                        Git Hash
-                    </a>
-                </FooterItem>
             </LeftFooter>
             <RighFooter>
                 <LogoWrapper>
