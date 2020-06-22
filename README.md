@@ -56,4 +56,4 @@ To calculate the same ipfs hash used for the application deployed you will need 
 Once you have your ENV variables set you should delete the `node_modules` and `build` folders, run `yarn` to have fresh dependencies installed and at last run `yarn run build` to generate a clean build.
 Now with the build at your disposal you can calculate the hash of the folder by running `ipfs add -r -n build`.
 
-The build hash ipfs of the entire build folder will be `QmY6JKm4xvwpYzF2xhcYbaLTe6Lmwvhvn6F6H3gLpvyHS9`
+The build hash ipfs of the entire build folder will be `QmPhoeL14E5SBFBaC4bA3nuRpg3MpxdWVYdPrdXHdQ3EHY`
