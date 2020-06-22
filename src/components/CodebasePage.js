@@ -146,8 +146,6 @@ const projects = {
         {
             name: 'openraise-dapp',
             github: 'https://github.com/levelkdev/openraise-dapp',
-            ipfs:
-                'https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/BC-DAPP-0.2.0',
             version: '0.2.3',
             links:
                 '<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xc10a5bbf78e0013dae5d62b4b6dbb174be8cfc6c3e7c3a48869565349162a276" target="_blank" rel="noopener noreferrer">Proposal #1</a>, <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xf3ace9e04caccd90316c344ba3bd32408498f1851a3db08bfbcf7b88181d6c47" target="_blank" rel="noopener noreferrer">Proposal #2</a>',
@@ -193,7 +191,8 @@ const projects = {
         {
             name: 'mesa-dapp',
             github: 'https://github.com/dOrgTech/dex-react',
-            ipfs: '',
+            ipfs:
+                'https://gateway.ipfs.io/ipfs/QmNMBB7Nuc7NDxxRYrh3cU2dSMBddnvn1WvKujUpudzFqY',
             version: '1.0.0',
             links:
                 '<a href="https://mesa.eth.link" target="_blank" rel="noopener noreferrer">Mesa Dapp</a>',
@@ -201,7 +200,8 @@ const projects = {
         {
             name: 'omen-dapp',
             github: 'https://github.com/protofire/gnosis-conditional-exchange',
-            ipfs: '',
+            ipfs:
+                'https://gateway.ipfs.io/ipfs/QmbB3wA5R2PR8s87pJRSUCcBHRxAtfFtkSWmVWEcHsaFeV',
             version: '0.1.0',
             links:
                 '<a href="https://omen.eth.link" target="_blank" rel="noopener noreferrer">Omen Dapp</a>',

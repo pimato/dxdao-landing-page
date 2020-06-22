@@ -418,14 +418,14 @@ const LandingPage = () => {
             </BannerSection>
             <DXDSection>
                 <DXDLogo src="DXD.svg" />
-                <Message>DXD powers the Decentralised Ecosystem</Message>
+                <Message>DXD powers the Decentralized Ecosystem</Message>
                 <Description margin="12px">
-                    The DXD token is DXdao´s native token. DXD token holders
-                    have an economic claim to the DXdao´s revenue. It also
-                    grants its owners future access to a suite of services and
-                    premium features in decentralised applications, such as
-                    glasless transactions, feeless anonymizing of assets,
-                    reduced trading fees on DEX protocols and more.
+                    DXD is the DXdao native ERC20 token, DXD token holders have
+                    an economic claim to the DXdao´s revenue and it also grants
+                    its owners future access to a suite of services and premium
+                    features in decentralised applications, such as glasless
+                    transactions, feeless anonymizing of assets, reduced trading
+                    fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
                     <DarkButton
