@@ -1,6 +1,6 @@
 {
     "name": "dxdao-landing-page",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "description": "DXdao landingpage dxdao.eth.link",
     "scripts": {
         "start": "./scripts/start.sh",
