@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
+import { version } from '../../../package.json';
 
 const FooterWrapper = styled.div`
     display: flex;
@@ -59,7 +60,7 @@ const Footer = () => {
             <LeftFooter>
                 <FooterItem>
                     <a href={links.footer_version} target="#">
-                        Version {process.env.REACT_APP_VERSION}
+                        Version {version}
                     </a>
                 </FooterItem>
             </LeftFooter>
