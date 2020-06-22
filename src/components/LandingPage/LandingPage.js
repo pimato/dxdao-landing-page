@@ -410,6 +410,10 @@ const LandingPage = () => {
                         <JoinActionText>Developer chat</JoinActionText>
                         <JoinActionArrow src="RightArrow.svg" />
                     </JoinAction>
+                    <JoinAction href={links.landing_guidebook} target="_blank">
+                        <JoinActionText>Governance Guidebook</JoinActionText>
+                        <JoinActionArrow src="RightArrow.svg" />
+                    </JoinAction>
                 </JoinActionWrapper>
             </BannerSection>
             <DXDSection>
@@ -426,10 +430,7 @@ const LandingPage = () => {
                 <ButtonRow>
                     <DarkButton
                         onClick={() => {
-                            window.open(
-                                'https://dxdao.eth.link/#/exchange',
-                                '_blank'
-                            );
+                            window.open('https://dxtrust.eth.link/', '_blank');
                         }}
                     >
                         Invest
@@ -468,7 +469,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://daotalk.org/t/omen-mvp-overview/1229"
+                        href="https://omen.eth.link"
                         target="_blank"
                     >
                         <ProductPanel>
@@ -502,7 +503,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://trade.dxdao.eth.link"
+                        href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317"
                         target="_blank"
                     >
                         <ProductPanel>

@@ -144,19 +144,19 @@ const CodebaseSection = styled.div`
 const projects = {
     official: [
         {
-            name: 'BC-DAPP',
-            github: 'https://github.com/levelkdev/BC-DAPP/tree/v0.2.0',
+            name: 'openraise-dapp',
+            github: 'https://github.com/levelkdev/openraise-dapp',
             ipfs:
                 'https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/BC-DAPP-0.2.0',
-            version: 'Stable v0.2.0',
+            version: '0.2.3',
             links:
-                '<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xc10a5bbf78e0013dae5d62b4b6dbb174be8cfc6c3e7c3a48869565349162a276" target="_blank" rel="noopener noreferrer">Propoal #1</a> <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xf3ace9e04caccd90316c344ba3bd32408498f1851a3db08bfbcf7b88181d6c47" target="_blank" rel="noopener noreferrer">Propoal #2</a>',
+                '<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xc10a5bbf78e0013dae5d62b4b6dbb174be8cfc6c3e7c3a48869565349162a276" target="_blank" rel="noopener noreferrer">Proposal #1</a>, <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xf3ace9e04caccd90316c344ba3bd32408498f1851a3db08bfbcf7b88181d6c47" target="_blank" rel="noopener noreferrer">Proposal #2</a>',
         },
         {
             name: 'dxdao-landing-page',
             github: 'https://github.com/fMercury/dxdao-landing-page',
             ipfs: '',
-            version: 'Alpha v0.1.0',
+            version: '0.2.0',
             links: '',
         },
         {
@@ -164,7 +164,7 @@ const projects = {
             github: 'https://github.com/AugustoL/dxdao-snapshot',
             ipfs:
                 'https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/dxdao-snapshot-0.1.0',
-            version: 'Alpha v0.1.0',
+            version: '0.1.0',
             links:
                 '<a href="https://daotalk.org/t/dxdao-snapshot-a-tool-for-monitoring/1429" target="_blank" rel="noopener noreferrer">DAOTalk Topic</a>',
         },
@@ -172,7 +172,7 @@ const projects = {
             name: 'dxswap-core',
             github: 'https://github.com/levelkdev/dxswap-core',
             ipfs: '',
-            version: 'Alpha v0.1.0',
+            version: '0.1.0',
             links:
                 '<a href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317" target="_blank" rel="noopener noreferrer">DAOTalk Topic</a>',
         },
@@ -180,30 +180,31 @@ const projects = {
             name: 'dxswap-periphery',
             github: 'https://github.com/levelkdev/dxswap-periphery',
             ipfs: '',
-            version: 'Alpha v0.1.0',
+            version: '0.1.0',
             links: '',
         },
         {
             name: 'dxswap-dapp',
             github: 'https://github.com/levelkdev/dxswap-dapp',
             ipfs: '',
-            version: 'Alpha v0.1.0',
+            version: '0.1.0',
             links: '',
         },
         {
             name: 'mesa-dapp',
             github: 'https://github.com/dOrgTech/dex-react',
             ipfs: '',
-            version: 'Stable v0.1.0',
-            links: '',
+            version: '1.0.0',
+            links:
+                '<a href="https://mesa.eth.link" target="_blank" rel="noopener noreferrer">Mesa Dapp</a>',
         },
         {
             name: 'omen-dapp',
             github: 'https://github.com/protofire/gnosis-conditional-exchange',
             ipfs: '',
-            version: 'Alpha v0.1.0',
+            version: '0.1.0',
             links:
-                '<a href="https://conditional.netlify.com/" target="_blank" rel="noopener noreferrer">Netifly Deploy</a>',
+                '<a href="https://omen.eth.link" target="_blank" rel="noopener noreferrer">Omen Dapp</a>',
         },
     ],
     community: [
@@ -213,7 +214,7 @@ const projects = {
                 'https://github.com/AugustoL/voting-dapp-daostack/tree/2d0c7e23f893fe733592c1401a801ec8007f3567',
             ipfs:
                 'https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/voting-dapp-daostack-2d0c7e23f893fe733592c1401a801ec8007f3567',
-            version: 'Stable v0.10.8',
+            version: '0.10.8',
             links:
                 '<a href="https://daotalk.org/t/presenting-voting-dapp-4-daostack-daos/1345" target="_blank" rel="noopener noreferrer">DAOTalk Topic</a> <a href="http://vote.dxtest.eth.link/" target="_blank" rel="noopener noreferrer">vote.dxtest.eth.link</a>',
         },
@@ -221,7 +222,7 @@ const projects = {
             name: 'arc-react',
             github: 'https://github.com/dOrgTech/arc.react',
             ipfs: '',
-            version: 'Alpha v0.0.1-alpha.2',
+            version: '0.0.1-alpha.2',
             links: '',
         },
     ],
