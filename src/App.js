@@ -8,6 +8,7 @@ import LandingPageHeader from './components/LandingPage/Header';
 import FAQPage from 'components/FAQPage';
 import BrandAssetsPage from 'components/BrandAssetsPage';
 import CodebasePage from 'components/CodebasePage';
+import Manifesto from './components/Manifesto';
 
 const App = () => {
     return (
@@ -48,6 +49,15 @@ const App = () => {
                         <div className="app-shell">
                             <LandingPageHeader />
                             <CodebasePage />
+                            <LandingPageFooter />
+                        </div>
+                    </div>
+                </Route>
+                <Route exact="/manifesto">
+                    <div className="landing-body-container">
+                        <div className="app-shell">
+                            <LandingPageHeader />
+                            <Manifesto />
                             <LandingPageFooter />
                         </div>
                     </div>
