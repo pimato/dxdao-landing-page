@@ -118,18 +118,13 @@ const MobileMenuItem = styled(Link)`
 const NavBar = ({}) => {
     const [active, setActive] = useState(false);
 
-    const routerPushMethod = (history, route) => {
+    const NavItem = withRouter(({ route, history, children }) => {
+        return <LogoContainer onClick={routerPush}>{children}</LogoContainer>;
+    });
+
+    const routerPush = (history, route) => {
         history.push(route);
     };
-    const NavItem = withRouter(
-        ({ option, route, history, location, children }) => {
-            return (
-                <LogoContainer onClick={routerPushMethod(history, route)}>
-                    {children}
-                </LogoContainer>
-            );
-        }
-    );
 
     const toggleMenu = (): void => {
         if (active === true) {
