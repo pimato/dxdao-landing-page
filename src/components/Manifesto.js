@@ -151,7 +151,7 @@ const Manifesto = () => {
             <ParagraphStandard marginTop={'0.75'}>
                 After the initial REP distribution, DXdao moved to launch a
                 token (DXD) to raise funds for the DAO. REP holders
-                <InlineUnderline thickness={1}>
+                <InlineUnderline>
                     {' '}
                     <a
                         href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xeb9cf2b3d76664dc1e983137f33b2400ad11966b1d79399d7ca55c25ad6283fa"
@@ -167,7 +167,7 @@ const Manifesto = () => {
                 as more DXD is minted. DXdao has a 100k DXD pre-mint that
                 unlocks continuously over three years. The full DXdao treasury
                 can be seen{' '}
-                <InlineUnderline thickness={1}>
+                <InlineUnderline>
                     <a
                         href="https://etherscan.io/tokenholdings?a=0x519b70055af55a007110b4ff99b0ea33071c720a"
                         target="_blank"
@@ -211,9 +211,7 @@ const Manifesto = () => {
                 <Bullet />
                 <ListItem>
                     <InlineBold>
-                        <InlineUnderline thickness={2}>
-                            Holographic Consensus
-                        </InlineUnderline>
+                        <InlineUnderline>Holographic Consensus</InlineUnderline>
                     </InlineBold>{' '}
                     - proposals are passed through a majority vote of REP
                     holders, but in order to scale its decision-making, DXdao
