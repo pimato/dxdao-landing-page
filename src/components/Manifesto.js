@@ -43,7 +43,7 @@ const SubHeadline = styled.div`
     line-height: 26px;
     letter-spacing: 0.02em;
     text-align: left;
-    color: #616161;
+    color: #2b2b2b;
     margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0)}rem;
 `;
 const RegularBold = styled.div`
@@ -56,11 +56,10 @@ const RegularBold = styled.div`
     color: #616161;
 `;
 const ItemWrapper = styled.div`
-    margin-top: 0.75rem;
+    margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0.625)}rem;
 `;
 
 const ListItem = styled(ParagraphStandard)`
-    margin-top: 0.625rem;
     overflow: hidden;
 `;
 const Bullet = styled.div`
@@ -73,13 +72,13 @@ const Bullet = styled.div`
     margin-right: 16px;
 `;
 const InlineUnderline = styled.span`
-    border-bottom: ${(prop) => prop.thickness}px solid #616161;
+    text-decoration: underline;
 `;
 const InlineBold = styled.span`
-    font-weight: 600;
+    font-weight: 500;
 `;
 const Logo = styled.img`
-    width: 24px;
+    width: 28px;
 `;
 const FlexWrap = styled.div`
     display: flex;
@@ -91,7 +90,15 @@ const Manifesto = () => {
     return (
         <ManifestoSection>
             <Headline>DXdao Manifesto</Headline>
-            <DateRatified>Ratified on September 19th, 2020</DateRatified>
+            <DateRatified>
+                <a
+                    href="https://etherscan.io/tx/0x7ae4b4a3dc8e8bc31a42a39f12b6c4b6a5ba3608a12b961f3f6dc006d99507b9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Ratified on September 19th, 2020
+                </a>
+            </DateRatified>
             <ParagraphStandard marginTop={'2'}>
                 DXdao is a decentralized collective that builds and governs
                 decentralized products and services for the world. It aims to be
@@ -146,7 +153,13 @@ const Manifesto = () => {
                 token (DXD) to raise funds for the DAO. REP holders
                 <InlineUnderline thickness={1}>
                     {' '}
-                    voted on April 25, 2020
+                    <a
+                        href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xeb9cf2b3d76664dc1e983137f33b2400ad11966b1d79399d7ca55c25ad6283fa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        voted on April 25, 2020
+                    </a>
                 </InlineUnderline>{' '}
                 to launch a bonding curve to mint DXD in exchange for ETH to be
                 held in DXdao’s treasury, which is controlled by REP holders.
@@ -154,7 +167,16 @@ const Manifesto = () => {
                 as more DXD is minted. DXdao has a 100k DXD pre-mint that
                 unlocks continuously over three years. The full DXdao treasury
                 can be seen{' '}
-                <InlineUnderline thickness={1}> here</InlineUnderline> .
+                <InlineUnderline thickness={1}>
+                    <a
+                        href="https://etherscan.io/tokenholdings?a=0x519b70055af55a007110b4ff99b0ea33071c720a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        here
+                    </a>
+                </InlineUnderline>{' '}
+                .
             </ParagraphStandard>
             <ParagraphStandard marginTop={'0.75'}>
                 DXD holders are entitled to the financial value created from
@@ -166,7 +188,7 @@ const Manifesto = () => {
             </ParagraphStandard>
             <SubHeadline marginTop={'2.375'}>DXdao is on-chain</SubHeadline>
 
-            <ItemWrapper>
+            <ItemWrapper marginTop={'0.75'}>
                 <Bullet />
                 <ListItem>
                     <InlineBold>No individual speaks for DXdao</InlineBold> -
@@ -208,7 +230,7 @@ const Manifesto = () => {
                 Decentralization for the world
             </SubHeadline>
 
-            <ItemWrapper>
+            <ItemWrapper marginTop={'0.75'}>
                 <Bullet />
                 <ListItem>
                     <InlineBold>Scaling decentralization</InlineBold> - DXdao’s
@@ -241,7 +263,7 @@ const Manifesto = () => {
                 Governance is the solution
             </SubHeadline>
 
-            <ItemWrapper>
+            <ItemWrapper marginTop={'0.75'}>
                 {' '}
                 <Bullet />
                 <ListItem>
@@ -277,7 +299,7 @@ const Manifesto = () => {
                 Open discourse and respect in reaching consensus
             </SubHeadline>
 
-            <ItemWrapper>
+            <ItemWrapper marginTop={'0.75'}>
                 {' '}
                 <Bullet />
                 <ListItem>
