@@ -118,13 +118,13 @@ const MobileMenuItem = styled(Link)`
 const NavBar = ({}) => {
     const [active, setActive] = useState(false);
 
-    const routerPushMethod = (history, route) => {
-        history.push(route);
-    };
     const NavItem = withRouter(
         ({ option, route, history, location, children }) => {
+            function routerPushMethod() {
+                history.push(route);
+            }
             return (
-                <LogoContainer onClick={routerPushMethod(history, route)}>
+                <LogoContainer onClick={routerPushMethod}>
                     {children}
                 </LogoContainer>
             );
