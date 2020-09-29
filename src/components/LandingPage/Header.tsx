@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
-import links from '../../links'
-
+import links from '../../links';
 
 const NavWrapper = styled.div`
     display: flex;
@@ -11,10 +10,10 @@ const NavWrapper = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 50px 0px 40px 0px;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
         padding: 25px 0px 20px 0px;
     }
-    @media(max-width: 460px) {
+    @media (max-width: 460px) {
         padding: 25px 10px 20px;
     }
 `;
@@ -34,7 +33,7 @@ const RightNav = styled.div`
 const DXdaoLogo = styled.img`
     height: 32px;
     width: 32px;
-    @media(max-width: 460px) {
+    @media (max-width: 460px) {
         height: 40px;
         width: 40px;
     }
@@ -60,7 +59,7 @@ const MenuItem = styled(Link)`
     cursor: pointer;
     margin-left: 42px;
     text-decoration: none;
-    @media(max-width: 460px) {
+    @media (max-width: 460px) {
         display: none;
     }
 `;
@@ -74,7 +73,7 @@ const MobileMenu = styled.div`
     align-items: center;
     justify-content: center;
     display: none;
-    @media(max-width: 460px) {
+    @media (max-width: 460px) {
         display: flex;
     }
 `;
@@ -93,8 +92,8 @@ const MobileNav = styled.div`
     border-bottom: 1px solid var(--footer-divider);
     padding-bottom: 12px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
-    ${props => {
-        if(props.active) {
+    ${(props) => {
+        if (props.active) {
             return `display: flex`;
         } else {
             return `display: none`;
@@ -118,15 +117,14 @@ const MobileMenuItem = styled(Link)`
 
 const NavBar = ({}) => {
     const [active, setActive] = useState(false);
-    
+
+    const routerPushMethod = (history, route) => {
+        history.push(route);
+    };
     const NavItem = withRouter(
         ({ option, route, history, location, children }) => {
             return (
-                <LogoContainer
-                    onClick={() => {
-                        history.push(route);
-                    }}
-                >
+                <LogoContainer onClick={routerPushMethod(history, route)}>
                     {children}
                 </LogoContainer>
             );
@@ -134,39 +132,42 @@ const NavBar = ({}) => {
     );
 
     const toggleMenu = (): void => {
-        if(active === true) {
+        if (active === true) {
             setActive(false);
         } else {
             setActive(true);
         }
-    }
+    };
 
     const handleLogoClicked = (): void => {
-        if(active === true){
+        if (active === true) {
             setActive(false);
         }
-    }
+    };
 
     return (
         <NavWrapper>
             <LeftNav>
                 <NavItem route="/">
-                    <DXdaoLogo src="Dxdao_Landing.svg" onClick={handleLogoClicked}/>
+                    <DXdaoLogo
+                        src="Dxdao_Landing.svg"
+                        onClick={handleLogoClicked}
+                    />
                 </NavItem>
             </LeftNav>
             <RightNav>
-                <MenuItem to={links.landing_codebase} >
-                    Codebase
-                </MenuItem>
-                <MenuItem to={links.landing_brand}>
-                    Brand Assets
-                </MenuItem>
+                <MenuItem to={links.landing_codebase}>Codebase</MenuItem>
+                <MenuItem to={links.landing_brand}>Brand Assets</MenuItem>
+                <MenuItem to={links.landing_manifesto}>Manifesto</MenuItem>
                 <MobileMenu onClick={toggleMenu}>
                     <img src="menu-burger.svg" alt="Menu" />
                 </MobileMenu>
             </RightNav>
             <MobileNav active={active}>
-                <MobileMenuItem to={links.landing_codebase} onClick={toggleMenu}>
+                <MobileMenuItem
+                    to={links.landing_codebase}
+                    onClick={toggleMenu}
+                >
                     Codebase
                 </MobileMenuItem>
                 <MobileMenuItem to={links.landing_brand} onClick={toggleMenu}>

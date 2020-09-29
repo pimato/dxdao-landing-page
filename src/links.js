@@ -11,6 +11,8 @@ const links = {
 
     landing_brand: '/brand-assets',
 
+    landing_manifesto: '/manifesto',
+
     landing_whitepaper:
         'https://github.com/gnosis/dx-daostack/blob/master/dxdao_whitepaper_v1.pdf',
 
