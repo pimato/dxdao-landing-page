@@ -7,7 +7,7 @@ const Rounded = css`
     padding: 2rem;
     margin-top: 1.25rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         padding: 1.25rem;
     }
 `;
@@ -21,7 +21,7 @@ const Headline = styled.div`
     letter-spacing: 0.02em;
     text-align: left;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         font-size: 18px;
         line-height: 23px;
         letter-spacing: 0.01em;
@@ -39,74 +39,68 @@ const BlueText = styled.div`
     color: #536dfe;
     text-decoration-line: underline;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         font-size: 14px;
         margin-top: 0.375rem;
         line-height: 22px;
         letter-spacing: 0em;
     }
 `;
-const GridWrapper = styled.div`
+const FlexWrapper = styled.div`
     margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
     font-family: IBM Plex Sans;
 `;
 
 const GuidingTenets = styled.div`
-    grid-column: 1/11;
     ${Rounded};
     margin-top: 0px;
 `;
 const SalaryStructure = styled.div`
-    grid-column: 1/11;
     ${Rounded}
 `;
 const MonthlyComp = styled.div`
-    grid-column: 1/7;
+    flex: 2;
     margin-right: 1.25rem;
-    @media screen and (max-width: 600px) {
-        grid-column: 1/11;
-        margin-right: 0px;
-    }
     ${Rounded};
     padding: 0px;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
+        margin-right: 0rem;
         padding: 0px;
         line-height: 21px;
     }
 `;
 const CalculateComp = styled.div`
-    grid-column: 7/11;
-
-    @media screen and (max-width: 600px) {
-        grid-column: 1/11;
+    flex: 1;
+    @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
     }
     ${Rounded}
 `;
 
 const ExperienceGuidelines = styled.div`
-    grid-column: 1/11;
     ${Rounded}
 `;
 const ExampleCompStructure = styled.div`
-    grid-column: 1/6;
-
-    @media screen and (max-width: 600px) {
-        grid-column: 1/11;
+    flex: 1;
+    @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
         margin-right: 0px;
     }
     margin-right: 0.625rem;
     ${Rounded}
 `;
 const OtherItems = styled.div`
-    @media screen and (max-width: 600px) {
-        grid-column: 1/11;
+    flex: 1;
+    @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
         margin-left: 0px;
     }
 
     margin-left: 0.625rem;
-    grid-column: 6/11;
     ${Rounded}
 `;
 
@@ -118,7 +112,7 @@ const SubHeader = styled.div`
     letter-spacing: 0.02em;
     text-align: left;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         font-size: 16px;
         line-height: 21px;
     }
@@ -136,7 +130,7 @@ const NormalText = styled.div`
 const ItemWrapper = styled.div`
     margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0.625)}rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0.5)}rem;
     }
 `;
@@ -184,7 +178,7 @@ const NumberBullet = styled.div`
     padding-top: 3px;
     margin-right: 1.25rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         font-size: 10px;
         height: 20px;
         width: 20px;
@@ -193,10 +187,15 @@ const NumberBullet = styled.div`
 `;
 const Table = styled.table`
     width: 100%;
-    //table-layout: fixed;
     height: 78%;
     margin-top: 1.25rem;
     border-collapse: collapse;
+    @media screen and (max-width: 985px) {
+        height: 81%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 867px) {
+        height: 83%;
+    }
 `;
 const TableHeader = styled.th`
     font-size: 14px;
@@ -210,7 +209,7 @@ const TableHeader = styled.th`
     border-top: 1px solid #ddd;
     padding: 0.5625rem 2rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         padding: 0.5625rem 1rem;
         font-size: 12px;
     }
@@ -223,7 +222,7 @@ const TableRegular = styled(TableHeader)`
 const MonthlyHeader = styled(SubHeader)`
     margin: 2rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         margin: 1.25rem;
     }
 `;
@@ -232,7 +231,7 @@ const WorkerCompensation = () => {
         <React.Fragment>
             <Headline>Worker Compensation Guidelines</Headline>
             <BlueText>Ratified on September 19th, 2020</BlueText>
-            <GridWrapper>
+            <FlexWrapper>
                 <GuidingTenets>
                     <SubHeader>GuidingTenets</SubHeader>
                     <ItemWrapper marginTop={'1'}>
@@ -505,7 +504,7 @@ const WorkerCompensation = () => {
                         </NormalText>
                     </ItemWrapper>
                 </OtherItems>
-            </GridWrapper>
+            </FlexWrapper>
         </React.Fragment>
     );
 };
