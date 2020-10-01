@@ -9,6 +9,7 @@ import FAQPage from 'components/FAQPage';
 import BrandAssetsPage from 'components/BrandAssetsPage';
 import CodebasePage from 'components/CodebasePage';
 import Manifesto from './components/Manifesto';
+import WorkerCompensation from './components/WorkerCompensation';
 
 const App = () => {
     return (
@@ -53,11 +54,20 @@ const App = () => {
                         </div>
                     </div>
                 </Route>
-                <Route exact="/manifesto">
+                <Route exact path="/manifesto">
                     <div className="landing-body-container">
                         <div className="app-shell">
                             <LandingPageHeader />
                             <Manifesto />
+                            <LandingPageFooter />
+                        </div>
+                    </div>
+                </Route>
+                <Route exact path="/worker-compensation">
+                    <div className="landing-body-container">
+                        <div className="app-shell">
+                            <LandingPageHeader />
+                            <WorkerCompensation />
                             <LandingPageFooter />
                         </div>
                     </div>

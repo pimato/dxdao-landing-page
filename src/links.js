@@ -13,6 +13,8 @@ const links = {
 
     landing_manifesto: '/manifesto',
 
+    landing_worker_compensation: '/worker-compensation',
+
     landing_whitepaper:
         'https://github.com/gnosis/dx-daostack/blob/master/dxdao_whitepaper_v1.pdf',
 
