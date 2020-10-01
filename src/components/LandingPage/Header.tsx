@@ -159,6 +159,9 @@ const NavBar = ({}) => {
                 <MenuItem to={links.landing_codebase}>Codebase</MenuItem>
                 <MenuItem to={links.landing_brand}>Brand Assets</MenuItem>
                 <MenuItem to={links.landing_manifesto}>Manifesto</MenuItem>
+                <MenuItem to={links.landing_worker_compensation}>
+                    Worker Compensation
+                </MenuItem>
                 <MobileMenu onClick={toggleMenu}>
                     <img src="menu-burger.svg" alt="Menu" />
                 </MobileMenu>
