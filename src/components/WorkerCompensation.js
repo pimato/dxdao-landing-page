@@ -5,7 +5,7 @@ const Rounded = css`
     border: 1px solid #d6d6d6;
     border-radius: 6px;
     padding: 2rem;
-    margin-top: 1.25rem;
+    margin-top: 1rem;
 
     @media screen and (max-width: 600px) {
         padding: 1.25rem;
@@ -64,7 +64,7 @@ const SalaryStructure = styled.div`
 `;
 const MonthlyComp = styled.div`
     grid-column: 1/7;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     @media screen and (max-width: 600px) {
         grid-column: 1/11;
         margin-right: 0px;
@@ -96,17 +96,14 @@ const ExampleCompStructure = styled.div`
         grid-column: 1/11;
         margin-right: 0px;
     }
-    margin-right: 0.625rem;
+    margin-right: 1rem;
     ${Rounded}
 `;
 const OtherItems = styled.div`
+    grid-column: 6/11;
     @media screen and (max-width: 600px) {
         grid-column: 1/11;
-        margin-left: 0px;
     }
-
-    margin-left: 0.625rem;
-    grid-column: 6/11;
     ${Rounded}
 `;
 
@@ -127,8 +124,8 @@ const NormalText = styled.div`
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
+    line-height: ${(prop) => (prop.lineHeight ? prop.lineHeight : 22)}px;
+    letter-spacing: 0.01rem;
     text-align: left;
     overflow: hidden;
     color: #616161;
@@ -194,7 +191,6 @@ const NumberBullet = styled.div`
 const Table = styled.table`
     width: 100%;
     //table-layout: fixed;
-    height: 78%;
     margin-top: 1.25rem;
     border-collapse: collapse;
 `;
@@ -208,7 +204,7 @@ const TableHeader = styled.th`
     text-align: left;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
-    padding: 0.5625rem 2rem;
+    padding: 0.625rem 2rem;
 
     @media screen and (max-width: 600px) {
         padding: 0.5625rem 1rem;
@@ -234,7 +230,7 @@ const WorkerCompensation = () => {
             <BlueText>Ratified on September 19th, 2020</BlueText>
             <GridWrapper>
                 <GuidingTenets>
-                    <SubHeader>GuidingTenets</SubHeader>
+                    <SubHeader>Guiding Tenets</SubHeader>
                     <ItemWrapper marginTop={'1'}>
                         <Bullet />
                         <NormalText>
@@ -364,21 +360,21 @@ const WorkerCompensation = () => {
                             guidelines and in consultation with DXdao community
                         </NormalText>
                     </ItemWrapper>
-                    <ItemWrapper marginTop={'1.25'}>
+                    <ItemWrapper marginTop={'1'}>
                         <NumberBullet>2</NumberBullet>
                         <NormalText>
                             Select Base Salary + DXD from monthly compensation
                             table
                         </NormalText>
                     </ItemWrapper>
-                    <ItemWrapper marginTop={'1.25'}>
+                    <ItemWrapper marginTop={'1'}>
                         <NumberBullet>3</NumberBullet>
                         <NormalText>
                             If opting for part-time work, multiply these numbers
                             by % of time, or intended hrs/week divided by 40.
                         </NormalText>
                     </ItemWrapper>
-                    <ItemWrapper marginTop={'1.25'}>
+                    <ItemWrapper marginTop={'1'}>
                         <NumberBullet>4</NumberBullet>
                         <NormalText>
                             Determine % of full salary if during the month trial
@@ -391,7 +387,7 @@ const WorkerCompensation = () => {
                     <SubHeader>Experience Guidelines</SubHeader>
                     <ItemWrapper marginTop={'1.5'}>
                         <LevelsBullet>Level 1</LevelsBullet>
-                        <NormalText>
+                        <NormalText lineHeight={'28'}>
                             I’m new! I don’t have many marketable life skills
                             but I’m passionate about DXdao and eager to learn
                         </NormalText>
@@ -406,7 +402,7 @@ const WorkerCompensation = () => {
                             expertise in my vertical.
                         </NormalText>
                     </ItemWrapper>
-                    <ItemWrapper>
+                    <ItemWrapper marginTop={'1'}>
                         <LevelsBullet>Level 3</LevelsBullet>
                         <NormalText>
                             I’ve been around the block and know how to work
@@ -416,7 +412,7 @@ const WorkerCompensation = () => {
                             vertically.
                         </NormalText>
                     </ItemWrapper>
-                    <ItemWrapper>
+                    <ItemWrapper marginTop={'1'}>
                         <LevelsBullet>Level 4</LevelsBullet>
                         <NormalText>
                             I know what’s going on and some (maybe even myself)
@@ -426,7 +422,7 @@ const WorkerCompensation = () => {
                             skill set.
                         </NormalText>
                     </ItemWrapper>
-                    <ItemWrapper>
+                    <ItemWrapper marginTop={'1'}>
                         <LevelsBullet>Level 5</LevelsBullet>
                         <NormalText>
                             I have deep expertise in a particular vertical or
