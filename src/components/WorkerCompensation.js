@@ -233,37 +233,40 @@ const WorkerCompensation = () => {
             <BlueText>Ratified on September 19th, 2020</BlueText>
             <FlexWrapper>
                 <GuidingTenets>
-                    <SubHeader>Guiding Tenets</SubHeader>
-                    <ItemWrapper marginTop={'1'}>
-                        <Bullet />
-                        <NormalText>
-                            DXdao should offer fair & competitive compensation,
-                            while also attracting those aligned with the mission
-                            of DXdao.
-                        </NormalText>
-                    </ItemWrapper>
-                    <ItemWrapper>
-                        <Bullet />
-                        <NormalText>
-                            DXdao hopes to attract the best and most ambitious
-                            minds across the world.
-                        </NormalText>
-                    </ItemWrapper>
-                    <ItemWrapper>
-                        <Bullet />
-                        <NormalText>
-                            Transparency in structure and a clear path for
-                            future growth are important.
-                        </NormalText>
-                    </ItemWrapper>
-                    <ItemWrapper>
-                        <Bullet />
-                        <NormalText>
-                            DXdao workers should be incentivized to drive
-                            financial value to DXD; compensation in DXD is meant
-                            to align worker interests with DXD holders.
-                        </NormalText>
-                    </ItemWrapper>
+                    <SubHeader>
+                        Guiding Tenets
+                        <ItemWrapper marginTop={'1'}>
+                            <Bullet />
+                            <NormalText>
+                                DXdao should offer fair & competitive
+                                compensation, while also attracting those
+                                aligned with the mission of DXdao.
+                            </NormalText>
+                        </ItemWrapper>
+                        <ItemWrapper>
+                            <Bullet />
+                            <NormalText>
+                                DXdao hopes to attract the best and most
+                                ambitious minds across the world.
+                            </NormalText>
+                        </ItemWrapper>
+                        <ItemWrapper>
+                            <Bullet />
+                            <NormalText>
+                                Transparency in structure and a clear path for
+                                future growth are important.
+                            </NormalText>
+                        </ItemWrapper>
+                        <ItemWrapper>
+                            <Bullet />
+                            <NormalText>
+                                DXdao workers should be incentivized to drive
+                                financial value to DXD; compensation in DXD is
+                                meant to align worker interests with DXD
+                                holders.
+                            </NormalText>
+                        </ItemWrapper>
+                    </SubHeader>
                 </GuidingTenets>
                 <SalaryStructure>
                     <SubHeader>Salary Structure</SubHeader>
