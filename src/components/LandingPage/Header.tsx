@@ -334,28 +334,28 @@ const NavBar = () => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            onClick={(event) => handleNavItemClick('', event)}
                             as="a"
                             href={links.landing_developer_chat}
                             target="_blank"
-                            onClick={(event) => handleNavItemClick('', event)}
                         >
                             Keybase
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            onClick={(event) => handleNavItemClick('', event)}
                             as="a"
                             href={links.header_forum}
                             target="_blank"
-                            onClick={(event) => handleNavItemClick('', event)}
                         >
                             Forum
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            onClick={(event) => handleNavItemClick('', event)}
                             as="a"
                             href={links.header_youtube}
                             target="_blank"
-                            onClick={(event) => handleNavItemClick('', event)}
                         >
                             Youtube
                         </SubItem>

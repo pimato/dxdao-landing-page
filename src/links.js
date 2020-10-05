@@ -37,7 +37,6 @@ const links = {
     landing_developer_chat: 'https://keybase.io/team/dx_dao',
 
     landing_newsletter: 'https://t.me/dxDAO',
-    landing_youtube: 'https://www.youtube.com/channel/UCb8ZjuuGhd062bGBWx5ce8A',
 
     landing_guidebook:
         'https://docs.google.com/document/d/1odc_6wVYpzF9SBp09Eeltje27mKPhGIMi4NwAPdyDNk',
