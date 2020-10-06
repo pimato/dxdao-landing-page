@@ -345,7 +345,7 @@ const LandingPage = () => {
     return (
         <LandingPageWrapper>
             <BannerSection>
-                <TagLine>WE PUT DECENTRALISATION BACK INTO DEFI</TagLine>
+                <TagLine>WE PUT DECENTRALISATION INTO DEFI</TagLine>
                 <BannerMessage>
                     <MetaTags>
                         <meta

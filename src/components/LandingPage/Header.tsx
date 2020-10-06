@@ -312,10 +312,10 @@ const NavBar = ({ passData }) => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
+                            as="a"
                             href={links.landing_guidebook}
                             target="_blank"
                         >
@@ -336,10 +336,10 @@ const NavBar = ({ passData }) => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
+                            as="a"
                             href={links.landing_omeneth}
                             target="_blank"
                         >
@@ -347,10 +347,10 @@ const NavBar = ({ passData }) => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
+                            as="a"
                             href={links.landing_dxswapeth}
                             target="_blank"
                         >
@@ -367,12 +367,12 @@ const NavBar = ({ passData }) => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            as="a"
-                            target="_blank"
-                            to={links.landing_codebase}
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
+                            as="a"
+                            target="_blank"
+                            to={links.landing_codebase}
                         >
                             Codebase
                         </SubItem>
@@ -464,11 +464,11 @@ const NavBar = ({ passData }) => {
                         </DropdownItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.landing_guidebook}
                             target="_blank"
                         >
@@ -487,11 +487,11 @@ const NavBar = ({ passData }) => {
                         </DropdownItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.landing_omeneth}
                             target="_blank"
                         >
