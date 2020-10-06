@@ -50,6 +50,9 @@ const links = {
 
     header_forum: 'https://daotalk.org/c/daos/dx-dao/15',
 
+    header_bounties:
+        'https://docs.google.com/document/d/1rLLUJu9a06YLhnAVNvzglbtoubUdiV9G436QVrrkNlE/edit',
+
     // Footer
 
     footer_version: `https://github.com/fMercury/dxdao-landing-page/tree/v${version}`,

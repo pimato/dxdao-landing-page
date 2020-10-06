@@ -8,6 +8,10 @@ const ManifestoSection = styled.section`
     font-family: 'IBM Plex Sans', sans-serif;
     border: 1px solid #d6d6d6;
     border-radius: 6px;
+
+    @media screen and (max-width: 768px) {
+        padding: 1.75rem 1.5rem;
+    }
 `;
 const Headline = styled.div`
     font-size: 28px;

@@ -64,11 +64,7 @@
     background-color: var(--white);
 }
 
-.app-shell {
-    width: 936px;
-    max-width: 90vw;
-    min-height: 100vh;
-}
+
 
 .green-text {
     color: #54ae6f;

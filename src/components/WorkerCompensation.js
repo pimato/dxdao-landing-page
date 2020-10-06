@@ -8,7 +8,7 @@ const Rounded = css`
     margin-top: 1rem;
 
     @media screen and (max-width: 768px) {
-        padding: 1.25rem;
+        padding: 1.75rem 1.5rem;
     }
 `;
 const Headline = styled.div`
@@ -63,7 +63,7 @@ const SalaryStructure = styled.div`
 `;
 const MonthlyComp = styled.div`
     flex: 2;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     ${Rounded};
     padding: 0px;
     @media screen and (max-width: 768px) {

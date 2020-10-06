@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
@@ -10,9 +10,9 @@ const NavWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 3.125rem 0 2.5rem 0;
+    padding: 3.125rem 0 0.5rem 0;
     @media (max-width: 768px) {
-        padding: 1.5625px 0 1.25rem 0;
+        padding: 1.5625rem 0 1.25rem 0;
     }
     @media (max-width: 460px) {
         padding: 1.5625rem 0.625rem 1.25rem;
@@ -32,12 +32,8 @@ const RightNav = styled.div`
 `;
 
 const DXdaoLogo = styled.img`
-    height: 2rem;
-    width: 2rem;
-    @media (max-width: 460px) {
-        height: 2.5rem;
-        width: 2.5rem;
-    }
+    height: 1.75rem;
+    width: 5.825rem;
 `;
 
 const LogoContainer = styled.div`
@@ -47,105 +43,11 @@ const LogoContainer = styled.div`
     font-size: 16px;
     line-height: 19px;
     cursor: pointer;
-`;
-
-const MenuItem = styled.div`
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    color: var(--dark-text);
-    cursor: pointer;
-    margin-left: 2.625rem;
-    text-decoration: none;
+    padding-bottom: 2rem;
     @media (max-width: 460px) {
-        display: none;
+        padding-bottom: 0;
     }
 `;
-
-const MobileMenu = styled.div`
-    width: 3.25rem;
-    height: 2.625rem;
-    border: 1px solid rgba(51, 51, 51, 0.2);
-    box-sizing: border-box;
-    border-radius: 3px;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    @media (max-width: 460px) {
-        display: flex;
-    }
-`;
-
-const MobileNav = styled.div`
-    position: absolute;
-    left: 0;
-    top: 76px;
-    width: 100%;
-    padding-left: 1.25rem;
-    background: var(--white);
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    border-bottom: 1px solid var(--footer-divider);
-    padding-bottom: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    padding-top: 1rem;
-    display: ${(props) => (props.active ? 'flex' : 'none')};
-    z-index: 1;
-`;
-const Arrow = styled.i`
-    float: right;
-    border: solid #000000;
-    border-width: 0 2px 2px 0;
-    margin-top: 0.875rem;
-    margin-right: 1.75rem;
-    display: inline-block;
-    padding: 0.25rem;
-    transform: ${(prop) => (!prop.show ? 'rotate(45deg)' : 'rotate(-135deg)')};
-    -webkit-transform: ${(prop) =>
-        !prop.show ? 'rotate(45deg)' : 'rotate(-135deg)'};
-`;
-
-const MobileMenuItem = styled.div`
-    font-family: IBM Plex Sans;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 31px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    margin-bottom: 1.5rem;
-    display: block;
-    color: black;
-    float: left;
-    width: 99%;
-`;
-
-const MobileDropdown = styled.div`
-    display: ${(prop) => (!prop.show ? 'none' : 'block')};
-    color: black;
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
-`;
-const DropdownItem = styled(Link)`
-    display: block;
-    color: black;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 25px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    &:not(:last-child) {
-        margin-bottom: 1.25rem;
-    }
-    ${(prop) =>
-        prop.disabled ? 'pointer-events: none;opacity: 0.5;color:grey;' : ''};
-`;
-
 const SubMenu = styled.div`
     position: absolute;
     display: ${(prop) => (!prop.show ? 'none' : 'flex')};
@@ -170,9 +72,113 @@ const SubItem = styled(Link)`
     },
     ${(prop) =>
         prop.disabled ? 'pointer-events: none;opacity: 0.5;color:grey;' : ''};
-    
+    &:hover  {
+    ${(prop) => (!prop.disabled ? 'color: #536DFE;' : '')};
+        
+}
 `;
 
+const MenuItem = styled.div`
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: var(--dark-text);
+    cursor: pointer;
+    margin-left: 2.625rem;
+    text-decoration: none;
+    padding-bottom: 2rem;
+    @media (max-width: 460px) {
+        display: none;
+    }
+    &:hover ${SubMenu} {
+        display: flex;
+    }
+    &:hover {
+        color: #536dfe;
+    }
+`;
+
+const MobileMenu = styled.div`
+    width: 3.25rem;
+    height: 2.625rem;
+
+    box-sizing: border-box;
+
+    align-items: center;
+    justify-content: center;
+    display: none;
+    @media (max-width: 460px) {
+        display: flex;
+    }
+`;
+
+const MobileNav = styled.div`
+    position: absolute;
+    left: 0;
+    top: 76px;
+    width: 100%;
+    padding-left: 1.25rem;
+    background: var(--white);
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-bottom: 1px solid var(--footer-divider);
+    padding-bottom: 70vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding-top: 1rem;
+    display: ${(props) => (props.active ? 'flex' : 'none')};
+    z-index: 1;
+`;
+const Arrow = styled.i`
+    float: right;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    margin-top: 0.875rem;
+    margin-right: 1.75rem;
+    display: inline-block;
+    padding: 0.25rem;
+    transform: ${(prop) => (!prop.show ? 'rotate(45deg)' : 'rotate(-135deg)')};
+    -webkit-transform: ${(prop) =>
+        !prop.show ? 'rotate(45deg)' : 'rotate(-135deg)'};
+`;
+const MobileMenuItem = styled.div`
+    font-family: IBM Plex Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    display: block;
+    color: black;
+    float: left;
+    width: 99%;
+`;
+const MobileDropdown = styled.div`
+    display: ${(prop) => (!prop.show ? 'none' : 'block')};
+    color: black;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+`;
+const DropdownItem = styled(Link)`
+    display: block;
+    color: black;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    &:not(:last-child) {
+        margin-bottom: 1.25rem;
+    }
+    ${(prop) =>
+        prop.disabled ? 'pointer-events: none;opacity: 0.5;color:grey;' : ''};
+`;
 const Divider = styled.div`
     border-top:1px solid #D6D6D6;
     margin-left: -1.25rem;
@@ -182,19 +188,54 @@ const Divider = styled.div`
             margin-left:0;
             margin-right:1.2rem;
 `;
+export const StyledBurger = styled.button`
+    position: absolute;
 
-const DaoText = styled.div`
-    color: #37474f;
-    margin-left: 1rem;
-    font-weight: bold;
-    span {
-        font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 1.125rem;
+    height: 0.9rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    z-index: 10;
+
+    &:focus {
+        outline: none;
+    }
+
+    div {
+        width: 1rem;
+        height: 0.1rem;
+        background: black;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
+
+        :first-child {
+            transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+        }
+
+        :nth-child(2) {
+            opacity: ${({ open }) => (open ? '0' : '1')};
+            transform: ${({ open }) =>
+                open ? 'translateX(20px)' : 'translateX(0)'};
+        }
+
+        :nth-child(3) {
+            transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+        }
     }
 `;
 
-const NavBar = () => {
+const NavBar = ({ passData }) => {
     const [active, setActive] = useState(false);
 
+    useEffect(() => {
+        passData(active);
+    }, [active]);
     const [navState, setNavState] = useState({
         learn: false,
         contribute: false,
@@ -205,6 +246,7 @@ const NavBar = () => {
         function routerPushMethod() {
             history.push(route);
         }
+
         return (
             <LogoContainer onClick={routerPushMethod}>{children}</LogoContainer>
         );
@@ -247,19 +289,15 @@ const NavBar = () => {
         <NavWrapper>
             <LeftNav>
                 <NavItem route="/">
-                    <DXdaoLogo
-                        src="brand/dxdao-blue.svg"
-                        onClick={handleLogoClicked}
-                    />
+                    <DXdaoLogo src="DXdao2.svg" onClick={handleLogoClicked} />
                 </NavItem>
-                <DaoText>
-                    DX<span>dao</span>
-                </DaoText>
             </LeftNav>
             <RightNav>
                 {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MenuItem
-                    onClick={(event) => handleNavItemClick('learn', event)}
+                    onClick={(event) => {
+                        event.stopPropagation();
+                    }}
                 >
                     Learn
                     <SubMenu show={navState.learn}>
@@ -275,7 +313,9 @@ const NavBar = () => {
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
                             as="a"
-                            onClick={(event) => handleNavItemClick('', event)}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             href={links.landing_guidebook}
                             target="_blank"
                         >
@@ -285,7 +325,9 @@ const NavBar = () => {
                 </MenuItem>
                 {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MenuItem
-                    onClick={(event) => handleNavItemClick('contribute', event)}
+                    onClick={(event) => {
+                        event.stopPropagation();
+                    }}
                 >
                     Contribute
                     <SubMenu show={navState.contribute}>
@@ -295,7 +337,9 @@ const NavBar = () => {
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
                             as="a"
-                            onClick={(event) => handleNavItemClick('', event)}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             href={links.landing_omeneth}
                             target="_blank"
                         >
@@ -304,37 +348,60 @@ const NavBar = () => {
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
                             as="a"
-                            onClick={(event) => handleNavItemClick('', event)}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             href={links.landing_dxswapeth}
                             target="_blank"
                         >
                             DXswap
                         </SubItem>
                         <Divider />
-                        <SubItem as="a" disabled={true}>
+                        <SubItem
+                            as="a"
+                            target="_blank"
+                            to={links.landing_codebase}
+                            href={links.header_bounties}
+                        >
                             Bounties
                         </SubItem>
-                        <SubItem to={links.landing_codebase}>Codebase</SubItem>
+                        {/* tslint:disable-next-line:jsx-no-lambda */}
+                        <SubItem
+                            as="a"
+                            target="_blank"
+                            to={links.landing_codebase}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
+                        >
+                            Codebase
+                        </SubItem>
                     </SubMenu>
                 </MenuItem>
                 {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MenuItem
-                    onClick={(event) => handleNavItemClick('community', event)}
+                    onClick={(event) => {
+                        event.stopPropagation();
+                    }}
                 >
                     Community
                     <SubMenu show={navState.community}>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             as="a"
                             href={links.footer_telegram}
                             target="_blank"
-                            onClick={(event) => handleNavItemClick('', event)}
                         >
                             Telegram
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            onClick={(event) => handleNavItemClick('', event)}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             as="a"
                             href={links.landing_developer_chat}
                             target="_blank"
@@ -343,7 +410,9 @@ const NavBar = () => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            onClick={(event) => handleNavItemClick('', event)}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             as="a"
                             href={links.header_forum}
                             target="_blank"
@@ -352,7 +421,9 @@ const NavBar = () => {
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
-                            onClick={(event) => handleNavItemClick('', event)}
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
                             as="a"
                             href={links.header_youtube}
                             target="_blank"
@@ -362,7 +433,11 @@ const NavBar = () => {
                     </SubMenu>
                 </MenuItem>
                 <MobileMenu onClick={toggleMenu}>
-                    <img src="menu-burger.svg" alt="Menu" />
+                    <StyledBurger open={active}>
+                        <div />
+                        <div />
+                        <div />
+                    </StyledBurger>
                 </MobileMenu>
             </RightNav>
             <MobileNav active={active}>
@@ -424,18 +499,27 @@ const NavBar = () => {
                         </DropdownItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.landing_dxswapeth}
                             target="_blank"
                         >
                             DXswap
                         </DropdownItem>
                         <Divider />
-                        <DropdownItem as="a" disabled={true}>
+                        {/* tslint:disable-next-line:jsx-no-lambda */}
+                        <DropdownItem
+                            onClick={(event) => {
+                                event.stopPropagation();
+                                toggleMenu();
+                            }}
+                            as="a"
+                            href={links.header_bounties}
+                            target="_blank"
+                        >
                             Bounties
                         </DropdownItem>
                         <DropdownItem
@@ -454,11 +538,11 @@ const NavBar = () => {
                     <MobileDropdown show={navState.community}>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.footer_telegram}
                             target="_blank"
                         >
@@ -466,11 +550,11 @@ const NavBar = () => {
                         </DropdownItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.landing_developer_chat}
                             target="_blank"
                         >
@@ -479,11 +563,11 @@ const NavBar = () => {
 
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.header_forum}
                             target="_blank"
                         >
@@ -491,11 +575,11 @@ const NavBar = () => {
                         </DropdownItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
-                            as="a"
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
+                            as="a"
                             href={links.header_youtube}
                             target="_blank"
                         >
