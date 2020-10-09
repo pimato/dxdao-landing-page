@@ -321,6 +321,7 @@ const NavBar = ({ passData }) => {
                         >
                             Guidebook
                         </SubItem>
+                        <SubItem to={links.landing_blog}>Blog</SubItem>
                     </SubMenu>
                 </MenuItem>
                 {/* tslint:disable-next-line:jsx-no-lambda */}
@@ -360,7 +361,6 @@ const NavBar = ({ passData }) => {
                         <SubItem
                             as="a"
                             target="_blank"
-                            to={links.landing_codebase}
                             href={links.header_bounties}
                         >
                             Bounties
@@ -473,6 +473,12 @@ const NavBar = ({ passData }) => {
                             target="_blank"
                         >
                             Guidebook
+                        </DropdownItem>
+                        <DropdownItem
+                            to={links.landing_blog}
+                            onClick={toggleMenu}
+                        >
+                            Blog
                         </DropdownItem>
                     </MobileDropdown>
                 </MobileMenuItem>
