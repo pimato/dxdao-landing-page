@@ -78,6 +78,13 @@ const SubItem = styled(Link)`
 }
 `;
 
+const SubHeader = styled.div`
+    font-weight: 400;
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 20px;
+`
+
 const MenuItem = styled.div`
     font-style: normal;
     font-weight: 500;
@@ -307,21 +314,6 @@ const NavBar = ({ passData }) => {
                         <SubItem to={links.landing_worker_compensation}>
                             Worker Compensation
                         </SubItem>
-                        <SubItem as="a" disabled={true}>
-                            DAOs
-                        </SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
-                        <SubItem
-                            onClick={(event) => {
-                                event.stopPropagation();
-                            }}
-                            as="a"
-                            href={links.landing_guidebook}
-                            target="_blank"
-                        >
-                            Guidebook
-                        </SubItem>
-                        <SubItem to={links.landing_blog}>Blog</SubItem>
                     </SubMenu>
                 </MenuItem>
                 {/* tslint:disable-next-line:jsx-no-lambda */}
@@ -332,10 +324,20 @@ const NavBar = ({ passData }) => {
                 >
                     Contribute
                     <SubMenu show={navState.contribute}>
-                        <SubItem as="a" disabled={true}>
+                        <SubHeader>
                             Project Boards
-                        </SubItem>
+                        </SubHeader>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
+                        <SubItem
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
+                            as="a"
+                            href={links.landing_dxdao}
+                            target="_blank"
+                        >
+                            DXdao
+                        </SubItem>
                         <SubItem
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -366,14 +368,7 @@ const NavBar = ({ passData }) => {
                             Bounties
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
-                        <SubItem
-                            onClick={(event) => {
-                                event.stopPropagation();
-                            }}
-                            as="a"
-                            target="_blank"
-                            to={links.landing_codebase}
-                        >
+                        <SubItem to={links.landing_codebase}>
                             Codebase
                         </SubItem>
                     </SubMenu>
@@ -418,6 +413,11 @@ const NavBar = ({ passData }) => {
                             target="_blank"
                         >
                             Forum
+                        </SubItem>
+                        <SubItem
+                            to={links.landing_blog}
+                        >
+                            Blog
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
@@ -473,12 +473,6 @@ const NavBar = ({ passData }) => {
                             target="_blank"
                         >
                             Guidebook
-                        </DropdownItem>
-                        <DropdownItem
-                            to={links.landing_blog}
-                            onClick={toggleMenu}
-                        >
-                            Blog
                         </DropdownItem>
                     </MobileDropdown>
                 </MobileMenuItem>
@@ -578,6 +572,12 @@ const NavBar = ({ passData }) => {
                             target="_blank"
                         >
                             Forum
+                        </DropdownItem>
+                        <DropdownItem
+                            to={links.landing_blog}
+                            onClick={toggleMenu}
+                        >
+                            Blog
                         </DropdownItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
