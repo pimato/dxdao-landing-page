@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Articles from '../../misc/blog-posts';
 import ReactMarkdown from 'react-markdown';
@@ -23,18 +23,37 @@ const Image = styled.img`
 `;
 
 const BlogPost = () => {
+    const [markText, setMarkText] = useState('');
+    const [blogState, setBlogState] = useState({
+        title: '',
+        image: '',
+    });
     //based on id i will find desired post
-    const currentId = Number(window.location.hash.substring(7));
 
-    const { title, short_description, image, markdown } = Articles.find(
-        ({ id }) => currentId === id
-    );
+    useEffect(() => {
+        const currentId = Number(window.location.hash.substring(7));
+
+        const { title, image, markdown, short_description } = Articles.find(
+            ({ id }) => currentId === id
+        );
+        setBlogState({
+            title: title,
+            image: image,
+            description: short_description,
+        });
+
+        fetch(markdown)
+            .then((response) => response.text())
+            .then((text) => {
+                setMarkText(text);
+            });
+    }, []);
 
     return (
         <BlogPostWrapper>
-            <Header>{title}</Header>
-            <Image src={image} />
-            <ReactMarkdown source={markdown} />
+            <Header>{blogState.title}</Header>
+            <Image src={blogState.image} />
+            <ReactMarkdown source={markText} />
         </BlogPostWrapper>
     );
 };
