@@ -83,7 +83,7 @@ const SubHeader = styled.div`
     font-size: 16px;
     color: #999999;
     margin-bottom: 20px;
-`
+`;
 
 const MenuItem = styled.div`
     font-style: normal;
@@ -138,6 +138,9 @@ const MobileNav = styled.div`
     padding-top: 1rem;
     display: ${(props) => (props.active ? 'flex' : 'none')};
     z-index: 1;
+    @media (max-width: 460px) {
+        box-shadow: none;
+    }
 `;
 const Arrow = styled.i`
     float: right;
@@ -324,9 +327,7 @@ const NavBar = ({ passData }) => {
                 >
                     Contribute
                     <SubMenu show={navState.contribute}>
-                        <SubHeader>
-                            Project Boards
-                        </SubHeader>
+                        <SubHeader>Project Boards</SubHeader>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
                             onClick={(event) => {
@@ -338,6 +339,7 @@ const NavBar = ({ passData }) => {
                         >
                             DXdao
                         </SubItem>
+                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -368,9 +370,7 @@ const NavBar = ({ passData }) => {
                             Bounties
                         </SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
-                        <SubItem to={links.landing_codebase}>
-                            Codebase
-                        </SubItem>
+                        <SubItem to={links.landing_codebase}>Codebase</SubItem>
                     </SubMenu>
                 </MenuItem>
                 {/* tslint:disable-next-line:jsx-no-lambda */}
@@ -414,11 +414,7 @@ const NavBar = ({ passData }) => {
                         >
                             Forum
                         </SubItem>
-                        <SubItem
-                            to={links.landing_blog}
-                        >
-                            Blog
-                        </SubItem>
+                        <SubItem to={links.landing_blog}>Blog</SubItem>
                         {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
                             onClick={(event) => {
