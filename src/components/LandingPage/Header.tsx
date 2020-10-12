@@ -11,11 +11,11 @@ const NavWrapper = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 3.125rem 0 0.5rem 0;
-    @media (max-width: 768px) {
-        padding: 1.5625rem 0 1.25rem 0;
+    @media (max-width: 1054px) {
+        padding: 1.75rem 1.25rem 1.25rem 1.25rem;
     }
-    @media (max-width: 460px) {
-        padding: 1.5625rem 0.625rem 1.25rem;
+    @media (max-width: 475px) {
+        padding: 1.75rem 1.6875rem 2rem 1.25rem;
     }
 `;
 
@@ -44,7 +44,7 @@ const LogoContainer = styled.div`
     line-height: 19px;
     cursor: pointer;
     padding-bottom: 2rem;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         padding-bottom: 0;
     }
 `;
@@ -96,7 +96,7 @@ const MenuItem = styled.div`
     margin-left: 2.625rem;
     text-decoration: none;
     padding-bottom: 2rem;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         display: none;
     }
     &:hover ${SubMenu} {
@@ -108,15 +108,11 @@ const MenuItem = styled.div`
 `;
 
 const MobileMenu = styled.div`
-    width: 3.25rem;
-    height: 2.625rem;
-
     box-sizing: border-box;
-
     align-items: center;
     justify-content: center;
     display: none;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         display: flex;
     }
 `;
@@ -124,7 +120,7 @@ const MobileMenu = styled.div`
 const MobileNav = styled.div`
     position: absolute;
     left: 0;
-    top: 76px;
+    top: 57px;
     width: 100%;
     padding-left: 1.25rem;
     background: var(--white);
@@ -133,12 +129,12 @@ const MobileNav = styled.div`
     align-items: start;
     justify-content: center;
     border-bottom: 1px solid var(--footer-divider);
-    padding-bottom: 70vh;
+    padding-bottom: 100vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: ${(props) => (props.active ? 'flex' : 'none')};
     z-index: 1;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         box-shadow: none;
     }
 `;
@@ -194,22 +190,21 @@ const Divider = styled.div`
     margin-left: -1.25rem;
     margin-right:-1.25rem;
     margin-bottom:1.25rem;
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 475px) {
             margin-left:0;
             margin-right:1.2rem;
 `;
 export const StyledBurger = styled.button`
     position: absolute;
-
+    padding: 0 1rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 1.125rem;
     height: 0.9rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0px;
+
     z-index: 10;
 
     &:focus {
@@ -240,11 +235,11 @@ export const StyledBurger = styled.button`
     }
 `;
 
-const NavBar = ({ passData }) => {
+const NavBar = ({ setMobileState }) => {
     const [active, setActive] = useState(false);
 
     useEffect(() => {
-        passData(active);
+        setMobileState(active);
     }, [active]);
     const [navState, setNavState] = useState({
         learn: false,
@@ -334,7 +329,7 @@ const NavBar = ({ passData }) => {
                                 event.stopPropagation();
                             }}
                             as="a"
-                            href={links.landing_dxdao}
+                            href={links.landing_dxdao_codebase}
                             target="_blank"
                         >
                             DXdao
@@ -345,7 +340,7 @@ const NavBar = ({ passData }) => {
                                 event.stopPropagation();
                             }}
                             as="a"
-                            href={links.landing_omeneth}
+                            href={links.landing_omeneth_codebase}
                             target="_blank"
                         >
                             Omen
@@ -356,7 +351,7 @@ const NavBar = ({ passData }) => {
                                 event.stopPropagation();
                             }}
                             as="a"
-                            href={links.landing_dxswapeth}
+                            href={links.landing_dxswapeth_codebase}
                             target="_blank"
                         >
                             DXswap
@@ -488,7 +483,7 @@ const NavBar = ({ passData }) => {
                                 toggleMenu();
                             }}
                             as="a"
-                            href={links.landing_omeneth}
+                            href={links.landing_omeneth_codebase}
                             target="_blank"
                         >
                             Omen
@@ -500,7 +495,7 @@ const NavBar = ({ passData }) => {
                                 toggleMenu();
                             }}
                             as="a"
-                            href={links.landing_dxswapeth}
+                            href={links.landing_dxswapeth_codebase}
                             target="_blank"
                         >
                             DXswap

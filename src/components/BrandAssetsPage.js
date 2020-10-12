@@ -93,7 +93,7 @@ const MediaPanel = styled.div`
         width: 100%;
         border-radius: 3px;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         height: auto;
         width: 100%;
     }

@@ -19,7 +19,7 @@ const DXDSection = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 124px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 84px;
     }
 `;
@@ -30,7 +30,7 @@ const BannerSection = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 84px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 24px;
     }
 `;
@@ -113,7 +113,7 @@ const Button = styled.div`
         border: 1px solid var(--lp-border-color-onHover);
         cursor: pointer;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         flex-basis: 47%;
         margin: 0;
     }
@@ -127,7 +127,7 @@ const BlueButton = styled(Button)`
         border: 1px solid white;
         cursor: pointer;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         flex-basis: 47%;
     }
 `;
@@ -137,7 +137,7 @@ const ProductSection = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 124px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 84px;
     }
 `;
@@ -193,7 +193,7 @@ const ProductPanel = styled.div`
     @media (max-width: 1024px) {
         margin: 24px 0 0 0;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         height: auto;
         margin: 16px 0 0 0;
     }
@@ -233,7 +233,7 @@ const AboutUsSection = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 124px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 84px;
     }
 `;
@@ -243,7 +243,7 @@ const AboutPanelWrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 31px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 32px;
     }
 `;
@@ -261,7 +261,7 @@ const AboutPanel = styled.div`
             margin-top: 32px;
         }
     }
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         width: 100%;
         margin-top: 32px;
     }
@@ -277,7 +277,7 @@ const AboutHeader = styled.div`
     letter-spacing: 0.03em;
     text-align: center;
     margin-top: 32px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 24px;
     }
 `;
@@ -290,7 +290,7 @@ const AboutDescription = styled.div`
     text-align: center;
     color: var(--light-body-text);
     margin-top: 24px;
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         margin-top: 16px;
     }
 `;
@@ -481,7 +481,13 @@ const LandingPage = () => {
                     fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
-                    <BlueButton>Get DXD</BlueButton>
+                    <BlueButton
+                        as="a"
+                        href={links.landing_dxtrust}
+                        target="_blank"
+                    >
+                        Get DXD
+                    </BlueButton>
                     <NormalButton route="/faq">FAQ</NormalButton>
                 </ButtonRow>
             </DXDSection>

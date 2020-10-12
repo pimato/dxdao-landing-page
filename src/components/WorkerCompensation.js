@@ -11,8 +11,11 @@ const Rounded = css`
         padding: 1.75rem 1.5rem;
     }
 `;
+
+const WorkerCompensationSection = styled.section`
+    margin: 0rem 1.25rem 1.25rem 1.25rem;
+`;
 const Headline = styled.div`
-    margin-top: 1.25rem;
     font-family: IBM Plex Sans;
     font-size: 32px;
     font-style: normal;
@@ -228,45 +231,42 @@ const MonthlyHeader = styled(SubHeader)`
 `;
 const WorkerCompensation = () => {
     return (
-        <React.Fragment>
+        <WorkerCompensationSection>
             <Headline>Worker Compensation Guidelines</Headline>
             <BlueText>Ratified on September 19th, 2020</BlueText>
             <FlexWrapper>
                 <GuidingTenets>
-                    <SubHeader>
-                        Guiding Tenets
-                        <ItemWrapper marginTop={'1'}>
-                            <Bullet />
-                            <NormalText>
-                                DXdao should offer fair & competitive
-                                compensation, while also attracting those
-                                aligned with the mission of DXdao.
-                            </NormalText>
-                        </ItemWrapper>
-                        <ItemWrapper>
-                            <Bullet />
-                            <NormalText>
-                                DXdao hopes to attract the best and most
-                                ambitious minds across the world.
-                            </NormalText>
-                        </ItemWrapper>
-                        <ItemWrapper>
-                            <Bullet />
-                            <NormalText>
-                                Transparency in structure and a clear path for
-                                future growth are important.
-                            </NormalText>
-                        </ItemWrapper>
-                        <ItemWrapper>
-                            <Bullet />
-                            <NormalText>
-                                DXdao workers should be incentivized to drive
-                                financial value to DXD; compensation in DXD is
-                                meant to align worker interests with DXD
-                                holders.
-                            </NormalText>
-                        </ItemWrapper>
-                    </SubHeader>
+                    <SubHeader>Guiding Tenets </SubHeader>
+                    <ItemWrapper marginTop={'1'}>
+                        <Bullet />
+                        <NormalText>
+                            DXdao should offer fair & competitive compensation,
+                            while also attracting those aligned with the mission
+                            of DXdao.
+                        </NormalText>
+                    </ItemWrapper>
+                    <ItemWrapper>
+                        <Bullet />
+                        <NormalText>
+                            DXdao hopes to attract the best and most ambitious
+                            minds across the world.
+                        </NormalText>
+                    </ItemWrapper>
+                    <ItemWrapper>
+                        <Bullet />
+                        <NormalText>
+                            Transparency in structure and a clear path for
+                            future growth are important.
+                        </NormalText>
+                    </ItemWrapper>
+                    <ItemWrapper>
+                        <Bullet />
+                        <NormalText>
+                            DXdao workers should be incentivized to drive
+                            financial value to DXD; compensation in DXD is meant
+                            to align worker interests with DXD holders.
+                        </NormalText>
+                    </ItemWrapper>
                 </GuidingTenets>
                 <SalaryStructure>
                     <SubHeader>Salary Structure</SubHeader>
@@ -508,7 +508,7 @@ const WorkerCompensation = () => {
                     </ItemWrapper>
                 </OtherItems>
             </FlexWrapper>
-        </React.Fragment>
+        </WorkerCompensationSection>
     );
 };
 

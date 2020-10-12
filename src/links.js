@@ -23,13 +23,18 @@ const links = {
     landing_mixeth:
         'https://daotalk.org/t/mix-eth-seeking-feedback-on-proposal/1183',
 
-    landing_omeneth: 'https://github.com/protofire/omen-exchange/projects/1',
+    landing_omeneth_codebase:
+        'https://github.com/protofire/omen-exchange/projects/1',
 
     landing_mesaeth: 'https://mesa.eth.link',
 
-    landing_dxswapeth: 'https://github.com/levelkdev/dxswap-dapp/projects/1',
+    landing_dxswapeth_codebase:
+        'https://github.com/levelkdev/dxswap-dapp/projects/1',
 
-    landing_dxdao: 'https://github.com/pimato/dxdao-landing-page/projects/1',
+    landing_dxdao_codebase:
+        'https://github.com/pimato/dxdao-landing-page/projects/1',
+
+    landing_dxtrust: 'https://dxtrust.eth.link/',
 
     landing_create_proposal:
         'https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a',

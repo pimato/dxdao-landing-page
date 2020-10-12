@@ -8,7 +8,7 @@ const ManifestoSection = styled.section`
     font-family: 'IBM Plex Sans', sans-serif;
     border: 1px solid #d6d6d6;
     border-radius: 6px;
-
+    margin: 0rem 1.25rem 1.25rem 1.25rem;
     @media screen and (max-width: 768px) {
         padding: 1.75rem 1.5rem;
     }
