@@ -5,8 +5,8 @@ const ManifestoSection = styled.section`
     display: block;
     padding: 44px;
     font-style: normal;
-    font-family: 'IBM Plex Sans', sans-serif;
-    border: 1px solid #d6d6d6;
+    font-family: var(--IBM);
+    border: 1px solid var(--white-shade);
     border-radius: 6px;
     margin: 0rem 1.25rem 1.25rem 1.25rem;
     @media screen and (max-width: 768px) {
@@ -19,7 +19,7 @@ const Headline = styled.div`
     line-height: 36px;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #2b2b2b;
+    color: var(--light-black);
 `;
 const DateRatified = styled.div`
     font-size: 16px;
@@ -27,7 +27,7 @@ const DateRatified = styled.div`
     line-height: 26px;
     letter-spacing: 0.01em;
     text-align: center;
-    color: #536dfe;
+    color: var(--blue-text);
     text-decoration-line: underline;
     margin-top: 8px;
 `;
@@ -37,7 +37,7 @@ const ParagraphStandard = styled.div`
     line-height: 26px;
     letter-spacing: 0.01em;
     text-align: left;
-    color: #616161;
+    color: var(--dark-text-gray);
     margin-top: ${(prop) => prop.marginTop}rem;
 `;
 
@@ -47,7 +47,7 @@ const SubHeadline = styled.div`
     line-height: 26px;
     letter-spacing: 0.02em;
     text-align: left;
-    color: #2b2b2b;
+    color: var(--light-black);
     margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0)}rem;
 `;
 const RegularBold = styled.div`
@@ -57,7 +57,7 @@ const RegularBold = styled.div`
     letter-spacing: 0.01em;
     text-align: left;
     margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0)}rem;
-    color: #616161;
+    color: var(--dark-text-gray);
 `;
 const ItemWrapper = styled.div`
     margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0.625)}rem;
@@ -69,7 +69,7 @@ const ListItem = styled(ParagraphStandard)`
 const Bullet = styled.div`
     height: 8px;
     width: 8px;
-    background-color: #616161;
+    background-color: var(--dark-text-gray);
     border-radius: 50%;
     float: left;
     margin-top: 10px;

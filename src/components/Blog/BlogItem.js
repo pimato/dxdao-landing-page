@@ -9,10 +9,10 @@ const Item = styled.div`
     background: #fff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
 `;
 const Header = styled.h2`
-    color: black;
+    color: var(--black);
 `;
 const Paragraph = styled.p``;
 const Image = styled.img`

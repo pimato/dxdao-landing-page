@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import links from '../../links';
 
 const NavWrapper = styled.div`
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -54,9 +54,9 @@ const SubMenu = styled.div`
     margin-top: 1rem;
     flex-direction: column;
     padding: 1.25rem;
-    border: 1px solid #d6d6d6;
+    border: 1px solid var(--white-shade);
     border-radius: 6px;
-    background: #ffffff;
+    background: var(--white);
 `;
 const SubItem = styled(Link)`
 
@@ -64,9 +64,9 @@ const SubItem = styled(Link)`
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
-    letter-spacing: 0.20000000298023224px;
+    letter-spacing: 0.2px;
     text-align: left;
-    color: #2B2B2B;
+    color: var(--light-black);
     &:not(:last-child){
     margin-bottom:1.25rem;
     },
@@ -81,7 +81,7 @@ const SubItem = styled(Link)`
 const SubHeader = styled.div`
     font-weight: 400;
     font-size: 16px;
-    color: #999999;
+    color: var(--light-body-text);
     margin-bottom: 20px;
 `;
 
@@ -103,7 +103,7 @@ const MenuItem = styled.div`
         display: flex;
     }
     &:hover {
-        color: #536dfe;
+        color: var(--blue-text);
     }
 `;
 
@@ -140,7 +140,7 @@ const MobileNav = styled.div`
 `;
 const Arrow = styled.i`
     float: right;
-    border: solid #000000;
+    border: solid var(--black);
     border-width: 0 2px 2px 0;
     margin-top: 0.875rem;
     margin-right: 1.75rem;
@@ -151,7 +151,7 @@ const Arrow = styled.i`
         !prop.show ? 'rotate(45deg)' : 'rotate(-135deg)'};
 `;
 const MobileMenuItem = styled.div`
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -160,19 +160,19 @@ const MobileMenuItem = styled.div`
     text-align: left;
     margin-bottom: 1.5rem;
     display: block;
-    color: black;
+    color: var(--black);
     float: left;
     width: 99%;
 `;
 const MobileDropdown = styled.div`
     display: ${(prop) => (!prop.show ? 'none' : 'block')};
-    color: black;
+    color: var(--black);
     margin-left: 1.5rem;
     margin-top: 1.5rem;
 `;
 const DropdownItem = styled(Link)`
     display: block;
-    color: black;
+    color: var(--black);
     font-size: 19px;
     font-style: normal;
     font-weight: 500;
@@ -186,7 +186,7 @@ const DropdownItem = styled(Link)`
         prop.disabled ? 'pointer-events: none;opacity: 0.5;color:grey;' : ''};
 `;
 const Divider = styled.div`
-    border-top:1px solid #D6D6D6;
+    border-top:1px solid var(--white-shade);
     margin-left: -1.25rem;
     margin-right:-1.25rem;
     margin-bottom:1.25rem;

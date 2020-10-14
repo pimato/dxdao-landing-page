@@ -119,7 +119,7 @@ const AsssetItemLink = styled.a`
     letter-spacing: 0.03em;
     color: var(--light-body-text);
     text-decoration: none;
-    color: #189ddf;
+    color: var(--dark-button-background);
     margin: 0 4px;
 `;
 

@@ -52,7 +52,7 @@ const ProjectsHeading = styled.div`
     border: 1px solid rgba(51, 51, 51, 0.2);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    color: #999999;
+    color: var(--light-body-text);
     font-family: Source Sans Pro;
     font-weight: 600;
 `;
@@ -62,8 +62,8 @@ const ProjectItem = styled.div`
     flex-direction: row;
     width: 100%;
     padding: 14px 20px 8px 20px;
-    border: 1px solid rgba(51, 51, 51, 0.2);
-    color: #333333;
+    border: 1px solid var(--dark-text);
+    color: var(--dark-text);
     font-family: Source Sans Pro;
     font-weight: 600;
     border-top: 0px;
@@ -97,7 +97,7 @@ const ProjectRepoMobileHidden = styled.span`,
 display: flex;
   @media (max-width: 1024px) {
     display:none;
-    color: #ff0000;
+    color:var(--red-color);
   }
 `;
 
@@ -114,7 +114,7 @@ const ProjectLinks = styled.div`
     display: flex;
     flex-direction: column;
     width: 20%;
-    color: #999999;
+    color: var(--light-body-text);
     @media (max-width: 1024px) {
         overflow-wrap: break-word;
         word-wrap: break-word;

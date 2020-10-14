@@ -8,7 +8,7 @@ const BlogContainer = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
 `;
 
 const Blog = () => {

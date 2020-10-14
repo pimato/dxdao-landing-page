@@ -7,7 +7,7 @@ const BlogPostWrapper = styled.div`
     margin: 20px;
     display: flex;
     flex-direction: column;
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
 `;
 const Header = styled.div`
     text-align: center;

@@ -5,7 +5,7 @@ import links from '../../links';
 import MetaTags from 'react-meta-tags';
 
 const LandingPageWrapper = styled.div`
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
 `;
 
 const DXDLogo = styled.img`
@@ -119,12 +119,12 @@ const Button = styled.div`
     }
 `;
 const BlueButton = styled(Button)`
-    background-color: #536dfe;
-    color: white;
+    background-color: var(--blue-text);
+    color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.075);
     &:hover {
-        background: #536dfe;
-        border: 1px solid white;
+        background: var(--blue-text);
+        border: 1px solid var(--white);
         cursor: pointer;
     }
     @media (max-width: 475px) {
@@ -143,7 +143,7 @@ const ProductSection = styled.div`
 `;
 
 const Message = styled.div`
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
@@ -311,11 +311,11 @@ const JoinAction = styled.a`
     line-height: 32px;
     align-items: center;
     letter-spacing: 0.02em;
-    color: #189ddf;
+    color: var(--dark-button-background);
     margin-top: 8px;
     text-decoration: none;
     &:hover {
-        color: #1690cc;
+        color: var(--turquois-light);
     }
 `;
 
