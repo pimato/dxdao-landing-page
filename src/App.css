@@ -17,8 +17,8 @@
     --dark-text-gray: #616161;
     --nav-text-light: rgba(55, 71, 79, 0.4);
     --nav-text-dark: rgba(55, 71, 79, 1);
-    --light-black:#2b2b2b;
-    --black:#000000;
+    --light-black: #2b2b2b;
+    --black: #000000;
     --panel-text: rgba(83, 109, 254, 0.8);
     --pending-panel-text: rgba(83, 109, 254, 0.6);
     --panel-icon: rgba(83, 109, 254, 0.2);
@@ -29,13 +29,13 @@
     --pending-ellipses-purple: #dde2ff;
     --medium-gray: rgba(207, 216, 220, 0.9); /*For border*/
     --light-gray: #FAFAFA; /*Site background*/
-    --medium-white:#ddd;
+    --medium-white: #ddd;
     --line-gray: rgba(225, 227, 231, 0.4);
     --turquois-text: #2d9cdb;
     --turquois-text-onHover: #226C96;
-    --turquois-light:#1690cc;
+    --turquois-light: #1690cc;
     --white: #ffffff;
-    --white-shade:#d6d6d6;
+    --white-shade: #d6d6d6;
     --gridLine: rgba(232, 234, 246, 0.5);
 
     --rewards-text-green: #54ae6f;
@@ -70,8 +70,6 @@
     font-family: var(--IBM);
     background-color: var(--white);
 }
-
-
 
 .green-text {
     color: #54ae6f;

@@ -6,7 +6,7 @@ const Item = styled.div`
     margin: 20px;
     flex-basis: 27%;
     padding: 20px;
-    background: #fff;
+    background: color(white);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     font-family: var(--IBM);

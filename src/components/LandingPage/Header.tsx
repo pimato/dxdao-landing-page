@@ -151,6 +151,7 @@ const Arrow = styled.i`
         !prop.show ? 'rotate(45deg)' : 'rotate(-135deg)'};
 `;
 const MobileMenuItem = styled.div`
+    animation: ease-in 5s infinite;
     font-family: var(--IBM);
     font-size: 24px;
     font-style: normal;
@@ -214,7 +215,7 @@ export const StyledBurger = styled.button`
     div {
         width: 1rem;
         height: 0.1rem;
-        background: black;
+        background: var(--black);
         transition: all 0.3s linear;
         position: relative;
         transform-origin: 1px;
@@ -298,8 +299,8 @@ const NavBar = ({ setMobileState }) => {
                 </NavItem>
             </LeftNav>
             <RightNav>
-                {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MenuItem
+                    /* tslint:disable-next-line:jsx-no-lambda */
                     onClick={(event) => {
                         event.stopPropagation();
                     }}
@@ -314,8 +315,8 @@ const NavBar = ({ setMobileState }) => {
                         </SubItem>
                     </SubMenu>
                 </MenuItem>
-                {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MenuItem
+                    /* tslint:disable-next-line:jsx-no-lambda */
                     onClick={(event) => {
                         event.stopPropagation();
                     }}
@@ -323,8 +324,8 @@ const NavBar = ({ setMobileState }) => {
                     Contribute
                     <SubMenu show={navState.contribute}>
                         <SubHeader>Project Boards</SubHeader>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -334,8 +335,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             DXdao
                         </SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -345,8 +346,9 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Omen
                         </SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
+
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -364,20 +366,19 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Bounties
                         </SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem to={links.landing_codebase}>Codebase</SubItem>
                     </SubMenu>
                 </MenuItem>
-                {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MenuItem
+                    /* tslint:disable-next-line:jsx-no-lambda */
                     onClick={(event) => {
                         event.stopPropagation();
                     }}
                 >
                     Community
                     <SubMenu show={navState.community}>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -387,8 +388,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Telegram
                         </SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -398,8 +399,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Keybase
                         </SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -410,8 +411,8 @@ const NavBar = ({ setMobileState }) => {
                             Forum
                         </SubItem>
                         <SubItem to={links.landing_blog}>Blog</SubItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <SubItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
@@ -432,8 +433,8 @@ const NavBar = ({ setMobileState }) => {
                 </MobileMenu>
             </RightNav>
             <MobileNav active={active}>
-                {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MobileMenuItem
+                    /* tslint:disable-next-line:jsx-no-lambda */
                     onClick={(event) => handleNavItemClick('learn', event)}
                 >
                     Learn <Arrow show={navState.learn} />
@@ -453,8 +454,8 @@ const NavBar = ({ setMobileState }) => {
                         <DropdownItem as="a" disabled={true}>
                             DAOs
                         </DropdownItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -467,8 +468,8 @@ const NavBar = ({ setMobileState }) => {
                         </DropdownItem>
                     </MobileDropdown>
                 </MobileMenuItem>
-                {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MobileMenuItem
+                    /* tslint:disable-next-line:jsx-no-lambda */
                     onClick={(event) => handleNavItemClick('contribute', event)}
                 >
                     Contribute <Arrow show={navState.contribute} />
@@ -476,8 +477,8 @@ const NavBar = ({ setMobileState }) => {
                         <DropdownItem as="a" disabled={true}>
                             Project Boards
                         </DropdownItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -488,8 +489,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Omen
                         </DropdownItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -501,8 +502,8 @@ const NavBar = ({ setMobileState }) => {
                             DXswap
                         </DropdownItem>
                         <Divider />
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -521,14 +522,14 @@ const NavBar = ({ setMobileState }) => {
                         </DropdownItem>
                     </MobileDropdown>
                 </MobileMenuItem>
-                {/* tslint:disable-next-line:jsx-no-lambda */}
                 <MobileMenuItem
+                    /* tslint:disable-next-line:jsx-no-lambda */
                     onClick={(event) => handleNavItemClick('community', event)}
                 >
                     Community <Arrow show={navState.community} />
                     <MobileDropdown show={navState.community}>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -539,8 +540,9 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Telegram
                         </DropdownItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
+
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -551,9 +553,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Keybase
                         </DropdownItem>
-
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
@@ -570,8 +571,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Blog
                         </DropdownItem>
-                        {/* tslint:disable-next-line:jsx-no-lambda */}
                         <DropdownItem
+                            /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();

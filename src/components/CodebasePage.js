@@ -87,7 +87,7 @@ const ProjectName = styled.div`
 const ProjectRepo = styled.div`,
   display: flex;
   flex-direction: column;
-  width:30%;
+  width: 30%;
   @media (max-width: 1024px) {
     text-align:center;
   }
@@ -97,7 +97,7 @@ const ProjectRepoMobileHidden = styled.span`,
 display: flex;
   @media (max-width: 1024px) {
     display:none;
-    color:var(--red-color);
+    color: var(--red-color);
   }
 `;
 
