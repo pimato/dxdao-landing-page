@@ -242,7 +242,7 @@ const AboutPanelWrapper = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 31px;
+    margin-top: 48px;
     @media (max-width: 475px) {
         margin-top: 32px;
     }
@@ -472,7 +472,7 @@ const LandingPage = () => {
             <DXDSection>
                 <DXDLogo src={'./brand/dxdao-blue.svg'} />
                 <Message>DXD powers the Decentralised Ecosystem</Message>
-                <Description margin="12px">
+                <Description>
                     DXD is the DXdao native ERC20 token, DXD token holders have
                     an economic claim to the DXdao´s revenue and it also grants
                     its owners future access to a suite of services and premium
