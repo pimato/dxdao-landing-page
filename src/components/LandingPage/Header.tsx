@@ -143,7 +143,7 @@ const Arrow = styled.i`
     float: right;
     border: solid var(--black);
     border-width: 0 2px 2px 0;
-    margin-top: 0.875rem;
+    margin-top: 0.5rem;
     display: inline-block;
     padding: 0.25rem;
     transform: ${(prop) => (!prop.show ? 'rotate(45deg)' : 'rotate(-135deg)')};
