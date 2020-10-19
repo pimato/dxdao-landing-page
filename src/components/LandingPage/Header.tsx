@@ -136,6 +136,7 @@ const MobileNav = styled.div`
     z-index: 1;
     @media (max-width: 475px) {
         box-shadow: none;
+        padding-right: 1.6875rem;
     }
 `;
 const Arrow = styled.i`
@@ -143,7 +144,6 @@ const Arrow = styled.i`
     border: solid var(--black);
     border-width: 0 2px 2px 0;
     margin-top: 0.875rem;
-    margin-right: 1.75rem;
     display: inline-block;
     padding: 0.25rem;
     transform: ${(prop) => (!prop.show ? 'rotate(45deg)' : 'rotate(-135deg)')};
@@ -197,7 +197,7 @@ const Divider = styled.div`
 `;
 export const StyledBurger = styled.button`
     position: absolute;
-    padding: 0 1rem 0 0;
+    padding: 0 0.75rem 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -205,7 +205,6 @@ export const StyledBurger = styled.button`
     background: transparent;
     border: none;
     cursor: pointer;
-
     z-index: 10;
 
     &:focus {
