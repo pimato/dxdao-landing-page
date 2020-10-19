@@ -159,7 +159,7 @@ const ProductPanelWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 20px 0 0 0;
+    margin-top: ${(props) => props.marginTop};
     @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
@@ -401,7 +401,7 @@ const LandingPage = () => {
             <ProductSection>
                 <TagLine>Our collectively owned products</TagLine>
                 <Message>Pure Dapps powered by DXdao</Message>
-                <ProductPanelWrapper>
+                <ProductPanelWrapper marginTop={'48px'}>
                     <ProductClickable
                         href="https://daotalk.org/t/mix-eth-seeking-feedback-on-proposal/1183"
                         target="_blank"
@@ -435,7 +435,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                 </ProductPanelWrapper>
-                <ProductPanelWrapper>
+                <ProductPanelWrapper marginTop={'20px'}>
                     <ProductClickable
                         href="https://mesa.eth.link"
                         target="_blank"
