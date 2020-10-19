@@ -12,7 +12,7 @@ import CodebasePage from 'components/CodebasePage';
 import Manifesto from './components/Manifesto';
 import WorkerCompensation from './components/WorkerCompensation';
 import Blog from './components/Blog/Blog';
-import BlogPost from './components/Blog/BlogPost';
+import { BlogPost } from './components/Blog/BlogPost';
 
 const AppShell = styled.div`
     width: 936px;

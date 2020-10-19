@@ -62,6 +62,11 @@ const links = {
     header_bounties:
         'https://docs.google.com/document/d/1rLLUJu9a06YLhnAVNvzglbtoubUdiV9G436QVrrkNlE/edit',
 
+    //Worker Compensation
+
+    ratified_etherscan:
+        'https://etherscan.io/tx/0x8ce31af340cd66c5b6089a9ba084d4964563f80963b2f4784ae569189736e094',
+
     // Footer
 
     footer_version: `https://github.com/fMercury/dxdao-landing-page/tree/v${version}`,

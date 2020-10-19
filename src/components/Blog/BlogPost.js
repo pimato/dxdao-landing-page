@@ -22,7 +22,7 @@ const Image = styled.img`
     margin-bottom: 40px;
 `;
 
-const BlogPost = () => {
+export const BlogPost = () => {
     const [markText, setMarkText] = useState('');
     const [blogState, setBlogState] = useState({
         title: '',
@@ -57,5 +57,3 @@ const BlogPost = () => {
         </BlogPostWrapper>
     );
 };
-
-export default BlogPost;

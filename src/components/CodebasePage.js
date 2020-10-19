@@ -62,7 +62,7 @@ const ProjectItem = styled.div`
     flex-direction: row;
     width: 100%;
     padding: 14px 20px 8px 20px;
-    border: 1px solid var(--dark-text);
+    border: 1px solid var(--black-border-color);
     color: var(--dark-text);
     font-family: Source Sans Pro;
     font-weight: 600;

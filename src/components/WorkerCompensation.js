@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-
+import links from '../links';
 const Rounded = css`
     border: 1px solid var(--white-shade);
     border-radius: 6px;
@@ -30,7 +30,7 @@ const Headline = styled.div`
         letter-spacing: 0.01em;
     }
 `;
-const BlueText = styled.div`
+const BlueText = styled.a`
     margin-top: 0.5rem;
     font-family: var(--IBM);
     font-size: 16px;
@@ -233,7 +233,9 @@ const WorkerCompensation = () => {
     return (
         <WorkerCompensationSection>
             <Headline>Worker Compensation Guidelines</Headline>
-            <BlueText>Ratified on September 19th, 2020</BlueText>
+            <BlueText href={links.ratified_etherscan} target="_blank">
+                Ratified on September 19th, 2020
+            </BlueText>
             <FlexWrapper>
                 <GuidingTenets>
                     <SubHeader>Guiding Tenets </SubHeader>
