@@ -57,6 +57,8 @@ const SubMenu = styled.div`
     border: 1px solid var(--white-shade);
     border-radius: 6px;
     background: var(--white);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.04);
 `;
 const SubItem = styled(Link)`
 

@@ -37,8 +37,8 @@ const BannerSection = styled.div`
 
 const TagLine = styled.div`
     font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 13px;
     line-height: 15px;
     text-align: center;
     text-transform: uppercase;
@@ -123,8 +123,8 @@ const BlueButton = styled(Button)`
     color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.075);
     &:hover {
-        background: var(--blue-text);
-        border: 1px solid var(--white);
+        background: var(--blue-hover);
+        border: 1px solid rgba(0, 0, 0, 0.075);
         cursor: pointer;
     }
     @media (max-width: 475px) {
@@ -210,7 +210,7 @@ const ProductName = styled.div`
     align-items: center;
     justify-content: center;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     line-height: 26px;
     margin-left: 16px;

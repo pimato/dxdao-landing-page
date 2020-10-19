@@ -23,6 +23,7 @@ const Headline = styled.div`
     line-height: 42px;
     letter-spacing: 0.02em;
     text-align: left;
+    margin-bottom: 8px;
 
     @media screen and (max-width: 768px) {
         font-size: 18px;
@@ -39,7 +40,6 @@ const BlueText = styled.a`
     line-height: 26px;
     letter-spacing: 0.01em;
     text-align: left;
-    color: var(--blue-text);
     text-decoration-line: underline;
 
     @media screen and (max-width: 768px) {
