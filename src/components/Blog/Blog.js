@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BlogItem from './BlogItem';
-import Articles from '../../misc/blog-posts';
+import Articles from '../../misc/ipfsTestAllArticles.json';
 
 const BlogContainer = styled.div`
     margin-top: 20px;
@@ -10,6 +10,8 @@ const BlogContainer = styled.div`
     justify-content: center;
     font-family: var(--IBM);
 `;
+// window.sessionStorage.setItem("1",'two')
+// console.log(window.sessionStorage)
 
 const Blog = () => {
     return (

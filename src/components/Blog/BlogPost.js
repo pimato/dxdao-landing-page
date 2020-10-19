@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Articles from '../../misc/blog-posts';
+import Articles from '../../misc/ipfsTestAllArticles.json';
 import ReactMarkdown from 'react-markdown';
 
 const BlogPostWrapper = styled.div`
@@ -23,10 +23,10 @@ const Image = styled.img`
 `;
 
 export const BlogPost = () => {
-    const [markText, setMarkText] = useState('');
     const [blogState, setBlogState] = useState({
         title: '',
         image: '',
+        markdown: '',
     });
     //based on id i will find desired post
 
@@ -40,20 +40,15 @@ export const BlogPost = () => {
             title: title,
             image: image,
             description: short_description,
+            markdown: markdown,
         });
-
-        fetch(markdown)
-            .then((response) => response.text())
-            .then((text) => {
-                setMarkText(text);
-            });
     }, []);
 
     return (
         <BlogPostWrapper>
             <Header>{blogState.title}</Header>
             <Image src={blogState.image} />
-            <ReactMarkdown source={markText} />
+            <ReactMarkdown source={blogState.markdown} />
         </BlogPostWrapper>
     );
 };
