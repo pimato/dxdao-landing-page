@@ -88,6 +88,7 @@ const SubHeader = styled.div`
 `;
 
 const MenuItem = styled.div`
+    z-index: 1;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -153,6 +154,7 @@ const Arrow = styled.i`
         !prop.show ? 'rotate(45deg)' : 'rotate(-135deg)'};
 `;
 const MobileMenuItem = styled.div`
+    z-index: 1;
     animation: ease-in 5s infinite;
     font-family: var(--IBM);
     font-size: 24px;
