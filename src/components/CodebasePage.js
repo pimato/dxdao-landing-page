@@ -11,7 +11,6 @@ const Headline = styled.div`
     text-align: left;
     letter-spacing: 0.02em;
     color: var(--dark-text);
-    padding-left: 3px;
     margin-top: 14px;
     margin-bottom: 20px;
     @media (max-width: 1024px) {
@@ -251,7 +250,7 @@ const CodebasePage = () => {
                 />
                 <meta name="keywords" content="DXdao, Codebase" />
             </MetaTags>
-            <Headline>DXdao Codebase</Headline>
+            <Headline>Codebase</Headline>
             <Subheadline>DXdao Official Projects</Subheadline>
             <CodebaseSection>
                 <ProjectsTable>
