@@ -56,7 +56,7 @@ const BannerMessage = styled.div`
     line-height: 52px;
     text-align: center;
     color: var(--dark-text);
-    margin-top: 12px;
+    margin-top: 8px;
     @media (max-width: 768px) {
         font-size: 32px;
         line-height: 46px;
@@ -152,7 +152,7 @@ const Message = styled.div`
     text-align: center;
 
     color: var(--dark-text);
-    margin-top: 16px;
+    margin-top: 8px;
 `;
 
 const ProductPanelWrapper = styled.div`
