@@ -10,11 +10,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fMercury/dxdao-landing-page.git"
+        "url": "git+https://github.com/pimato/dxdao-landing-page.git"
     },
     "authors": "John Kelleher <john.kelleher@levelk.io>, Thomas Pulber <corkus@pm.me>, Thomas Spofford <tspofford@pm.me>, Augusto Lemble <me@augustol.com>",
     "bugs": {
-        "url": "https://github.com/fMercury/dxdao-landing-page/issues"
+        "url": "https://github.com/pimato/dxdao-landing-page/issues"
     },
     "homepage": "./",
     "eslintConfig": {

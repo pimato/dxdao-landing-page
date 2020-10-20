@@ -154,9 +154,9 @@ const projects = {
         },
         {
             name: 'dxdao-landing-page',
-            github: 'https://github.com/fMercury/dxdao-landing-page',
+            github: 'https://github.com/pimato/dxdao-landing-page',
             ipfs: '',
-            version: '0.2.0',
+            version: '0.2.3',
             links: '',
         },
         {
