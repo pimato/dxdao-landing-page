@@ -11,9 +11,12 @@ const ManifestoSection = styled.section`
     box-sizing: border-box;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.04);
     border-radius: 6px;
-    margin: 0rem 1.25rem 1.25rem 1.25rem;
+
     @media screen and (max-width: 768px) {
         padding: 1.75rem 1.5rem;
+    }
+    @media screen and (max-width: 1054px) {
+        margin: 0rem 1.25rem 1.25rem 1.25rem;
     }
 `;
 const Headline = styled.div`
