@@ -345,7 +345,7 @@ const LandingPage = () => {
     return (
         <LandingPageWrapper>
             <BannerSection>
-                <TagLine>WE PUT DECENTRALISATION INTO DEFI</TagLine>
+                <TagLine>DEFI'S GOVERNANCE LAYER</TagLine>
                 <BannerMessage>
                     <MetaTags>
                         <meta
@@ -399,8 +399,8 @@ const LandingPage = () => {
             </BannerSection>
 
             <ProductSection>
-                <TagLine>Our collectively owned products</TagLine>
-                <Message>Pure Dapps powered by DXdao</Message>
+                <TagLine>COLLECTIVELY OWNED PRODUCTS</TagLine>
+                <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
                     <ProductClickable
                         href="https://daotalk.org/t/mix-eth-seeking-feedback-on-proposal/1183"
