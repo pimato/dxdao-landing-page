@@ -93,7 +93,7 @@ const MediaPanel = styled.div`
         width: 100%;
         border-radius: 3px;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 475px) {
         height: auto;
         width: 100%;
     }
@@ -119,7 +119,7 @@ const AsssetItemLink = styled.a`
     letter-spacing: 0.03em;
     color: var(--light-body-text);
     text-decoration: none;
-    color: #189ddf;
+    color: var(--dark-button-background);
     margin: 0 4px;
 `;
 

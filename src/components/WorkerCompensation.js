@@ -1,25 +1,29 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-
+import links from '../links';
 const Rounded = css`
-    border: 1px solid #d6d6d6;
+    border: 1px solid var(--white-shade);
     border-radius: 6px;
     padding: 2rem;
     margin-top: 1rem;
 
     @media screen and (max-width: 768px) {
-        padding: 1.25rem;
+        padding: 1.75rem 1.5rem;
     }
 `;
+
+const WorkerCompensationSection = styled.section`
+    margin: 0rem 1.25rem 1.25rem 1.25rem;
+`;
 const Headline = styled.div`
-    margin-top: 1.25rem;
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: 42px;
     letter-spacing: 0.02em;
     text-align: left;
+    margin-bottom: 8px;
 
     @media screen and (max-width: 768px) {
         font-size: 18px;
@@ -27,16 +31,15 @@ const Headline = styled.div`
         letter-spacing: 0.01em;
     }
 `;
-const BlueText = styled.div`
+const BlueText = styled.a`
     margin-top: 0.5rem;
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0.01em;
     text-align: left;
-    color: #536dfe;
     text-decoration-line: underline;
 
     @media screen and (max-width: 768px) {
@@ -51,7 +54,7 @@ const FlexWrapper = styled.div`
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    font-family: IBM Plex Sans;
+    font-family: var(--IBM);
 `;
 
 const GuidingTenets = styled.div`
@@ -63,7 +66,7 @@ const SalaryStructure = styled.div`
 `;
 const MonthlyComp = styled.div`
     flex: 2;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
     ${Rounded};
     padding: 0px;
     @media screen and (max-width: 768px) {
@@ -105,7 +108,7 @@ const OtherItems = styled.div`
 `;
 
 const SubHeader = styled.div`
-    color: #2b2b2b;
+    color: var(--light-black);
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
@@ -125,7 +128,7 @@ const NormalText = styled.div`
     letter-spacing: 0.01rem;
     text-align: left;
     overflow: hidden;
-    color: #616161;
+    color: var(--dark-text-gray);
 `;
 const ItemWrapper = styled.div`
     margin-top: ${(prop) => (prop.marginTop ? prop.marginTop : 0.625)}rem;
@@ -138,7 +141,7 @@ const ItemWrapper = styled.div`
 const Bullet = styled.div`
     height: 8px;
     width: 8px;
-    background-color: #616161;
+    background-color: var(--dark-text-gray);
     border-radius: 50%;
     float: left;
     margin-top: 0.375rem;
@@ -146,8 +149,8 @@ const Bullet = styled.div`
 `;
 const SubBullet = styled(Bullet)`
     margin-left: 1.25rem;
-    border: 1px solid #616161;
-    background-color: white;
+    border: 1px solid var(--dark-text-gray);
+    background-color: var(--white);
 `;
 const LevelsBullet = styled.div`
     font-size: 14px;
@@ -156,7 +159,7 @@ const LevelsBullet = styled.div`
     line-height: 18px;
     letter-spacing: 0px;
     text-align: center;
-    border: 1px solid #d6d6d6;
+    border: 1px solid var(--white-shade);
     float: left;
     padding: 0.25rem 0.8125rem;
     border-radius: 6px;
@@ -173,8 +176,8 @@ const NumberBullet = styled.div`
     letter-spacing: 0px;
     text-align: center;
     border-radius: 50%;
-    border: 1px solid #d6d6d6;
-    background-color: white;
+    border: 1px solid var(--white-shade);
+    background-color: var(--white);
     padding-top: 3px;
     margin-right: 1.25rem;
 
@@ -202,11 +205,11 @@ const TableHeader = styled.th`
     font-style: normal;
     font-weight: 500;
     line-height: 27px;
-    color: #2b2b2b;
+    color: var(--light-black);
     letter-spacing: 0px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
+    border-bottom: 1px solid var(--medium-white);
+    border-top: 1px solid var(--medium-white);
     padding: 0.625rem 2rem;
 
     @media screen and (max-width: 768px) {
@@ -228,12 +231,14 @@ const MonthlyHeader = styled(SubHeader)`
 `;
 const WorkerCompensation = () => {
     return (
-        <React.Fragment>
+        <WorkerCompensationSection>
             <Headline>Worker Compensation Guidelines</Headline>
-            <BlueText>Ratified on September 19th, 2020</BlueText>
+            <BlueText href={links.ratified_etherscan} target="_blank">
+                Ratified on September 19th, 2020
+            </BlueText>
             <FlexWrapper>
                 <GuidingTenets>
-                    <SubHeader>Guiding Tenets</SubHeader>
+                    <SubHeader>Guiding Tenets </SubHeader>
                     <ItemWrapper marginTop={'1'}>
                         <Bullet />
                         <NormalText>
@@ -505,7 +510,7 @@ const WorkerCompensation = () => {
                     </ItemWrapper>
                 </OtherItems>
             </FlexWrapper>
-        </React.Fragment>
+        </WorkerCompensationSection>
     );
 };
 

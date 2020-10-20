@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
 import { version } from '../../../package.json';
@@ -35,17 +34,7 @@ const FooterItem = styled.div`
     }
     a:hover {
         color: var(--text-gray-onHover);
-    }a
-    
-`;
-
-const FooterDivider = styled.div`
-    background: var(--footer-text-gray);
-    width: 4px;
-    height: 4px;
-    border-radius: 2px;
-    line-height: 24px;
-    margin: 7px;
+    }
 `;
 
 const LogoWrapper = styled.div`
