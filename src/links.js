@@ -69,7 +69,7 @@ const links = {
 
     // Footer
 
-    footer_version: `https://github.com/fMercury/dxdao-landing-page/tree/v${version}`,
+    footer_version: `https://github.com/pimato/dxdao-landing-page/tree/v${version}`,
 
     footer_twitter: 'https://twitter.com/dxdao_',
 
