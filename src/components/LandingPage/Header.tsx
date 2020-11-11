@@ -411,7 +411,7 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Forum
                         </SubItem>
-                        {/*<SubItem to={links.landing_blog}>Blog</SubItem>*/}
+                        <SubItem to={links.landing_blog}>Blog</SubItem>
                         <SubItem
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
