@@ -411,7 +411,6 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Forum
                         </SubItem>
-                        <SubItem to={links.landing_blog}>Blog</SubItem>
                         <SubItem
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
@@ -566,12 +565,6 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Forum
                         </DropdownItem>
-                        {/*<DropdownItem*/}
-                        {/*    to={links.landing_blog}*/}
-                        {/*    onClick={toggleMenu}*/}
-                        {/*>*/}
-                        {/*    Blog*/}
-                        {/*</DropdownItem>*/}
                         <DropdownItem
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
