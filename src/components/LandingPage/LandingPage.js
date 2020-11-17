@@ -365,7 +365,7 @@ const LandingPage = () => {
                         />
                         <meta
                             name="keywords"
-                            content="DXdao, LandingPage, Omen, Mix, Dxswap, Mesa"
+                            content="DXdao, LandingPage, Omen, Mix, Rails,Swapr Mesa"
                         />
                     </MetaTags>
                     <HeavyMessage>DXdao </HeavyMessage>is a{' '}
@@ -403,22 +403,6 @@ const LandingPage = () => {
                 <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
                     <ProductClickable
-                        href="https://daotalk.org/t/mix-eth-seeking-feedback-on-proposal/1183"
-                        target="_blank"
-                    >
-                        <ProductPanel>
-                            <ProductNameWrapper>
-                                <ProductLogo src="Mix.svg" />
-                                <ProductName>Mix.eth</ProductName>
-                            </ProductNameWrapper>
-                            <ProductDescription>
-                                Mix is a portfolio manager for the Ethereum
-                                ecosystem with privacy, security, and a good
-                                user experience as core features.
-                            </ProductDescription>
-                        </ProductPanel>
-                    </ProductClickable>
-                    <ProductClickable
                         href="https://omen.eth.link"
                         target="_blank"
                     >
@@ -431,6 +415,21 @@ const LandingPage = () => {
                                 Omen is a fully decentralized prediction market
                                 platform built on top of the Gnosis conditional
                                 token framework.
+                            </ProductDescription>
+                        </ProductPanel>
+                    </ProductClickable>
+                    <ProductClickable
+                        href="https://medium.com/swapr/dxdao-announces-swapr-becoming-the-first-dao-to-launch-a-defi-protocol-on-ethereum-d45c291ae86a"
+                        target="_blank"
+                    >
+                        <ProductPanel>
+                            <ProductNameWrapper>
+                                <ProductLogo src="Swapr.svg" />
+                                <ProductName>Swapr.eth</ProductName>
+                            </ProductNameWrapper>
+                            <ProductDescription>
+                                Swapr is a protocol for exchanging ERC-20
+                                tokens.
                             </ProductDescription>
                         </ProductPanel>
                     </ProductClickable>
@@ -453,17 +452,18 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317"
+                        href="https://rails.eth.link/"
                         target="_blank"
                     >
                         <ProductPanel>
                             <ProductNameWrapper>
-                                <ProductLogo src="Dxswap.svg" />
-                                <ProductName>DXswap.eth</ProductName>
+                                <ProductLogo src="Rails.svg" />
+                                <ProductName>Rails.eth</ProductName>
                             </ProductNameWrapper>
                             <ProductDescription>
-                                DXswap is a protocol for exchanging ERC-20
-                                tokens.
+                                Rails brings fast, cheap, and hassle-free
+                                cryptocurrency micropayments to the masses. Get
+                                aboard.
                             </ProductDescription>
                         </ProductPanel>
                     </ProductClickable>

@@ -193,7 +193,7 @@ const assets = {
             jpg: './brand/mix-black.jpg',
         },
     },
-    dxswap: {
+    swapr: {
         purple: {
             svg: './brand/dxswap-purple.svg',
             png: './brand/dxswap-purple.png',
@@ -212,6 +212,16 @@ const assets = {
             jpg: './brand/mesa-black.jpg',
         },
     },
+    rails: {
+        black: {
+            svg: './brand/rails-black.svg',
+            png: './brand/rails-black.png',
+        },
+        white: {
+            svg: './brand/rails-white.svg',
+            png: './brand/rails-white.png',
+        },
+    },
 };
 
 const BrandAssetsPage = () => {
@@ -225,12 +235,12 @@ const BrandAssetsPage = () => {
                 <meta
                     id="meta-description"
                     name="dxdao.eth"
-                    content="Official DXdao and product logos: Omen Mix Dxswap Mesa"
+                    content="Official DXdao and product logos: Omen Rails Swapr Mesa"
                 />
                 <meta id="og-title" property="og:title" content="DXdao Brand" />
                 <meta
                     name="keywords"
-                    content="DXdao, BrandAssets, Omen, Mix, Dxswap, Mesa"
+                    content="DXdao, BrandAssets, Omen, Dxswap, Mesa"
                 />
             </MetaTags>
             <Headline>DXdao Brand</Headline>
@@ -408,33 +418,33 @@ const BrandAssetsPage = () => {
                     <MediaPanel style={{ borderBottomRightRadius: 3 }}>
                         <ProductNameWrapper>
                             <ProductLogo src="Dxswap.svg" />
-                            <ProductName>Dxswap logo</ProductName>
+                            <ProductName>Swapr logo</ProductName>
                         </ProductNameWrapper>
                         <ProductDescription>
-                            This is the main Dxswap logo and should always be
+                            This is the main Swapr logo and should always be
                             used as is. This logo should be used when reflecting
-                            the Dxswap product, for example when partnering with
+                            the Swapr product, for example when partnering with
                             us.
                         </ProductDescription>
                         <Assets>
                             <AssetItem>
                                 Black:
                                 <AsssetItemLink
-                                    href={assets.dxswap.black.svg}
+                                    href={assets.swapr.black.svg}
                                     target="#"
                                 >
                                     svg
                                 </AsssetItemLink>
                                 /
                                 <AsssetItemLink
-                                    href={assets.dxswap.black.png}
+                                    href={assets.swapr.black.png}
                                     target="#"
                                 >
                                     png
                                 </AsssetItemLink>
                                 /
                                 <AsssetItemLink
-                                    href={assets.dxswap.black.jpg}
+                                    href={assets.swapr.black.jpg}
                                     target="#"
                                 >
                                     jpg
@@ -443,21 +453,21 @@ const BrandAssetsPage = () => {
                             <AssetItem>
                                 Purple:
                                 <AsssetItemLink
-                                    href={assets.dxswap.purple.svg}
+                                    href={assets.swapr.purple.svg}
                                     target="#"
                                 >
                                     svg
                                 </AsssetItemLink>
                                 /
                                 <AsssetItemLink
-                                    href={assets.dxswap.purple.png}
+                                    href={assets.swapr.purple.png}
                                     target="#"
                                 >
                                     png
                                 </AsssetItemLink>
                                 /
                                 <AsssetItemLink
-                                    href={assets.dxswap.purple.jpg}
+                                    href={assets.swapr.purple.jpg}
                                     target="#"
                                 >
                                     jpg
@@ -499,6 +509,52 @@ const BrandAssetsPage = () => {
                                     target="#"
                                 >
                                     jpg
+                                </AsssetItemLink>
+                            </AssetItem>
+                        </Assets>
+                    </MediaPanel>
+                    <MediaPanel style={{ borderBottomLeftRadius: 3 }}>
+                        <ProductNameWrapper>
+                            <ProductLogo src="Rails.svg" />
+                            <ProductName>Rails logo</ProductName>
+                        </ProductNameWrapper>
+                        <ProductDescription>
+                            This is the main Rails logo and should always be
+                            used as is. This logo should be used when reflecting
+                            the Rails product, for example when partnering with
+                            us.
+                        </ProductDescription>
+                        <Assets>
+                            <AssetItem>
+                                Black:
+                                <AsssetItemLink
+                                    href={assets.rails.black.svg}
+                                    target="#"
+                                >
+                                    svg
+                                </AsssetItemLink>
+                                /
+                                <AsssetItemLink
+                                    href={assets.rails.black.png}
+                                    target="#"
+                                >
+                                    png
+                                </AsssetItemLink>
+                            </AssetItem>
+                            <AssetItem>
+                                White:
+                                <AsssetItemLink
+                                    href={assets.rails.white.svg}
+                                    target="#"
+                                >
+                                    svg
+                                </AsssetItemLink>
+                                /
+                                <AsssetItemLink
+                                    href={assets.rails.white.png}
+                                    target="#"
+                                >
+                                    png
                                 </AsssetItemLink>
                             </AssetItem>
                         </Assets>

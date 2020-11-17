@@ -26,7 +26,7 @@ const links = {
 
     landing_mesaeth: 'https://mesa.eth.link',
 
-    landing_dxswapeth_codebase:
+    landing_swapr_codebase:
         'https://github.com/levelkdev/dxswap-dapp/projects/1',
 
     landing_dxdao_codebase:
