@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
 import MetaTags from 'react-meta-tags';
+import { useIpfsLink } from '../../hooks/useIpfsLink';
 
 const LandingPageWrapper = styled.div`
     font-family: var(--IBM);
@@ -328,6 +329,7 @@ const JoinActionArrow = styled.img`
 `;
 
 const LandingPage = () => {
+    const ipfs = useIpfsLink();
     const NormalButton = withRouter(
         ({ option, route, history, location, children }) => {
             return (
@@ -365,7 +367,7 @@ const LandingPage = () => {
                         />
                         <meta
                             name="keywords"
-                            content="DXdao, LandingPage, Omen, Mix, Rails,Swapr Mesa"
+                            content="DXdao, LandingPage, Omen, Mix, Rails,Swapr, Mesa"
                         />
                     </MetaTags>
                     <HeavyMessage>DXdao </HeavyMessage>is a{' '}
@@ -403,7 +405,9 @@ const LandingPage = () => {
                 <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
                     <ProductClickable
-                        href="https://omen.eth.link"
+                        href={
+                            ipfs ? links.landing_omen_ipfs : links.landing_omen
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
@@ -428,15 +432,19 @@ const LandingPage = () => {
                                 <ProductName>Swapr.eth</ProductName>
                             </ProductNameWrapper>
                             <ProductDescription>
-                                Swapr is a protocol for exchanging ERC-20
-                                tokens.
+                                A governance-enabled automated-market maker with
+                                adjustable fees.
                             </ProductDescription>
                         </ProductPanel>
                     </ProductClickable>
                 </ProductPanelWrapper>
                 <ProductPanelWrapper marginTop={'20px'}>
                     <ProductClickable
-                        href="https://mesa.eth.link"
+                        href={
+                            ipfs
+                                ? links.landing_mesa_ipfs
+                                : links.landing_mesaeth
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
@@ -452,7 +460,11 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://rails.eth.link/"
+                        href={
+                            ipfs
+                                ? links.landing_rails_ipfs
+                                : links.landing_rails
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
