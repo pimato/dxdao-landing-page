@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MetaTags from 'react-meta-tags';
+import links from '../links';
 
 const Headline = styled.div`
     font-family: Raleway;
@@ -197,7 +198,7 @@ const projects = {
                 'https://gateway.ipfs.io/ipfs/QmNMBB7Nuc7NDxxRYrh3cU2dSMBddnvn1WvKujUpudzFqY',
             version: '1.0.0',
             links:
-                '<a href="https://mesa.eth.link" target="_blank" rel="noopener noreferrer">Mesa Dapp</a>',
+                '<a href={links.landing_mesaeth} target="_blank" rel="noopener noreferrer">Mesa Dapp</a>',
         },
         {
             name: 'omen-dapp',
@@ -206,7 +207,7 @@ const projects = {
                 'https://gateway.ipfs.io/ipfs/QmbB3wA5R2PR8s87pJRSUCcBHRxAtfFtkSWmVWEcHsaFeV',
             version: '0.1.0',
             links:
-                '<a href="https://omen.eth.link" target="_blank" rel="noopener noreferrer">Omen Dapp</a>',
+                '<a href={links.landing_omen} target="_blank" rel="noopener noreferrer">Omen Dapp</a>',
         },
         {
             name: 'rails',
