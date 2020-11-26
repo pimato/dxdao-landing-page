@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
 import MetaTags from 'react-meta-tags';
-import { useIpfsLink } from '../../hooks/useIpfsLink';
 
 const LandingPageWrapper = styled.div`
     font-family: var(--IBM);
@@ -214,7 +213,7 @@ const ProductName = styled.div`
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
-    margin-left: 16px;
+    margin-left: 12px;
     letter-spacing: 0.02em;
     color: var(--dark-text);
 `;
@@ -329,7 +328,9 @@ const JoinActionArrow = styled.img`
 `;
 
 const LandingPage = () => {
-    const ipfs = useIpfsLink();
+    //check if user has metamask
+    const ipfs = !!window.ethereum;
+
     const NormalButton = withRouter(
         ({ option, route, history, location, children }) => {
             return (
