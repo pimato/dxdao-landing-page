@@ -26,6 +26,14 @@ const links = {
 
     landing_mesaeth: 'https://mesa.eth.link',
 
+    landing_mesa_ipfs: 'https://mesa.eth',
+
+    landing_omen: 'https://omen.eth.link',
+
+    landing_omen_ipfs: 'https://omen.eth',
+    landing_rails: 'https://rails.eth.link',
+    landing_rails_ipfs: 'https://rails.eth',
+
     landing_swapr_codebase:
         'https://github.com/levelkdev/dxswap-dapp/projects/1',
 
