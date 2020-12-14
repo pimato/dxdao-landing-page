@@ -316,6 +316,7 @@ const NavBar = ({ setMobileState }) => {
                         <SubItem to={links.landing_worker_compensation}>
                             Worker Compensation
                         </SubItem>
+                        <SubItem to="/faq">FAQ</SubItem>
                     </SubMenu>
                 </MenuItem>
                 <MenuItem
@@ -452,6 +453,12 @@ const NavBar = ({ setMobileState }) => {
                             onClick={toggleMenu}
                         >
                             Worker Compensation
+                        </DropdownItem>
+                        <DropdownItem
+                            to={links.landing_faq}
+                            onClick={toggleMenu}
+                        >
+                            FAQ
                         </DropdownItem>
                         <DropdownItem as="a" disabled={true}>
                             DAOs
