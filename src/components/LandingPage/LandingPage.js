@@ -116,7 +116,7 @@ const Button = styled.button`
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        flex-basis: 47%;
+        width: 47%;
         margin: 0;
     }
 `;
@@ -131,7 +131,8 @@ const SwaprButton = styled(Button)`
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        flex-basis: 47%;
+        width: 47%;
+        margin-right: 12px;
     }
 `;
 
