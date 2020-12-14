@@ -172,7 +172,7 @@ const projects = {
             name: 'dxswap-core',
             github: 'https://github.com/levelkdev/dxswap-core',
             ipfs: '',
-            version: '0.1.0',
+            version: '0.3.1',
             links:
                 '<a href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317" target="_blank" rel="noopener noreferrer">DAOTalk Topic</a>',
         },
@@ -180,22 +180,24 @@ const projects = {
             name: 'dxswap-periphery',
             github: 'https://github.com/levelkdev/dxswap-periphery',
             ipfs: '',
-            version: '0.1.0',
+            version: '0.3.1',
             links: '',
         },
         {
             name: 'dxswap-dapp',
             github: 'https://github.com/levelkdev/dxswap-dapp',
-            ipfs: '',
-            version: '0.1.0',
-            links: '',
+            ipfs:
+                'https://gateway.ipfs.io/ipfs/QmZVVyQuX3QW6u9iQew66FeDEfchpEURaSPE5RJ6B5aS96/#/swap',
+            version: '1.1.0 Alpha 1',
+            links:
+                '<a href="https://swapr.eth.link" target="_blank" rel="noopener noreferrer">Swapr Dapp</a>',
         },
         {
             name: 'mesa-dapp',
             github: 'https://github.com/dOrgTech/dex-react',
             ipfs:
-                'https://gateway.ipfs.io/ipfs/QmNMBB7Nuc7NDxxRYrh3cU2dSMBddnvn1WvKujUpudzFqY',
-            version: '1.0.0',
+                'https://gateway.ipfs.io/ipfs/QmWP3AHj4d9zWfbKxhHgF5tWKTQrgg8WQC24F8ew6cFiHV',
+            version: '1.5.2',
             links:
                 '<a href="https://mesa.eth.link" target="_blank" rel="noopener noreferrer">Mesa Dapp</a>',
         },
@@ -203,8 +205,8 @@ const projects = {
             name: 'omen-dapp',
             github: 'https://github.com/protofire/gnosis-conditional-exchange',
             ipfs:
-                'https://gateway.ipfs.io/ipfs/QmbB3wA5R2PR8s87pJRSUCcBHRxAtfFtkSWmVWEcHsaFeV',
-            version: '0.1.0',
+                'https://gateway.ipfs.io/ipfs/QmUqN9F8gbmgS933U2ubvrqWGCibNuVdG6FjQny8ywKJVp',
+            version: '1.2.0',
             links:
                 '<a href="https://omen.eth.link" target="_blank" rel="noopener noreferrer">Omen Dapp</a>',
         },
@@ -212,8 +214,8 @@ const projects = {
             name: 'rails',
             github: 'https://github.com/luzzif/rails',
             ipfs:
-                'https://gateway.ipfs.io/ipfs/QmcDqAS2HTRamb5LjHJEFMMpTtCA3gxsAds6vKjfaWoiXa',
-            version: '1.0.2',
+                'https://gateway.ipfs.io/ipfs/QmSzjFGSGmbm7anc6pJV5kCWESQcCAGBw6byTvcrW8UDdN',
+            version: '1.1.0',
             links:
                 '<a href="https://rails.eth.link" target="_blank" rel="noopener noreferrer">Rails Dapp</a>',
         },

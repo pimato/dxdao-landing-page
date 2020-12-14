@@ -348,7 +348,7 @@ const LandingPage = () => {
     return (
         <LandingPageWrapper>
             <BannerSection>
-                <TagLine>DEFI'S GOVERNANCE LAYER</TagLine>
+                <TagLine>WE DECENTRALIZE DEFI</TagLine>
                 <BannerMessage>
                     <MetaTags>
                         <meta
@@ -424,7 +424,11 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://medium.com/swapr/dxdao-announces-swapr-becoming-the-first-dao-to-launch-a-defi-protocol-on-ethereum-d45c291ae86a"
+                        href={
+                            ipfs
+                                ? links.landing_swapr_ipfs
+                                : links.landing_swapr
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
@@ -512,8 +516,8 @@ const LandingPage = () => {
                         <AboutIcon src="No-Hierarchy.svg" />
                         <AboutHeader>No Hierarchies</AboutHeader>
                         <AboutDescription>
-                            There is no boss. Members find consensus through
-                            voting.
+                            Work with a distributed collective that finds
+                            consensus through voting.
                         </AboutDescription>
                     </AboutPanel>
                     <AboutPanel>
