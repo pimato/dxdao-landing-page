@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import links from '../links';
 
 const ManifestoSection = styled.section`
     display: block;
@@ -102,7 +103,7 @@ const Manifesto = () => {
             <Headline>DXdao Manifesto</Headline>
             <DateRatified>
                 <a
-                    href="https://etherscan.io/tx/0x7ae4b4a3dc8e8bc31a42a39f12b6c4b6a5ba3608a12b961f3f6dc006d99507b9"
+                    href={links.ratified_manifesto_alchemy}
                     target="_blank"
                     rel="noopener noreferrer"
                 >

@@ -92,43 +92,47 @@ const ButtonRow = styled.div`
     margin-top: 32px;
 `;
 
-const Button = styled.div`
+const Button = styled.button`
     display: flex;
+    padding: 9.5px 17px;
+    font-family: var(--IBM);
     justify-content: center;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     line-height: 18px;
     display: flex;
+    background-color: white;
     align-items: center;
     text-align: center;
     letter-spacing: 0.02em;
-    width: 120px;
     height: 43px;
     color: var(--dark-text);
     border: 1px solid rgba(51, 51, 51, 0.2);
-    border-radius: 3px;
+    border-radius: 6px;
     margin: 0px 10px;
     &:hover {
         border: 1px solid var(--lp-border-color-onHover);
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        flex-basis: 47%;
+        width: 47%;
         margin: 0;
     }
 `;
-const BlueButton = styled(Button)`
-    background-color: var(--blue-text);
+const SwaprButton = styled(Button)`
+    background-color: var(--violet-color);
     color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 6px;
     &:hover {
-        background: var(--blue-hover);
+        background: var(--violet-hover);
         border: 1px solid rgba(0, 0, 0, 0.075);
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        flex-basis: 47%;
+        width: 47%;
+        margin-right: 12px;
     }
 `;
 
@@ -213,7 +217,7 @@ const ProductName = styled.div`
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
-    margin-left: 16px;
+    margin-left: 12px;
     letter-spacing: 0.02em;
     color: var(--dark-text);
 `;
@@ -268,6 +272,10 @@ const AboutPanel = styled.div`
 `;
 
 const AboutIcon = styled.img``;
+
+const SwaprLogo = styled.img`
+    margin-right: 10px;
+`;
 
 const AboutHeader = styled.div`
     font-style: normal;
@@ -328,6 +336,9 @@ const JoinActionArrow = styled.img`
 `;
 
 const LandingPage = () => {
+    //check if user has metamask
+    const ipfs = !!window.ethereum;
+
     const NormalButton = withRouter(
         ({ option, route, history, location, children }) => {
             return (
@@ -345,7 +356,7 @@ const LandingPage = () => {
     return (
         <LandingPageWrapper>
             <BannerSection>
-                <TagLine>WE PUT DECENTRALISATION INTO DEFI</TagLine>
+                <TagLine>WE DECENTRALIZE DEFI</TagLine>
                 <BannerMessage>
                     <MetaTags>
                         <meta
@@ -365,7 +376,7 @@ const LandingPage = () => {
                         />
                         <meta
                             name="keywords"
-                            content="DXdao, LandingPage, Omen, Mix, Dxswap, Mesa"
+                            content="DXdao, LandingPage, Omen, Mix, Rails,Swapr, Mesa"
                         />
                     </MetaTags>
                     <HeavyMessage>DXdao </HeavyMessage>is a{' '}
@@ -399,27 +410,13 @@ const LandingPage = () => {
             </BannerSection>
 
             <ProductSection>
-                <TagLine>Our collectively owned products</TagLine>
-                <Message>Pure Dapps powered by DXdao</Message>
+                <TagLine>COLLECTIVELY OWNED PRODUCTS</TagLine>
+                <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
                     <ProductClickable
-                        href="https://daotalk.org/t/mix-eth-seeking-feedback-on-proposal/1183"
-                        target="_blank"
-                    >
-                        <ProductPanel>
-                            <ProductNameWrapper>
-                                <ProductLogo src="Mix.svg" />
-                                <ProductName>Mix.eth</ProductName>
-                            </ProductNameWrapper>
-                            <ProductDescription>
-                                Mix is a portfolio manager for the Ethereum
-                                ecosystem with privacy, security, and a good
-                                user experience as core features.
-                            </ProductDescription>
-                        </ProductPanel>
-                    </ProductClickable>
-                    <ProductClickable
-                        href="https://omen.eth.link"
+                        href={
+                            ipfs ? links.landing_omen_ipfs : links.landing_omen
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
@@ -434,10 +431,33 @@ const LandingPage = () => {
                             </ProductDescription>
                         </ProductPanel>
                     </ProductClickable>
+                    <ProductClickable
+                        href={
+                            ipfs
+                                ? links.landing_swapr_ipfs
+                                : links.landing_swapr
+                        }
+                        target="_blank"
+                    >
+                        <ProductPanel>
+                            <ProductNameWrapper>
+                                <ProductLogo src="Swapr.svg" />
+                                <ProductName>Swapr.eth</ProductName>
+                            </ProductNameWrapper>
+                            <ProductDescription>
+                                A governance-enabled automated-market maker with
+                                adjustable fees.
+                            </ProductDescription>
+                        </ProductPanel>
+                    </ProductClickable>
                 </ProductPanelWrapper>
                 <ProductPanelWrapper marginTop={'20px'}>
                     <ProductClickable
-                        href="https://mesa.eth.link"
+                        href={
+                            ipfs
+                                ? links.landing_mesa_ipfs
+                                : links.landing_mesaeth
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
@@ -453,17 +473,22 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317"
+                        href={
+                            ipfs
+                                ? links.landing_rails_ipfs
+                                : links.landing_rails
+                        }
                         target="_blank"
                     >
                         <ProductPanel>
                             <ProductNameWrapper>
-                                <ProductLogo src="Dxswap.svg" />
-                                <ProductName>DXswap.eth</ProductName>
+                                <ProductLogo src="Rails.svg" />
+                                <ProductName>Rails.eth</ProductName>
                             </ProductNameWrapper>
                             <ProductDescription>
-                                DXswap is a protocol for exchanging ERC-20
-                                tokens.
+                                Rails brings fast, cheap, and hassle-free
+                                cryptocurrency micropayments to the masses. Get
+                                aboard.
                             </ProductDescription>
                         </ProductPanel>
                     </ProductClickable>
@@ -481,14 +506,16 @@ const LandingPage = () => {
                     fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
-                    <BlueButton
+                    <SwaprButton
                         as="a"
-                        href={links.landing_dxtrust}
+                        href={links.landing_swapr}
                         target="_blank"
                     >
-                        Get DXD
-                    </BlueButton>
-                    <NormalButton route="/faq">FAQ</NormalButton>
+                        <SwaprLogo src="./brand/SwaprWhite.svg" /> Swapr.eth
+                    </SwaprButton>
+                    <NormalButton href={links.landing_dxtrust}>
+                        DXtrust.eth
+                    </NormalButton>
                 </ButtonRow>
             </DXDSection>
             <AboutUsSection>
@@ -499,8 +526,8 @@ const LandingPage = () => {
                         <AboutIcon src="No-Hierarchy.svg" />
                         <AboutHeader>No Hierarchies</AboutHeader>
                         <AboutDescription>
-                            There is no boss. Members find consensus through
-                            voting.
+                            Work with a distributed collective that finds
+                            consensus through voting.
                         </AboutDescription>
                     </AboutPanel>
                     <AboutPanel>

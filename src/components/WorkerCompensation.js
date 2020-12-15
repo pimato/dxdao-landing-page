@@ -235,7 +235,10 @@ const WorkerCompensation = () => {
     return (
         <WorkerCompensationSection>
             <Headline>Worker Compensation Guidelines</Headline>
-            <BlueText href={links.ratified_etherscan} target="_blank">
+            <BlueText
+                href={links.ratified_worker_compensation_alchemy}
+                target="_blank"
+            >
                 Ratified on September 19th, 2020
             </BlueText>
             <FlexWrapper>

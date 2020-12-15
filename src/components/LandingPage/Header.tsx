@@ -88,6 +88,7 @@ const SubHeader = styled.div`
 `;
 
 const MenuItem = styled.div`
+    z-index: 1;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -153,6 +154,7 @@ const Arrow = styled.i`
         !prop.show ? 'rotate(45deg)' : 'rotate(-135deg)'};
 `;
 const MobileMenuItem = styled.div`
+    z-index: 1;
     animation: ease-in 5s infinite;
     font-family: var(--IBM);
     font-size: 24px;
@@ -314,6 +316,7 @@ const NavBar = ({ setMobileState }) => {
                         <SubItem to={links.landing_worker_compensation}>
                             Worker Compensation
                         </SubItem>
+                        <SubItem to="/faq">FAQ</SubItem>
                     </SubMenu>
                 </MenuItem>
                 <MenuItem
@@ -354,10 +357,10 @@ const NavBar = ({ setMobileState }) => {
                                 event.stopPropagation();
                             }}
                             as="a"
-                            href={links.landing_dxswapeth_codebase}
+                            href={links.landing_swapr_codebase}
                             target="_blank"
                         >
-                            DXswap
+                            Swapr
                         </SubItem>
                         <Divider />
                         <SubItem
@@ -411,7 +414,6 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Forum
                         </SubItem>
-                        {/*<SubItem to={links.landing_blog}>Blog</SubItem>*/}
                         <SubItem
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
@@ -451,6 +453,12 @@ const NavBar = ({ setMobileState }) => {
                             onClick={toggleMenu}
                         >
                             Worker Compensation
+                        </DropdownItem>
+                        <DropdownItem
+                            to={links.landing_faq}
+                            onClick={toggleMenu}
+                        >
+                            FAQ
                         </DropdownItem>
                         <DropdownItem as="a" disabled={true}>
                             DAOs
@@ -497,10 +505,10 @@ const NavBar = ({ setMobileState }) => {
                                 toggleMenu();
                             }}
                             as="a"
-                            href={links.landing_dxswapeth_codebase}
+                            href={links.landing_swapr_codebase}
                             target="_blank"
                         >
-                            DXswap
+                            Swapr
                         </DropdownItem>
                         <Divider />
                         <DropdownItem
@@ -566,12 +574,6 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Forum
                         </DropdownItem>
-                        {/*<DropdownItem*/}
-                        {/*    to={links.landing_blog}*/}
-                        {/*    onClick={toggleMenu}*/}
-                        {/*>*/}
-                        {/*    Blog*/}
-                        {/*</DropdownItem>*/}
                         <DropdownItem
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {

@@ -11,8 +11,6 @@ import BrandAssetsPage from 'components/BrandAssetsPage';
 import CodebasePage from 'components/CodebasePage';
 import Manifesto from './components/Manifesto';
 import WorkerCompensation from './components/WorkerCompensation';
-import Blog from './components/Blog/Blog';
-import { BlogPost } from './components/Blog/BlogPost';
 
 const AppShell = styled.div`
     width: 936px;
@@ -95,28 +93,6 @@ const App = () => {
                                 setMobileState={setMobileState}
                             />
                             <WorkerCompensation />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-                <Route exact path="/blog">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <Blog />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-                <Route exact path="/blog/:title">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <BlogPost />
                             <LandingPageFooter />
                         </AppShell>
                     </div>
