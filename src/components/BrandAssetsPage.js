@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import MetaTags from 'react-meta-tags';
 
 const Headline = styled.div`
-    font-family: Raleway;
+    font-family: var(--IBM);
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -21,7 +21,7 @@ const Headline = styled.div`
 `;
 
 const Subheadline = styled.div`
-    font-family: Raleway;
+    font-family: var(--IBM);
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -140,7 +140,7 @@ const ProductName = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Raleway;
+    font-family: var(--IBM);
     font-style: normal;
     font-weight: 600;
     font-size: 22px;

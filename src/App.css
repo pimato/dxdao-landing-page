@@ -216,7 +216,7 @@ pre {
   }
   
   .NavigationLinks {
-    font-family: Raleway, sans-serif;
+    font-family: var(--IBM);
     font-weight: 500;
     font-size: 20px;
   
@@ -238,6 +238,7 @@ pre {
   }
   
   .Content {
+      z-index: 2;
     background-color:white;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -287,7 +288,7 @@ pre {
   
     padding: 20px 23px;
   
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--IBM);
     font-weight: 600;
   
     color: var(--dark-text);

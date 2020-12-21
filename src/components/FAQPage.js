@@ -9,9 +9,9 @@ import Accordion from './Accordion';
 import FAQ_DATA from '../misc/faq';
 
 const BannerMessage = styled.div`
-    font-family: Raleway;
+    font-family: var(--IBM);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 24px;
     line-height: 28px;
     text-align: left;
@@ -23,7 +23,7 @@ const BannerMessage = styled.div`
 `;
 
 const Description = styled.div`
-    font-family: Source Sans Pro;
+    font-family: var(--IBM);
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
