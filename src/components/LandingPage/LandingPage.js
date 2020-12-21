@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../links';
 import MetaTags from 'react-meta-tags';
@@ -339,20 +338,6 @@ const LandingPage = () => {
     //check if user has metamask
     const ipfs = !!window.ethereum;
 
-    const NormalButton = withRouter(
-        ({ option, route, history, location, children }) => {
-            return (
-                <Button
-                    onClick={() => {
-                        history.push(route);
-                    }}
-                >
-                    {children}
-                </Button>
-            );
-        }
-    );
-
     return (
         <LandingPageWrapper>
             <BannerSection>
@@ -513,9 +498,9 @@ const LandingPage = () => {
                     >
                         <SwaprLogo src="./brand/SwaprWhite.svg" /> Swapr.eth
                     </SwaprButton>
-                    <NormalButton href={links.landing_dxtrust}>
+                    <Button as="a" target="_blank" href={links.landing_dxtrust}>
                         DXtrust.eth
-                    </NormalButton>
+                    </Button>
                 </ButtonRow>
             </DXDSection>
             <AboutUsSection>
