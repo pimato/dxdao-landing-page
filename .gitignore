@@ -11,6 +11,7 @@
 # production
 /build
 /contracts/build
+.idea/
 
 # config
 /src/config/contracts.json

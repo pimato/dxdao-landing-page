@@ -11,7 +11,7 @@ const LandingPageWrapper = styled.div`
     justify-content: space-between;
 `;
 
-const LandingPageContainer = ({}) => {
+const LandingPageContainer = () => {
     return (
         <LandingPageWrapper>
             <LandingPageHeader />
