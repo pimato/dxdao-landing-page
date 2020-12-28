@@ -3,9 +3,9 @@ import { HashRouter, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 
-import LandingPageFooter from './components/landing-page/Footer';
-import LandingPageHeader from './components/landing-page/Header';
-import { Router } from './components/router';
+import LandingPageFooter from './components/footer/Footer';
+import LandingPageNavBar from './components/navigation/NavigationBar';
+import { Router } from './pages/router';
 
 const AppShell = styled.div`
     width: 936px;
@@ -25,7 +25,7 @@ const App = () => {
             <Switch>
                 <div className="landing-body-container">
                     <AppShell toggle={mobileState}>
-                        <LandingPageHeader setMobileState={setMobileState} />
+                        <LandingPageNavBar setMobileState={setMobileState} />
                         <Router />
                         <LandingPageFooter />
                     </AppShell>

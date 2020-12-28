@@ -97,7 +97,7 @@ const FlexWrap = styled.div`
     justify-content: center;
 `;
 
-export const Index = () => {
+export const Manifesto = () => {
     return (
         <ManifestoSection>
             <Headline>DXdao Manifesto</Headline>

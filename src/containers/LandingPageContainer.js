@@ -1,7 +1,7 @@
 import React from 'react';
-import LandingPage from '../components/landing-page/LandingPage';
-import LandingPageFooter from '../components/landing-page/Footer';
-import LandingPageHeader from '../components/landing-page/Header';
+import LandingPage from '../pages/landing-page';
+import LandingPageFooter from '../components/footer/Footer';
+import LandingPageHeader from '../components/navigation/NavigationBar';
 import styled from 'styled-components';
 
 const LandingPageWrapper = styled.div`

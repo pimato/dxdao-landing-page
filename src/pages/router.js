@@ -1,9 +1,10 @@
 import { Route } from 'react-router-dom';
-import LandingPage from './landing-page/LandingPage';
+
+import { LandingPage } from './landing-page';
 import { FAQ } from './faq';
 import { BrandAssets } from './brand-assets';
 import { Codebase } from './codebase';
-import { Index } from './manifesto';
+import { Manifesto } from './manifesto';
 import { WorkerCompensation } from './worker-compensation';
 import React from 'react';
 
@@ -23,7 +24,7 @@ export const Router = () => {
                 <Codebase />
             </Route>
             <Route exact path="/manifesto">
-                <Index />
+                <Manifesto />
             </Route>
             <Route exact path="/worker-compensation">
                 <WorkerCompensation />
