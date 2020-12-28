@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import links from '../../links';
+import links from '../../misc/links';
 import MetaTags from 'react-meta-tags';
 
 const LandingPageWrapper = styled.div`

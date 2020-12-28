@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import links from '../../links';
+import links from '../../misc/links';
 import { version } from '../../../package.json';
 
 const FooterWrapper = styled.div`

@@ -224,7 +224,7 @@ const assets = {
     },
 };
 
-const BrandAssetsPage = () => {
+export const BrandAssets = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -564,4 +564,3 @@ const BrandAssetsPage = () => {
         </section>
     );
 };
-export default BrandAssetsPage;

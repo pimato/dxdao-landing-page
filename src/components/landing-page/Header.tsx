@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
-import links from '../../links';
+import links from '../../misc/links';
 
 const NavWrapper = styled.div`
     font-family: var(--IBM);

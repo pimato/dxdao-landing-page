@@ -6,7 +6,7 @@ import MetaTags from 'react-meta-tags';
 import Accordion from './Accordion';
 
 // Content
-import FAQ_DATA from '../misc/faq';
+import FAQ_DATA from '../../misc/faq';
 
 const BannerMessage = styled.div`
     font-family: Raleway;
@@ -34,7 +34,7 @@ const Description = styled.div`
     padding: 0px 48px 24px 24px;
 `;
 
-const FAQPage = () => {
+export const FAQ = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -115,4 +115,3 @@ const FAQPage = () => {
         </section>
     );
 };
-export default FAQPage;

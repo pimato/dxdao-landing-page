@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
-import LandingPage from './components/LandingPage/LandingPage';
-import LandingPageFooter from './components/LandingPage/Footer';
-import LandingPageHeader from './components/LandingPage/Header';
+import LandingPage from './components/landing-page/LandingPage';
+import LandingPageFooter from './components/landing-page/Footer';
+import LandingPageHeader from './components/landing-page/Header';
 
-import FAQPage from 'components/FAQPage';
-import BrandAssetsPage from 'components/BrandAssetsPage';
-import CodebasePage from 'components/CodebasePage';
-import Manifesto from './components/Manifesto';
-import WorkerCompensation from './components/WorkerCompensation';
+import { FAQ } from './components/faq';
+import { BrandAssets } from './components/brand-assets';
+import { Codebase } from './components/codebase';
+import { Index } from './components/manifesto';
+import { WorkerCompensation } from './components/worker-compensation';
 
 const AppShell = styled.div`
     width: 936px;
@@ -46,7 +46,7 @@ const App = () => {
                             <LandingPageHeader
                                 setMobileState={setMobileState}
                             />
-                            <FAQPage />
+                            <FAQ />
                             <LandingPageFooter />
                         </AppShell>
                     </div>
@@ -58,7 +58,7 @@ const App = () => {
                             <LandingPageHeader
                                 setMobileState={setMobileState}
                             />
-                            <BrandAssetsPage />
+                            <BrandAssets />
                             <LandingPageFooter />
                         </AppShell>
                     </div>
@@ -70,7 +70,7 @@ const App = () => {
                             <LandingPageHeader
                                 setMobileState={setMobileState}
                             />
-                            <CodebasePage />
+                            <Codebase />
                             <LandingPageFooter />
                         </AppShell>
                     </div>
@@ -81,7 +81,7 @@ const App = () => {
                             <LandingPageHeader
                                 setMobileState={setMobileState}
                             />
-                            <Manifesto />
+                            <Index />
                             <LandingPageFooter />
                         </AppShell>
                     </div>

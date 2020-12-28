@@ -1,7 +1,7 @@
 import React from 'react';
-import LandingPage from '../components/LandingPage/LandingPage';
-import LandingPageFooter from '../components/LandingPage/Footer';
-import LandingPageHeader from '../components/LandingPage/Header';
+import LandingPage from '../components/landing-page/LandingPage';
+import LandingPageFooter from '../components/landing-page/Footer';
+import LandingPageHeader from '../components/landing-page/Header';
 import styled from 'styled-components';
 
 const LandingPageWrapper = styled.div`
@@ -14,9 +14,9 @@ const LandingPageWrapper = styled.div`
 const LandingPageContainer = ({}) => {
     return (
         <LandingPageWrapper>
-          <LandingPageHeader />
-          <LandingPage />
-          <LandingPageFooter />
+            <LandingPageHeader />
+            <LandingPage />
+            <LandingPageFooter />
         </LandingPageWrapper>
     );
 };

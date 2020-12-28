@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import links from '../links';
+import links from '../../misc/links';
 
 const ManifestoSection = styled.section`
     display: block;
@@ -97,7 +97,7 @@ const FlexWrap = styled.div`
     justify-content: center;
 `;
 
-const Manifesto = () => {
+export const Index = () => {
     return (
         <ManifestoSection>
             <Headline>DXdao Manifesto</Headline>
@@ -363,5 +363,3 @@ const Manifesto = () => {
         </ManifestoSection>
     );
 };
-
-export default Manifesto;

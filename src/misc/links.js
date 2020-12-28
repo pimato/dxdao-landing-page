@@ -1,4 +1,4 @@
-import { version } from '../package.json';
+import { version } from '../../package.json';
 
 const links = {
     // Landing Page
@@ -70,7 +70,7 @@ const links = {
     header_bounties:
         'https://docs.google.com/document/d/1rLLUJu9a06YLhnAVNvzglbtoubUdiV9G436QVrrkNlE/edit',
 
-    //Manifesto
+    //Index
 
     ratified_manifesto_alchemy:
         'https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x86c4ffbd87bf949b482f57a626d8b2137d32d967ef21ae7cf8475a2f30c4ff8e',
