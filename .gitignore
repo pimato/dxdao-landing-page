@@ -12,6 +12,7 @@
 /build
 /contracts/build
 .idea/
+.idea
 
 # config
 /src/config/contracts.json
