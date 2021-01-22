@@ -60,6 +60,11 @@ const Footer = () => {
                     </a>
                 </LogoWrapper>
                 <LogoWrapper>
+                    <a href={links.footer_discord} target="#">
+                        <FooterLogo src="discord_color.svg"></FooterLogo>
+                    </a>
+                </LogoWrapper>
+                <LogoWrapper>
                     <a href={links.footer_reddit} target="#">
                         <FooterLogo src="reddit_color.svg"></FooterLogo>
                     </a>

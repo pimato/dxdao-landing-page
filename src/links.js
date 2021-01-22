@@ -95,6 +95,8 @@ const links = {
     footer_reddit: 'https://www.reddit.com/r/dxdao/',
 
     footer_telegram: 'https://t.me/dxDAO',
+
+    footer_discord: 'https://discord.gg/wpC6USUb',
 };
 
 export default links;
