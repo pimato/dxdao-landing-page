@@ -413,12 +413,7 @@ const LandingPage = () => {
                 <TagLine>COLLECTIVELY OWNED PRODUCTS</TagLine>
                 <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
-                    <ProductClickable
-                        href={
-                            ipfs ? links.landing_omen_ipfs : links.landing_omen
-                        }
-                        target="_blank"
-                    >
+                    <ProductClickable href={links.landing_omen} target="_blank">
                         <ProductPanel>
                             <ProductNameWrapper>
                                 <ProductLogo src="Omen.svg" />
@@ -432,11 +427,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_swapr_ipfs
-                                : links.landing_swapr
-                        }
+                        href={links.landing_swapr}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -453,11 +444,7 @@ const LandingPage = () => {
                 </ProductPanelWrapper>
                 <ProductPanelWrapper marginTop={'20px'}>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_mesa_ipfs
-                                : links.landing_mesaeth
-                        }
+                        href={links.landing_mesaeth}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -473,11 +460,7 @@ const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_rails_ipfs
-                                : links.landing_rails
-                        }
+                        href={links.landing_rails}
                         target="_blank"
                     >
                         <ProductPanel>
