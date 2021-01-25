@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter, Switch } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 
@@ -22,15 +22,13 @@ const App = () => {
 
     return (
         <HashRouter>
-            <Switch>
-                <div className="landing-body-container">
-                    <AppShell toggle={mobileState}>
-                        <NavBar setMobileState={setMobileState} />
-                        <Router />
-                        <Footer />
-                    </AppShell>
-                </div>
-            </Switch>
+            <div className="landing-body-container">
+                <AppShell toggle={mobileState}>
+                    <NavBar setMobileState={setMobileState} />
+                    <Router />
+                    <Footer />
+                </AppShell>
+            </div>
         </HashRouter>
     );
 };

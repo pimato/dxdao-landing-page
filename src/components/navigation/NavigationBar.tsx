@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import links from '../../misc/links';
 
 const NavWrapper = styled.div`
@@ -60,9 +60,8 @@ const SubMenu = styled.div`
     box-sizing: border-box;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.04);
 `;
-const SubItem = styled(Link)`
-
-    font-size: 15px;
+const SubItemStyle = css`
+  font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
@@ -76,8 +75,12 @@ const SubItem = styled(Link)`
         prop.disabled ? 'pointer-events: none;opacity: 0.5;color:grey;' : ''};
     &:hover  {
     ${(prop) => (!prop.disabled ? 'color: #536DFE;' : '')};
-        
-}
+`;
+const SubItem = styled(Link)`
+    ${SubItemStyle};
+`;
+const SubLink = styled.a`
+    ${SubItemStyle};
 `;
 
 const SubHeader = styled.div`
@@ -175,7 +178,7 @@ const MobileDropdown = styled.div`
     margin-left: 1.5rem;
     margin-top: 1.5rem;
 `;
-const DropdownItem = styled(Link)`
+const DropDownStyle = css`
     display: block;
     color: var(--black);
     font-size: 19px;
@@ -189,6 +192,12 @@ const DropdownItem = styled(Link)`
     }
     ${(prop) =>
         prop.disabled ? 'pointer-events: none;opacity: 0.5;color:grey;' : ''};
+`;
+const DropdownItem = styled(Link)`
+    ${DropDownStyle};
+`;
+const DropdownLink = styled.a`
+    ${DropDownStyle};
 `;
 const Divider = styled.div`
     border-top:1px solid var(--white-shade);
@@ -328,18 +337,18 @@ const NavBar = ({ setMobileState }) => {
                     Contribute
                     <SubMenu show={navState.contribute}>
                         <SubHeader>Project Boards</SubHeader>
-                        <SubItem
+                        <SubLink
+                            as="a"
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                             }}
-                            as="a"
                             href={links.landing_dxdao_codebase}
                             target="_blank"
                         >
                             DXdao
-                        </SubItem>
-                        <SubItem
+                        </SubLink>
+                        <SubLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -349,9 +358,9 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Omen
-                        </SubItem>
+                        </SubLink>
 
-                        <SubItem
+                        <SubLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -361,15 +370,15 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Swapr
-                        </SubItem>
+                        </SubLink>
                         <Divider />
-                        <SubItem
+                        <SubLink
                             as="a"
                             target="_blank"
                             href={links.header_bounties}
                         >
                             Bounties
-                        </SubItem>
+                        </SubLink>
                         <SubItem to={links.landing_codebase}>Codebase</SubItem>
                     </SubMenu>
                 </MenuItem>
@@ -381,7 +390,7 @@ const NavBar = ({ setMobileState }) => {
                 >
                     Community
                     <SubMenu show={navState.community}>
-                        <SubItem
+                        <SubLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -391,8 +400,8 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Telegram
-                        </SubItem>
-                        <SubItem
+                        </SubLink>
+                        <SubLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -402,8 +411,8 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Keybase
-                        </SubItem>
-                        <SubItem
+                        </SubLink>
+                        <SubLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -413,8 +422,8 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Forum
-                        </SubItem>
-                        <SubItem
+                        </SubLink>
+                        <SubLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -424,7 +433,7 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Youtube
-                        </SubItem>
+                        </SubLink>
                     </SubMenu>
                 </MenuItem>
                 <MobileMenu onClick={toggleMenu}>
@@ -460,10 +469,8 @@ const NavBar = ({ setMobileState }) => {
                         >
                             FAQ
                         </DropdownItem>
-                        <DropdownItem as="a" disabled={true}>
-                            DAOs
-                        </DropdownItem>
-                        <DropdownItem
+                        <DropdownLink disabled={true}>DAOs</DropdownLink>
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
@@ -474,7 +481,7 @@ const NavBar = ({ setMobileState }) => {
                             target="_blank"
                         >
                             Guidebook
-                        </DropdownItem>
+                        </DropdownLink>
                     </MobileDropdown>
                 </MobileMenuItem>
                 <MobileMenuItem
@@ -483,46 +490,43 @@ const NavBar = ({ setMobileState }) => {
                 >
                     Contribute <Arrow show={navState.contribute} />
                     <MobileDropdown show={navState.contribute}>
-                        <DropdownItem as="a" disabled={true}>
+                        <DropdownLink disabled={true}>
                             Project Boards
-                        </DropdownItem>
-                        <DropdownItem
+                        </DropdownLink>
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.landing_omeneth_codebase}
                             target="_blank"
                         >
                             Omen
-                        </DropdownItem>
-                        <DropdownItem
+                        </DropdownLink>
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.landing_swapr_codebase}
                             target="_blank"
                         >
                             Swapr
-                        </DropdownItem>
+                        </DropdownLink>
                         <Divider />
-                        <DropdownItem
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.header_bounties}
                             target="_blank"
                         >
                             Bounties
-                        </DropdownItem>
+                        </DropdownLink>
                         <DropdownItem
                             onClick={toggleMenu}
                             to={links.landing_codebase}
@@ -537,55 +541,51 @@ const NavBar = ({ setMobileState }) => {
                 >
                     Community <Arrow show={navState.community} />
                     <MobileDropdown show={navState.community}>
-                        <DropdownItem
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.footer_telegram}
                             target="_blank"
                         >
                             Telegram
-                        </DropdownItem>
+                        </DropdownLink>
 
-                        <DropdownItem
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.landing_developer_chat}
                             target="_blank"
                         >
                             Keybase
-                        </DropdownItem>
-                        <DropdownItem
+                        </DropdownLink>
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.header_forum}
                             target="_blank"
                         >
                             Forum
-                        </DropdownItem>
-                        <DropdownItem
+                        </DropdownLink>
+                        <DropdownLink
                             /* tslint:disable-next-line:jsx-no-lambda */
                             onClick={(event) => {
                                 event.stopPropagation();
                                 toggleMenu();
                             }}
-                            as="a"
                             href={links.header_youtube}
                             target="_blank"
                         >
                             Youtube
-                        </DropdownItem>
+                        </DropdownLink>
                     </MobileDropdown>
                 </MobileMenuItem>
             </MobileNav>
