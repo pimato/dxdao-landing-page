@@ -70,7 +70,7 @@ const links = {
     header_bounties:
         'https://docs.google.com/document/d/1rLLUJu9a06YLhnAVNvzglbtoubUdiV9G436QVrrkNlE/edit',
 
-    //Index
+    // Index
 
     ratified_manifesto_alchemy:
         'https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x86c4ffbd87bf949b482f57a626d8b2137d32d967ef21ae7cf8475a2f30c4ff8e',
@@ -78,7 +78,7 @@ const links = {
     ratified_manifesto_etherscan:
         'https://etherscan.io/tx/0x7ae4b4a3dc8e8bc31a42a39f12b6c4b6a5ba3608a12b961f3f6dc006d99507b9',
 
-    //Worker Compensation
+    // Worker Compensation
 
     ratified_worker_compensation_alchemy:
         'https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xc9ebd5e6c96b87ee1ab09cbe7f301eb2c885068073ca4db4a5a01ab5c40ecf5b',
@@ -91,8 +91,6 @@ const links = {
     footer_version: `https://github.com/pimato/dxdao-landing-page/tree/v${version}`,
 
     footer_twitter: 'https://twitter.com/dxdao_',
-
-    footer_reddit: 'https://www.reddit.com/r/dxdao/',
 
     footer_telegram: 'https://t.me/dxDAO',
 };
