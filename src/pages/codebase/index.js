@@ -241,7 +241,7 @@ const projects = {
     ],
 };
 
-const CodebasePage = () => {
+export const Codebase = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -369,4 +369,3 @@ const CodebasePage = () => {
         </section>
     );
 };
-export default CodebasePage;

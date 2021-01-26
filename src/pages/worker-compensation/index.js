@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import links from '../links';
+import links from '../../misc/links';
 const Rounded = css`
     border: 1px solid var(--white-shade);
     border-radius: 6px;
@@ -231,7 +231,7 @@ const MonthlyHeader = styled(SubHeader)`
         margin: 1.25rem;
     }
 `;
-const WorkerCompensation = () => {
+export const WorkerCompensation = () => {
     return (
         <WorkerCompensationSection>
             <Headline>Worker Compensation Guidelines</Headline>
@@ -518,5 +518,3 @@ const WorkerCompensation = () => {
         </WorkerCompensationSection>
     );
 };
-
-export default WorkerCompensation;

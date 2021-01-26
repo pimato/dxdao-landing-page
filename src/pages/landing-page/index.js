@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import links from '../../links';
+import links from '../../misc/links';
 import MetaTags from 'react-meta-tags';
 
 const LandingPageWrapper = styled.div`
@@ -335,7 +335,7 @@ const JoinActionArrow = styled.img`
     margin-left: 12px;
 `;
 
-const LandingPage = () => {
+export const LandingPage = () => {
     //check if user has metamask
     const ipfs = !!window.ethereum;
 
@@ -367,7 +367,7 @@ const LandingPage = () => {
                         <meta
                             id="og-title"
                             property="og:title"
-                            content="DXdao LandingPage"
+                            content="DXdao Index"
                         />
                         <meta
                             id="og-image"
@@ -376,7 +376,7 @@ const LandingPage = () => {
                         />
                         <meta
                             name="keywords"
-                            content="DXdao, LandingPage, Omen, Mix, Rails,Swapr, Mesa"
+                            content="DXdao, Index, Omen, Mix, Rails,Swapr, Mesa"
                         />
                     </MetaTags>
                     <HeavyMessage>DXdao </HeavyMessage>is a{' '}
@@ -558,5 +558,3 @@ const LandingPage = () => {
         </LandingPageWrapper>
     );
 };
-
-export default LandingPage;

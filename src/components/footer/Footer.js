@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import links from '../../links';
+import links from '../../misc/links';
 import { version } from '../../../package.json';
 
 const FooterWrapper = styled.div`
@@ -57,11 +57,6 @@ const Footer = () => {
                 <LogoWrapper>
                     <a href={links.footer_twitter} target="#">
                         <FooterLogo src="twitter_color.svg"></FooterLogo>
-                    </a>
-                </LogoWrapper>
-                <LogoWrapper>
-                    <a href={links.footer_reddit} target="#">
-                        <FooterLogo src="reddit_color.svg"></FooterLogo>
                     </a>
                 </LogoWrapper>
                 <LogoWrapper>

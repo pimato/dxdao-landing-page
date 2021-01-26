@@ -11,6 +11,9 @@
 # production
 /build
 /contracts/build
+.idea/
+.idea
+package-lock.json
 
 # config
 /src/config/contracts.json

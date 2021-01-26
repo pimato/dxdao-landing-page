@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
-import LandingPage from './components/LandingPage/LandingPage';
-import LandingPageFooter from './components/LandingPage/Footer';
-import LandingPageHeader from './components/LandingPage/Header';
 
-import FAQPage from 'components/FAQPage';
-import BrandAssetsPage from 'components/BrandAssetsPage';
-import CodebasePage from 'components/CodebasePage';
-import Manifesto from './components/Manifesto';
-import WorkerCompensation from './components/WorkerCompensation';
+import Footer from './components/footer/Footer';
+import NavBar from './components/navigation/NavigationBar';
+import { Router } from './pages/router';
 
 const AppShell = styled.div`
     width: 936px;
@@ -27,77 +22,13 @@ const App = () => {
 
     return (
         <HashRouter>
-            <Switch>
-                <Route exact path="/">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <LandingPage />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-
-                <Route exact path="/faq">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <FAQPage />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-
-                <Route exact path="/brand-assets">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <BrandAssetsPage />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-
-                <Route exact path="/codebase">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <CodebasePage />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-                <Route exact path="/manifesto">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <Manifesto />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-                <Route exact path="/worker-compensation">
-                    <div className="landing-body-container">
-                        <AppShell toggle={mobileState}>
-                            <LandingPageHeader
-                                setMobileState={setMobileState}
-                            />
-                            <WorkerCompensation />
-                            <LandingPageFooter />
-                        </AppShell>
-                    </div>
-                </Route>
-            </Switch>
+            <div className="landing-body-container">
+                <AppShell toggle={mobileState}>
+                    <NavBar setMobileState={setMobileState} />
+                    <Router />
+                    <Footer />
+                </AppShell>
+            </div>
         </HashRouter>
     );
 };
