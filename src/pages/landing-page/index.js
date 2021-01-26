@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../misc/links';
 import MetaTags from 'react-meta-tags';
@@ -131,7 +130,7 @@ const SwaprButton = styled(Button)`
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        width: 47%;
+        width: 44%;
         margin-right: 12px;
     }
 `;
@@ -146,8 +145,8 @@ const DxtrustButton = styled(Button)`
         border: 1px solid rgba(0, 0, 0, 0.075);
         cursor: pointer;
     }
-    @media (max-width: 475px) {
-        width: 47%;
+    @media (max-width: 400px) {
+        width: 44%;
         margin-right: 12px;
     }
 `;
@@ -353,21 +352,7 @@ const JoinActionArrow = styled.img`
 
 export const LandingPage = () => {
     //check if user has metamask
-    const ipfs = !!window.ethereum;
-
-    const NormalButton = withRouter(
-        ({ option, route, history, location, children }) => {
-            return (
-                <Button
-                    onClick={() => {
-                        history.push(route);
-                    }}
-                >
-                    {children}
-                </Button>
-            );
-        }
-    );
+    //const ipfs = !!window.ethereum;
 
     return (
         <LandingPageWrapper>
