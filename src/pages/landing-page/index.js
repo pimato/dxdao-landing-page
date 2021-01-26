@@ -335,9 +335,6 @@ const JoinActionArrow = styled.img`
 `;
 
 export const LandingPage = () => {
-    //check if user has metamask
-    //const ipfs = !!window.ethereum;
-
     return (
         <LandingPageWrapper>
             <BannerSection>
