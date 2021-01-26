@@ -119,7 +119,7 @@ const Button = styled.button`
         margin: 0;
     }
 `;
-const SwaprButton = styled(Button)`
+const LandingPageButton = styled(Button)`
     background-color: var(--violet-color);
     color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.075);
@@ -130,22 +130,6 @@ const SwaprButton = styled(Button)`
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        width: 44%;
-        margin-right: 12px;
-    }
-`;
-
-const DxtrustButton = styled(Button)`
-    background-color: var(--violet-color);
-    color: var(--white);
-    border: 1px solid rgba(0, 0, 0, 0.075);
-    border-radius: 6px;
-    &:hover {
-        background: var(--violet-hover);
-        border: 1px solid rgba(0, 0, 0, 0.075);
-        cursor: pointer;
-    }
-    @media (max-width: 400px) {
         width: 44%;
         margin-right: 12px;
     }
@@ -490,20 +474,20 @@ export const LandingPage = () => {
                     fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
-                    <SwaprButton
+                    <LandingPageButton
                         as="a"
                         href={links.landing_swapr}
                         target="_blank"
                     >
                         <SwaprLogo src="./brand/SwaprWhite.svg" /> Swapr.eth
-                    </SwaprButton>
-                    <DxtrustButton
+                    </LandingPageButton>
+                    <LandingPageButton
                         as="a"
                         href={links.landing_dxtrust}
                         target="_blank"
                     >
                         DXtrust.eth
-                    </DxtrustButton>
+                    </LandingPageButton>
                 </ButtonRow>
             </DXDSection>
             <AboutUsSection>
