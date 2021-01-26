@@ -136,6 +136,22 @@ const SwaprButton = styled(Button)`
     }
 `;
 
+const DxtrustButton = styled(Button)`
+    background-color: var(--violet-color);
+    color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 6px;
+    &:hover {
+        background: var(--violet-hover);
+        border: 1px solid rgba(0, 0, 0, 0.075);
+        cursor: pointer;
+    }
+    @media (max-width: 475px) {
+        width: 47%;
+        margin-right: 12px;
+    }
+`;
+
 const ProductSection = styled.div`
     display: flex;
     flex-direction: column;
@@ -413,12 +429,7 @@ export const LandingPage = () => {
                 <TagLine>COLLECTIVELY OWNED PRODUCTS</TagLine>
                 <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
-                    <ProductClickable
-                        href={
-                            ipfs ? links.landing_omen_ipfs : links.landing_omen
-                        }
-                        target="_blank"
-                    >
+                    <ProductClickable href={links.landing_omen} target="_blank">
                         <ProductPanel>
                             <ProductNameWrapper>
                                 <ProductLogo src="Omen.svg" />
@@ -432,11 +443,7 @@ export const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_swapr_ipfs
-                                : links.landing_swapr
-                        }
+                        href={links.landing_swapr}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -453,11 +460,7 @@ export const LandingPage = () => {
                 </ProductPanelWrapper>
                 <ProductPanelWrapper marginTop={'20px'}>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_mesa_ipfs
-                                : links.landing_mesaeth
-                        }
+                        href={links.landing_mesaeth}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -473,11 +476,7 @@ export const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_rails_ipfs
-                                : links.landing_rails
-                        }
+                        href={links.landing_rails}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -513,9 +512,13 @@ export const LandingPage = () => {
                     >
                         <SwaprLogo src="./brand/SwaprWhite.svg" /> Swapr.eth
                     </SwaprButton>
-                    <NormalButton href={links.landing_dxtrust}>
+                    <DxtrustButton
+                        as="a"
+                        href={links.landing_dxtrust}
+                        target="_blank"
+                    >
                         DXtrust.eth
-                    </NormalButton>
+                    </DxtrustButton>
                 </ButtonRow>
             </DXDSection>
             <AboutUsSection>

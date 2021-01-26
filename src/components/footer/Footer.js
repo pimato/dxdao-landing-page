@@ -60,6 +60,11 @@ const Footer = () => {
                     </a>
                 </LogoWrapper>
                 <LogoWrapper>
+                    <a href={links.footer_discord} target="#">
+                        <FooterLogo src="discord-v2.svg"></FooterLogo>
+                    </a>
+                </LogoWrapper>
+                <LogoWrapper>
                     <a href={links.footer_telegram} target="#">
                         <FooterLogo src="telegram_color.svg"></FooterLogo>
                     </a>
