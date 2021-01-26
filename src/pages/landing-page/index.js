@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import links from '../../misc/links';
 import MetaTags from 'react-meta-tags';
@@ -120,7 +119,7 @@ const Button = styled.button`
         margin: 0;
     }
 `;
-const SwaprButton = styled(Button)`
+const LandingPageButton = styled(Button)`
     background-color: var(--violet-color);
     color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.075);
@@ -131,7 +130,7 @@ const SwaprButton = styled(Button)`
         cursor: pointer;
     }
     @media (max-width: 475px) {
-        width: 47%;
+        width: 44%;
         margin-right: 12px;
     }
 `;
@@ -336,23 +335,6 @@ const JoinActionArrow = styled.img`
 `;
 
 export const LandingPage = () => {
-    //check if user has metamask
-    const ipfs = !!window.ethereum;
-
-    const NormalButton = withRouter(
-        ({ option, route, history, location, children }) => {
-            return (
-                <Button
-                    onClick={() => {
-                        history.push(route);
-                    }}
-                >
-                    {children}
-                </Button>
-            );
-        }
-    );
-
     return (
         <LandingPageWrapper>
             <BannerSection>
@@ -413,12 +395,7 @@ export const LandingPage = () => {
                 <TagLine>COLLECTIVELY OWNED PRODUCTS</TagLine>
                 <Message>Decentralized Products Governed by DXdao</Message>
                 <ProductPanelWrapper marginTop={'48px'}>
-                    <ProductClickable
-                        href={
-                            ipfs ? links.landing_omen_ipfs : links.landing_omen
-                        }
-                        target="_blank"
-                    >
+                    <ProductClickable href={links.landing_omen} target="_blank">
                         <ProductPanel>
                             <ProductNameWrapper>
                                 <ProductLogo src="Omen.svg" />
@@ -432,11 +409,7 @@ export const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_swapr_ipfs
-                                : links.landing_swapr
-                        }
+                        href={links.landing_swapr}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -453,11 +426,7 @@ export const LandingPage = () => {
                 </ProductPanelWrapper>
                 <ProductPanelWrapper marginTop={'20px'}>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_mesa_ipfs
-                                : links.landing_mesaeth
-                        }
+                        href={links.landing_mesaeth}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -473,11 +442,7 @@ export const LandingPage = () => {
                         </ProductPanel>
                     </ProductClickable>
                     <ProductClickable
-                        href={
-                            ipfs
-                                ? links.landing_rails_ipfs
-                                : links.landing_rails
-                        }
+                        href={links.landing_rails}
                         target="_blank"
                     >
                         <ProductPanel>
@@ -506,16 +471,20 @@ export const LandingPage = () => {
                     fees on DEX protocols and more.
                 </Description>
                 <ButtonRow>
-                    <SwaprButton
+                    <LandingPageButton
                         as="a"
                         href={links.landing_swapr}
                         target="_blank"
                     >
                         <SwaprLogo src="./brand/SwaprWhite.svg" /> Swapr.eth
-                    </SwaprButton>
-                    <NormalButton href={links.landing_dxtrust}>
+                    </LandingPageButton>
+                    <LandingPageButton
+                        as="a"
+                        href={links.landing_dxtrust}
+                        target="_blank"
+                    >
                         DXtrust.eth
-                    </NormalButton>
+                    </LandingPageButton>
                 </ButtonRow>
             </DXDSection>
             <AboutUsSection>

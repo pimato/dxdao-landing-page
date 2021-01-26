@@ -93,6 +93,8 @@ const links = {
     footer_twitter: 'https://twitter.com/dxdao_',
 
     footer_telegram: 'https://t.me/dxDAO',
+
+    footer_discord: 'https://discord.com/invite/4QXEJQkvHH',
 };
 
 export default links;

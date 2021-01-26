@@ -56,12 +56,17 @@ const Footer = () => {
             <RighFooter>
                 <LogoWrapper>
                     <a href={links.footer_twitter} target="#">
-                        <FooterLogo src="twitter_color.svg"></FooterLogo>
+                        <FooterLogo src="twitter_color.svg" />
+                    </a>
+                </LogoWrapper>
+                <LogoWrapper>
+                    <a href={links.footer_discord} target="#">
+                        <FooterLogo src="discord-v2.svg" />
                     </a>
                 </LogoWrapper>
                 <LogoWrapper>
                     <a href={links.footer_telegram} target="#">
-                        <FooterLogo src="telegram_color.svg"></FooterLogo>
+                        <FooterLogo src="telegram_color.svg" />
                     </a>
                 </LogoWrapper>
             </RighFooter>

@@ -407,6 +407,17 @@ const NavBar = ({ setMobileState }) => {
                                 event.stopPropagation();
                             }}
                             as="a"
+                            href={links.footer_discord}
+                            target="_blank"
+                        >
+                            Discord
+                        </SubLink>
+                        <SubLink
+                            /* tslint:disable-next-line:jsx-no-lambda */
+                            onClick={(event) => {
+                                event.stopPropagation();
+                            }}
+                            as="a"
                             href={links.landing_developer_chat}
                             target="_blank"
                         >
