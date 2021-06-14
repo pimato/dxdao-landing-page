@@ -5,7 +5,7 @@ import { FAQ } from './faq';
 import { BrandAssets } from './brand-assets';
 import { Codebase } from './codebase';
 import { Manifesto } from './manifesto';
-import { WorkerCompensation } from './worker-compensation';
+
 import React from 'react';
 
 export const Router = () => {
@@ -27,9 +27,9 @@ export const Router = () => {
                 <Route exact path="/manifesto">
                     <Manifesto />
                 </Route>
-                <Route exact path="/worker-compensation">
-                    <WorkerCompensation />
-                </Route>
+                {/*<Route exact path="/worker-compensation">*/}
+                {/*    <WorkerCompensation />*/}
+                {/*</Route>*/}
             </Switch>
         </React.Fragment>
     );
