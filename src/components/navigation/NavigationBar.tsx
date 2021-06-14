@@ -322,9 +322,9 @@ const NavBar = ({ setMobileState }) => {
                         <SubItem to={links.landing_manifesto}>
                             Manifesto
                         </SubItem>
-                        <SubItem to={links.landing_worker_compensation}>
-                            Worker Compensation
-                        </SubItem>
+                        {/*<SubItem to={links.landing_worker_compensation}>*/}
+                        {/*    Worker Compensation*/}
+                        {/*</SubItem>*/}
                         <SubItem to="/faq">FAQ</SubItem>
                     </SubMenu>
                 </MenuItem>
@@ -468,12 +468,12 @@ const NavBar = ({ setMobileState }) => {
                         >
                             Manifesto
                         </DropdownItem>
-                        <DropdownItem
-                            to={links.landing_worker_compensation}
-                            onClick={toggleMenu}
-                        >
-                            Worker Compensation
-                        </DropdownItem>
+                        {/*<DropdownItem*/}
+                        {/*    to={links.landing_worker_compensation}*/}
+                        {/*    onClick={toggleMenu}*/}
+                        {/*>*/}
+                        {/*    Worker Compensation*/}
+                        {/*</DropdownItem>*/}
                         <DropdownItem
                             to={links.landing_faq}
                             onClick={toggleMenu}
